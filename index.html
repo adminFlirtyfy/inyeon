@@ -26,6 +26,9 @@
             --dark-gray: #444444;
             --gradient-start: rgba(255,255,255,0.05);
             --gradient-end: rgba(255,255,255,0);
+            --accent-color: #7c3aed;
+            --danger-color: #ef4444;
+            --success-color: #10b981;
         }
         
         body {
@@ -44,8 +47,12 @@
         
         /* Header */
         header {
-            padding: 30px 0;
+            padding: 20px 0;
             border-bottom: 1px solid var(--dark-gray);
+            position: sticky;
+            top: 0;
+            background-color: var(--primary-black);
+            z-index: 1000;
         }
         
         .header-content {
@@ -54,16 +61,79 @@
             align-items: center;
         }
         
-        .logo {
-            font-size: 28px;
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        
+        .logo-image {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-color), #a855f7);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--pure-white);
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .logo-text {
+            font-size: 24px;
             font-weight: 700;
             color: var(--pure-white);
-            text-decoration: none;
             letter-spacing: -0.5px;
         }
         
-        .logo span {
+        .logo-text span {
             font-weight: 300;
+            color: var(--accent-color);
+        }
+        
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .nav-link {
+            color: var(--medium-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--pure-white);
+        }
+        
+        .download-btn-header {
+            background: var(--accent-color);
+            color: var(--pure-white);
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .download-btn-header:hover {
+            background: #6d28d9;
+            transform: translateY(-2px);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--pure-white);
+            font-size: 1.5rem;
+            cursor: pointer;
         }
         
         /* Hero Section */
@@ -99,51 +169,31 @@
             margin-right: auto;
         }
         
-        .cta-form {
-            display: flex;
-            max-width: 500px;
-            margin: 0 auto 30px;
-            border-radius: 50px;
-            overflow: hidden;
-            background: var(--secondary-black);
-            border: 1px solid var(--dark-gray);
-            padding: 5px;
-        }
-        
-        .email-input {
-            flex: 1;
-            padding: 18px 24px;
-            background: transparent;
-            border: none;
+        .download-btn-hero {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--accent-color);
             color: var(--pure-white);
-            font-size: 1rem;
-        }
-        
-        .email-input:focus {
-            outline: none;
-        }
-        
-        .submit-btn {
-            background: var(--pure-white);
-            color: var(--primary-black);
-            border: none;
-            padding: 18px 36px;
-            font-size: 1rem;
-            font-weight: 600;
+            padding: 20px 40px;
             border-radius: 50px;
-            cursor: pointer;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
             transition: all 0.3s ease;
+            margin-bottom: 30px;
+            border: none;
+            cursor: pointer;
         }
         
-        .submit-btn:hover {
-            background: var(--light-gray);
-            transform: translateY(-2px);
+        .download-btn-hero:hover {
+            background: #6d28d9;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.3);
         }
         
-        .submit-btn:disabled {
-            background: var(--medium-gray);
-            cursor: not-allowed;
-            transform: none;
+        .download-btn-hero i {
+            font-size: 1.3rem;
         }
         
         /* Features Section */
@@ -247,59 +297,290 @@
             color: var(--medium-gray);
         }
         
-        /* Early Access */
-        .early-access {
-            background: var(--secondary-black);
-            border-radius: 24px;
-            padding: 80px 40px;
-            text-align: center;
-            max-width: 800px;
+        /* Policy Pages */
+        .policy-container {
+            max-width: 900px;
             margin: 0 auto;
+            padding: 80px 20px 120px;
+        }
+        
+        .policy-header {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--dark-gray);
+        }
+        
+        .policy-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+        
+        .policy-updated {
+            color: var(--medium-gray);
+            font-size: 1rem;
+        }
+        
+        .policy-section {
+            margin-bottom: 50px;
+            padding: 30px;
+            background: var(--secondary-black);
+            border-radius: 12px;
             border: 1px solid var(--dark-gray);
         }
         
-        .early-access h2 {
-            font-size: 2.2rem;
-            font-weight: 700;
+        .policy-subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--pure-white);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .policy-subtitle i {
+            color: var(--accent-color);
+        }
+        
+        .policy-text {
+            color: var(--medium-gray);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+        
+        .policy-list {
+            color: var(--medium-gray);
+            margin-left: 25px;
             margin-bottom: 20px;
         }
         
-        .early-access p {
-            font-size: 1.1rem;
+        .policy-list li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+        
+        .warning-box {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 4px solid var(--danger-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box .policy-text {
+            color: #fecaca;
+            margin-bottom: 0;
+        }
+        
+        .important-note {
+            background: rgba(124, 58, 237, 0.1);
+            border-left: 4px solid var(--accent-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .important-note .policy-text {
+            color: #ddd6fe;
+            margin-bottom: 0;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             color: var(--medium-gray);
-            margin-bottom: 40px;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 30px;
+            transition: color 0.3s ease;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background: var(--secondary-black);
+            border: 1px solid var(--dark-gray);
+        }
+        
+        .back-btn:hover {
+            color: var(--pure-white);
+            border-color: var(--medium-gray);
+        }
+        
+        /* Contact Form */
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 80px 20px 120px;
+        }
+        
+        .contact-form {
+            background: var(--secondary-black);
+            border-radius: 16px;
+            padding: 40px;
+            border: 1px solid var(--dark-gray);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--pure-white);
+        }
+        
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 15px;
+            background: var(--primary-black);
+            border: 1px solid var(--dark-gray);
+            border-radius: 8px;
+            color: var(--pure-white);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+        
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: var(--accent-color);
+            color: var(--pure-white);
+            padding: 16px 32px;
+            border-radius: 50px;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .submit-btn:hover {
+            background: #6d28d9;
+            transform: translateY(-2px);
+        }
+        
+        .submit-btn:disabled {
+            background: var(--medium-gray);
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .success-message {
+            color: var(--success-color);
+            font-weight: 600;
+            margin-top: 20px;
+            text-align: center;
+            display: none;
+        }
+        
+        .error-message {
+            color: var(--danger-color);
+            font-weight: 600;
+            margin-top: 20px;
+            text-align: center;
+            display: none;
+        }
+        
+        .email-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .email-link:hover {
+            text-decoration: underline;
         }
         
         /* Footer */
         footer {
             padding: 60px 0 40px;
-            text-align: center;
             border-top: 1px solid var(--dark-gray);
             margin-top: 60px;
         }
         
-        .footer-logo {
-            font-size: 2rem;
-            font-weight: 700;
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
             margin-bottom: 20px;
             color: var(--pure-white);
         }
         
-        .footer-text {
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
             color: var(--medium-gray);
-            margin-bottom: 30px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--pure-white);
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--pure-white);
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo-image {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--accent-color), #a855f7);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        
+        .copyright {
+            text-align: center;
+            color: var(--medium-gray);
+            padding-top: 30px;
+            border-top: 1px solid var(--dark-gray);
         }
         
         .platform-badge {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
             background: var(--light-black);
-            padding: 10px 20px;
+            padding: 12px 24px;
             border-radius: 50px;
             font-weight: 600;
-            margin-top: 10px;
             border: 1px solid var(--dark-gray);
         }
         
@@ -330,23 +611,34 @@
                 width: 100%;
             }
             
-            .cta-form {
-                flex-direction: column;
-                background: transparent;
-                border: none;
-                padding: 0;
+            .mobile-menu-btn {
+                display: block;
             }
             
-            .email-input {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
                 background: var(--secondary-black);
-                border: 1px solid var(--dark-gray);
-                margin-bottom: 15px;
-                border-radius: 50px;
-                text-align: center;
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+                border-bottom: 1px solid var(--dark-gray);
+                z-index: 100;
             }
             
-            .submit-btn {
-                border-radius: 50px;
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .policy-section {
+                padding: 20px;
+            }
+            
+            .contact-form {
+                padding: 30px 20px;
             }
         }
         
@@ -390,19 +682,27 @@
             font-weight: 600;
         }
         
-        /* Success Message */
-        .success-message {
-            color: #4CAF50;
-            font-weight: 600;
-            margin-top: 20px;
+        .hide {
+            display: none !important;
+        }
+        
+        .show {
+            display: block !important;
+        }
+        
+        /* Page Content */
+        .page-content {
             display: none;
         }
         
-        .error-message {
-            color: #f44336;
-            font-weight: 600;
-            margin-top: 20px;
-            display: none;
+        .page-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
     </style>
 </head>
@@ -411,207 +711,474 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo">Inyeon<span>AI</span></a>
-                <div class="platform-badge">Launching soon on Android</div>
+                <a href="#" class="logo-container" onclick="showPage('home')">
+                    <img src="app-logo.jpg" alt="Inyeon AI Logo" class="logo-image">
+                    <div class="logo-text">Inyeon<span>AI</span></div>
+                </a>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="nav-menu" id="navMenu">
+                    <a href="#" class="nav-link" onclick="showPage('home')">Home</a>
+                    <a href="#how-it-works" class="nav-link" onclick="scrollToSection('how-it-works')">How It Works</a>
+                    <a href="#" class="nav-link" onclick="showPage('support')">Support</a>
+                    <a href="#" class="nav-link" onclick="showPage('privacy')">Privacy</a>
+                    <a href="#" class="nav-link" onclick="showPage('terms')">Terms</a>
+                    <a href="#download" class="download-btn-header" onclick="downloadApp()">
+                        <i class="fab fa-android"></i> Download App
+                    </a>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="illustration">
-                    <i class="fas fa-heart"></i>
+    <!-- Home Page -->
+    <div id="home-page" class="page-content active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="illustration">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h1>Destiny doesn’t swipe,<br>It discovers you</h1>
+                    <p>Inyeon AI helps you meet through moods, intent, and real connection. Experience the next generation of social discovery focused on what truly matters.</p>
+                    
+                    <a href="#download" class="download-btn-hero" onclick="downloadApp()">
+                        <i class="fab fa-android"></i> Download for Android
+                    </a>
+                    
+                    <div class="platform-badge">
+                        <i class="fab fa-android"></i> Available on Android
+                    </div>
                 </div>
-                <h1>Meaningful connections,<br>not endless swiping</h1>
-                <p>Inyeon AI helps you meet through moods, intent, and real connection. Experience the next generation of social discovery focused on what truly matters.</p>
+            </div>
+        </section>
+
+        <!-- Why Inyeon AI -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Why Inyeon AI</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-ban"></i>
+                        </div>
+                        <h3 class="feature-title">Less swiping, more intention</h3>
+                        <p class="feature-description">Move beyond superficial judgments to connections based on shared values and genuine compatibility.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-cloud-moon"></i>
+                        </div>
+                        <h3 class="feature-title">Mood & moment-based matching</h3>
+                        <p class="feature-description">Connect based on how you're feeling right now, not just static profiles and outdated preferences.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-eye-slash"></i>
+                        </div>
+                        <h3 class="feature-title">Blind-date inspired experiences</h3>
+                        <p class="feature-description">Rediscover the excitement of genuine connection before appearance enters the equation.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <h3 class="feature-title">Designed for real conversations</h3>
+                        <p class="feature-description">Thoughtful prompts and meaningful interactions that go beyond "hey" and lead to genuine connection.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="section" id="how-it-works">
+            <div class="container">
+                <h2 class="section-title">How It Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Choose your mood or intent</h3>
+                        <p class="step-description">Select how you're feeling or what you're looking for in this moment.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Get matched naturally</h3>
+                        <p class="step-description">Connect with people who share your current mindset and intentions.</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Start meaningful conversations</h3>
+                        <p class="step-description">Engage in authentic dialogue with thoughtfully matched connections.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Privacy Policy Page -->
+    <div id="privacy-page" class="page-content">
+        <div class="policy-container">
+            <a href="#" class="back-btn" onclick="showPage('home')">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+            
+            <div class="policy-header">
+                <h1 class="policy-title">Privacy Policy</h1>
+                <p class="policy-updated">Last Updated: December 1, 2023</p>
+            </div>
+            
+            <div class="policy-section">
+                <h2 class="policy-subtitle"><i class="fas fa-user-shield"></i> Introduction</h2>
+                <p class="policy-text">Welcome to Inyeon AI ("we," "our," or "us"). We operate a dating and social connection app designed to facilitate meaningful relationships. Your privacy is critically important to us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our dating app.</p>
+            </div>
+            
+            <div class="policy-section">
+                <h2 class="policy-subtitle"><i class="fas fa-database"></i> Information We Collect</h2>
                 
-                <form id="earlyAccessForm1" class="cta-form">
-                    <input type="email" name="email" class="email-input" placeholder="Your email address" required>
-                    <button type="submit" class="submit-btn">Join the early access list</button>
+                <h3 style="color: var(--light-gray); margin: 20px 0 10px;">Personal Information</h3>
+                <p class="policy-text">When you create an account, we collect:</p>
+                <ul class="policy-list">
+                    <li>Email address, phone number, and password</li>
+                    <li>Your name, age, gender, and dating preferences</li>
+                    <li>Profile photos and videos</li>
+                    <li>Biographical information and interests</li>
+                    <li>Location data (with your permission)</li>
+                </ul>
+            </div>
+            
+            <div class="policy-section">
+                <h2 class="policy-subtitle"><i class="fas fa-cogs"></i> How We Use Your Information</h2>
+                <p class="policy-text">We use your information to:</p>
+                <ul class="policy-list">
+                    <li><strong>Create and manage your dating profile</strong></li>
+                    <li><strong>Match you with compatible users</strong> based on mood, intent, and preferences</li>
+                    <li><strong>Facilitate conversations</strong> and connections between users</li>
+                    <li><strong>Improve our matching algorithms</strong> and user experience</li>
+                    <li><strong>Ensure safety</strong> and prevent fraudulent activity</li>
+                </ul>
+            </div>
+            
+            <div class="policy-section">
+                <h2 class="policy-subtitle"><i class="fas fa-lock"></i> Data Security</h2>
+                <p class="policy-text">We implement industry-standard security measures to protect your personal information, including:</p>
+                <ul class="policy-list">
+                    <li>End-to-end encryption for messages</li>
+                    <li>Secure data storage with encryption at rest</li>
+                    <li>Regular security audits and vulnerability testing</li>
+                    <li>Access controls and authentication measures</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms & Conditions Page -->
+    <div id="terms-page" class="page-content">
+        <div class="policy-container">
+            <a href="#" class="back-btn" onclick="showPage('home')">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+            
+            <div class="policy-header">
+                <h1 class="policy-title">Terms & Conditions</h1>
+                <p class="policy-updated">Last Updated: December 1, 2023</p>
+            </div>
+            
+            <div class="policy-section">
+                <h2 class="policy-subtitle"><i class="fas fa-file-contract"></i> Agreement to Terms</h2>
+                <p class="policy-text">By accessing or using Inyeon AI ("the App"), you agree to be bound by these Terms and Conditions ("Terms"). If you disagree with any part of the Terms, you may not access the App.</p>
+            </div>
+            
+            <div class="policy-section">
+                <h2 class="policy-subtitle"><i class="fas fa-user-check"></i> Eligibility Requirements</h2>
+                <p class="policy-text">To use Inyeon AI, you must:</p>
+                <ul class="policy-list">
+                    <li>Be at least 18 years old</li>
+                    <li>Be legally eligible to enter into binding contracts</li>
+                    <li>Not be prohibited from using dating services</li>
+                    <li>Not have been previously removed from Inyeon AI for violations</li>
+                </ul>
+            </div>
+            
+            <div class="policy-section">
+                <h2 class="policy-subtitle"><i class="fas fa-ban"></i> Prohibited Conduct</h2>
+                <p class="policy-text">You agree not to:</p>
+                <ul class="policy-list">
+                    <li><strong>Harass, threaten, or intimidate</strong> other users</li>
+                    <li><strong>Share explicit or pornographic content</strong></li>
+                    <li><strong>Impersonate others</strong> or create fake profiles</li>
+                    <li><strong>Solicit money or financial information</strong> from other users</li>
+                    <li><strong>Engage in catfishing</strong> or misrepresent your identity</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Support Page -->
+    <div id="support-page" class="page-content">
+        <div class="contact-container">
+            <a href="#" class="back-btn" onclick="showPage('home')">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+            
+            <h1 class="policy-title">Support</h1>
+            <p class="policy-text" style="text-align: center; margin-bottom: 40px;">Contact us for any questions or issues. We'll get back to you as soon as possible.</p>
+            
+            <div class="contact-form">
+                <form id="supportForm">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email address" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="problem">What can we help you with?</label>
+                        <textarea id="problem" name="problem" class="form-textarea" placeholder="Describe your issue or question..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        Send Message
+                    </button>
+                    
+                    <div class="success-message" id="successMessage">
+                        Thank you! Your message has been sent. We'll get back to you soon.
+                    </div>
+                    
+                    <div class="error-message" id="errorMessage">
+                        Something went wrong. Please try again or email us directly.
+                    </div>
                 </form>
-                <div class="success-message" id="successMessage1">Thank you! You've been added to the early access list.</div>
-                <div class="error-message" id="errorMessage1">Something went wrong. Please try again.</div>
-                <p class="highlight">Be among the first to experience Inyeon AI</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Inyeon AI -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Why Inyeon AI</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-ban"></i>
-                    </div>
-                    <h3 class="feature-title">Less swiping, more intention</h3>
-                    <p class="feature-description">Move beyond superficial judgments to connections based on shared values and genuine compatibility.</p>
-                </div>
                 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-cloud-moon"></i>
-                    </div>
-                    <h3 class="feature-title">Mood & moment-based matching</h3>
-                    <p class="feature-description">Connect based on how you're feeling right now, not just static profiles and outdated preferences.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-eye-slash"></i>
-                    </div>
-                    <h3 class="feature-title">Blind-date inspired experiences</h3>
-                    <p class="feature-description">Rediscover the excitement of genuine connection before appearance enters the equation.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-comment-dots"></i>
-                    </div>
-                    <h3 class="feature-title">Designed for real conversations</h3>
-                    <p class="feature-description">Thoughtful prompts and meaningful interactions that go beyond "hey" and lead to genuine connection.</p>
+                <div style="margin-top: 40px; text-align: center;">
+                    <p class="policy-text">Or email us directly at:</p>
+                    <a href="mailto:support@inyeonai.com" class="email-link" style="font-size: 1.2rem;">support@inyeonai.com</a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">How It Works</h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3 class="step-title">Choose your mood or intent</h3>
-                    <p class="step-description">Select how you're feeling or what you're looking for in this moment.</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3 class="step-title">Get matched naturally</h3>
-                    <p class="step-description">Connect with people who share your current mindset and intentions.</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3 class="step-title">Start meaningful conversations</h3>
-                    <p class="step-description">Engage in authentic dialogue with thoughtfully matched connections.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Early Access -->
-    <section class="section">
-        <div class="container">
-            <div class="early-access">
-                <h2>Be Among The First</h2>
-                <p>Join our early access list to be notified when Inyeon AI launches. Experience meaningful connections before anyone else.</p>
-                
-                <form id="earlyAccessForm2" class="cta-form">
-                    <input type="email" name="email" class="email-input" placeholder="Your email address" required>
-                    <button type="submit" class="submit-btn">Join the early access list</button>
-                </form>
-                <div class="success-message" id="successMessage2">Thank you! You've been added to the early access list.</div>
-                <div class="error-message" id="errorMessage2">Something went wrong. Please try again.</div>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-logo">Inyeon<span>AI</span></div>
-            <p class="footer-text">Meaningful connections through mood, intent, and destiny.</p>
-            <div class="platform-badge">Launching soon on Android</div>
-            <p class="footer-text" style="margin-top: 30px;">&copy; 2023 inyeonai.com. All rights reserved.</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Inyeon AI</h3>
+                    <p style="color: var(--medium-gray); margin-bottom: 15px;">Meaningful connections through mood, intent, and destiny.</p>
+                    <div class="platform-badge" style="margin-top: 10px;">
+                        <i class="fab fa-android"></i> Android App
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Explore</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="showPage('home')">Home</a></li>
+                        <li><a href="#" onclick="scrollToSection('how-it-works')">How It Works</a></li>
+                        <li><a href="#" onclick="showPage('support')">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="showPage('privacy')">Privacy Policy</a></li>
+                        <li><a href="#" onclick="showPage('terms')">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="showPage('support')">Contact Support</a></li>
+                        <li><a href="mailto:support@inyeonai.com">Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 Inyeon AI. All rights reserved.
+            </div>
         </div>
     </footer>
 
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyXVng0Yx5cPtimSLiK6XGs4CEUUUVqZENOSbSob9AQihQB14YVHA4PiSA8dOLW9PgH/exec'
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
         
-        // Handle both forms
-        document.addEventListener('DOMContentLoaded', function() {
-            const forms = ['earlyAccessForm1', 'earlyAccessForm2'];
+        // Mobile menu toggle
+        mobileMenuBtn.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.nav-menu') && !event.target.closest('.mobile-menu-btn')) {
+                navMenu.classList.remove('active');
+            }
+        });
+        
+        // Check URL on page load
+        const urlParams = new URLSearchParams(window.location.search);
+        const page = urlParams.get('page');
+        if (page) {
+            showPage(page);
+        }
+        
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', function(event) {
+            const urlParams = new URLSearchParams(window.location.search);
+            const page = urlParams.get('page') || 'home';
+            showPage(page);
+        });
+        
+        // Setup form submission
+        setupSupportForm();
+    });
+    
+    // Navigation functions
+    function showPage(pageName) {
+        // Hide all pages
+        document.querySelectorAll('.page-content').forEach(page => {
+            page.classList.remove('active');
+        });
+        
+        // Show the selected page
+        const pageElement = document.getElementById(pageName + '-page');
+        if (pageElement) {
+            pageElement.classList.add('active');
+        }
+        
+        // Update URL without reloading
+        const newUrl = pageName === 'home' 
+            ? window.location.pathname 
+            : `${window.location.pathname}?page=${pageName}`;
+        history.pushState({page: pageName}, '', newUrl);
+        
+        // Close mobile menu
+        document.getElementById('navMenu').classList.remove('active');
+        
+        // Scroll to top
+        window.scrollTo(0, 0);
+    }
+    
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            // If we're not on home page, go to home page first
+            const currentPage = document.querySelector('.page-content.active');
+            if (currentPage.id !== 'home-page') {
+                showPage('home');
+                // Wait for page transition then scroll
+                setTimeout(() => {
+                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            } else {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+        
+        // Close mobile menu
+        document.getElementById('navMenu').classList.remove('active');
+    }
+    
+    function downloadApp() {
+        // Replace with your actual app download link
+        window.open('https://play.google.com/store/apps/details?id=com.example.inyeonai', '_blank');
+        
+        // Close mobile menu
+        document.getElementById('navMenu').classList.remove('active');
+    }
+    
+    // Support form setup
+    function setupSupportForm() {
+        const form = document.getElementById('supportForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+        
+        if (!form) return;
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
             
-            forms.forEach(formId => {
-                const form = document.getElementById(formId);
-                const submitBtn = form.querySelector('.submit-btn');
-                const successMessage = document.getElementById(`successMessage${formId.slice(-1)}`);
-                const errorMessage = document.getElementById(`errorMessage${formId.slice(-1)}`);
-                const emailInput = form.querySelector('.email-input');
+            // Reset messages
+            successMessage.style.display = 'none';
+            errorMessage.style.display = 'none';
+            
+            // Show loading state
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            // Get form data
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                problem: formData.get('problem')
+            };
+            
+            // REPLACE THIS WITH YOUR GOOGLE SHEETS SCRIPT URL
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzYJcZNAhBuCLszC88N86EfTGcIFvl2ZNQcJou_TV81_lCUQuSWFkH-W1VYmJ2JMr9r/exec';
+            
+            // Send to Google Sheets
+            fetch(scriptURL, {
+                method: 'POST',
+                mode: 'no-cors', // Important for Google Apps Script
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(() => {
+                // Since we use no-cors, we can't read the response
+                // But we assume success if the request went through
+                successMessage.style.display = 'block';
+                form.reset();
                 
-                form.addEventListener('submit', e => {
-                    e.preventDefault();
-                    
-                    // Reset messages
+                // Hide success message after 5 seconds
+                setTimeout(() => {
                     successMessage.style.display = 'none';
+                }, 5000);
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                errorMessage.style.display = 'block';
+                
+                // Hide error message after 5 seconds
+                setTimeout(() => {
                     errorMessage.style.display = 'none';
-                    
-                    // Disable button and show loading state
-                    const originalText = submitBtn.textContent;
-                    submitBtn.textContent = 'Processing...';
-                    submitBtn.disabled = true;
-                    
-                    // Submit to Google Sheet
-                    fetch(scriptURL, { 
-                        method: 'POST', 
-                        body: new FormData(form)
-                    })
-                    .then(response => {
-                        if (response.ok) {
-                            // Show success message
-                            successMessage.style.display = 'block';
-                            // Clear form
-                            emailInput.value = '';
-                            
-                            // Hide success message after 5 seconds
-                            setTimeout(() => {
-                                successMessage.style.display = 'none';
-                            }, 5000);
-                        } else {
-                            throw new Error('Network response was not ok');
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error!', error.message);
-                        errorMessage.style.display = 'block';
-                        
-                        // Hide error message after 5 seconds
-                        setTimeout(() => {
-                            errorMessage.style.display = 'none';
-                        }, 5000);
-                    })
-                    .finally(() => {
-                        // Reset button
-                        submitBtn.textContent = originalText;
-                        submitBtn.disabled = false;
-                    });
-                });
+                }, 5000);
+            })
+            .finally(() => {
+                // Reset button
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
             });
         });
-    </script>
-    <script type="text/javascript">
-    (function (l) {
-      if (l.search[1] === "/") {
-        var decoded = l.search
-          .slice(1)
-          .split("&")
-          .map(function (s) {
-            return s.replace(/~and~/g, "&");
-          })
-          .join("?");
-        window.history.replaceState(
-          null,
-          null,
-          l.pathname.slice(0, -1) + decoded + l.hash
-        );
-      }
-    })(window.location);
-  </script>
+    }
+    
+    // Close mobile menu on resize if window becomes larger
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            document.getElementById('navMenu').classList.remove('active');
+        }
+    });
+</script>
 </body>
 </html>
