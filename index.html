@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inyeon AI – Meaningful Connections</title>
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" type="/favicon.ico">
-    <link rel="apple-touch-icon" href="/app-logo.jpg">
-    <!-- SEO -->
-    <meta name="description" content="Inyeon AI helps you build meaningful connections — not endless swiping. Discover people who truly align with you.">
-    <!-- Open Graph (WhatsApp, LinkedIn, Google) -->
-    <meta property="og:title" content="Inyeon AI – Meaningful Connections">
-    <meta property="og:description" content="Meaningful connections, not endless swiping.">
-    <meta property="og:image" content="https://www.inyeonai.com/app-logo.jpg">
-    <meta property="og:url" content="https://www.inyeonai.com">
-    <meta property="og:type" content="website">
-    <!-- Twitter Preview -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Inyeon AI">
-    <meta name="twitter:description" content="Meaningful connections, not endless swiping.">
-    <meta name="twitter:image" content="https://www.inyeonai.com/app-logo.jpg">
-    <!-- Fonts & Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-   
-    <style>
+   <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Inyeon AI – Meaningful Connections</title>
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" type="/favicon.ico">
+<link rel="apple-touch-icon" href="/app-logo.jpg">
+
+<!-- SEO -->
+<meta name="description" content="Inyeon AI helps you build meaningful connections — not endless swiping. Discover people who truly align with you.">
+
+<!-- Open Graph (WhatsApp, LinkedIn, Google) -->
+<meta property="og:title" content="Inyeon AI – Meaningful Connections">
+<meta property="og:description" content="Meaningful connections, not endless swiping.">
+<meta property="og:image" content="https://www.inyeonai.com/app-logo.jpg">
+<meta property="og:url" content="https://www.inyeonai.com">
+<meta property="og:type" content="website">
+
+<!-- Twitter Preview -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Inyeon AI">
+<meta name="twitter:description" content="Meaningful connections, not endless swiping.">
+<meta name="twitter:image" content="https://www.inyeonai.com/app-logo.jpg">
+
+<!-- Fonts & Icons -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <style>
         * {
             margin: 0;
             padding: 0;
@@ -730,7 +735,7 @@
         <div class="container">
             <div class="header-content">
                 <a href="#" class="logo-container" onclick="showPage('home')">
-                    <img src="/app-logo.jpg" alt="Inyeon AI Logo" class="logo-image">
+                    <img src="app-logo.jpg" alt="Inyeon AI Logo" class="logo-image">
                     <div class="logo-text">Inyeon<span>AI</span></div>
                 </a>
                 
@@ -1054,8 +1059,142 @@
                 <strong>Email:</strong> support@inyeonai.com
             </p>
         </div>
+        <div class="open-source-section" onclick="showPage('open-source')" style="cursor:pointer;">
+            <h2 class="policy-subtitle">
+                <i class="fas fa-envelope"></i> How Inyeon Ai Works ?
+            </h2>
+            <p class="policy-text">
+                Open Source Libraries and Data Attributions
+            </p>
+        </div>
+
     </div>
     </div>
+    <div id="open-source-page" class="page-content">
+    <div class="policy-container">
+        <a href="#" class="back-btn" onclick="showPage('home')">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+
+        <div class="policy-header">
+            <h1 class="policy-title">Open Source Libraries and Data Attributions</h1>
+            <p class="policy-updated">Last Updated: January 2026</p>
+        </div>
+
+        <div class="policy-section">
+            <p class="policy-text">
+                Inyeon Ai uses open source software to build a reliable and secure experience. 
+                We thank the open source community for making this possible.
+            </p>
+        </div>
+
+        <div class="policy-section">
+            <h2 class="policy-subtitle">
+                <i class="fas fa-code"></i> Libraries Used in This App
+            </h2>
+            <p class="policy-text">
+                The following open source libraries are used in Inyeon Ai, based on the complete 
+                dependency list included in the Android build.
+            </p>
+        </div>
+
+        <div class="policy-section">
+            <h2 class="policy-subtitle">
+                <i class="fas fa-file-contract"></i> Apache License 2.0
+            </h2>
+            <ul class="policy-list">
+                <li>AndroidX Libraries (Activity, AppCompat, Lifecycle, Navigation, Room, WorkManager, CameraX, Media3, RecyclerView, ViewPager, ConstraintLayout, Security, Emoji, Credentials, etc.)</li>
+                <li>Google Play Services (Auth, Ads, Wallet, Maps, Location, Identity, Measurement, SafetyNet, FIDO, Tasks, Basement, Base, Stats, AppSet)</li>
+                <li>Firebase SDK (Analytics, Auth, Firestore, Realtime Database, Messaging, Functions, Dynamic Links, Installations, App Check, Encoders)</li>
+                <li>Google APIs & Clients (Google HTTP Client, OAuth Client, Drive API, Identity Services)</li>
+                <li>Material Components for Android</li>
+                <li>Android Billing Client</li>
+                <li>Google User Messaging Platform (UMP)</li>
+                <li>Google Play Integrity API</li>
+                <li>Smack (XMPP) libraries including OMEMO, Signal, TCP, IM, Extensions, Experimental modules</li>
+                <li>gRPC libraries (Core, Stub, API, Android, OkHttp, Protobuf Lite)</li>
+                <li>OkHttp, Retrofit, Okio</li>
+                <li>Guava (including ListenableFuture & FailureAccess)</li>
+                <li>JetBrains Kotlin (Stdlib, BOM, Annotations)</li>
+                <li>Kotlin Coroutines</li>
+                <li>Volley Networking Library</li>
+                <li>Timber Logging Library</li>
+                <li>Lottie Animation Library</li>
+                <li>Razorpay Android SDK</li>
+                <li>Tink Cryptography Library</li>
+                <li>AndroidX Profile Installer</li>
+                <li>AndroidX Startup Runtime</li>
+                <li>AndroidX Core Utilities</li>
+            </ul>
+        </div>
+
+        <div class="policy-section">
+            <h2 class="policy-subtitle">
+                <i class="fas fa-file-contract"></i> MIT License
+            </h2>
+            <ul class="policy-list">
+                <li>Facebook Fresco (Image Pipeline, UI, Animated Formats, Vito, Drawee)</li>
+                <li>Facebook SoLoader</li>
+                <li>Glide & Glide Transformations</li>
+                <li>Brotli Decoder</li>
+                <li>UCrop Image Cropper</li>
+                <li>CardStackView</li>
+                <li>Amplituda Audio Visualization</li>
+                <li>CircleIndicator</li>
+                <li>SwipeLayout</li>
+                <li>HSLuv Color Library</li>
+            </ul>
+        </div>
+
+        <div class="policy-section">
+            <h2 class="policy-subtitle">
+                <i class="fas fa-file-contract"></i> BSD / Similar Permissive Licenses
+            </h2>
+            <ul class="policy-list">
+                <li>MiniDNS</li>
+                <li>JSR-305</li>
+                <li>Checker Framework Qualifiers</li>
+                <li>Animal Sniffer Annotations</li>
+                <li>PerfMark API</li>
+                <li>J2ObjC Annotations</li>
+                <li>Error Prone Annotations</li>
+                <li>OpenCensus</li>
+                <li>Apache Commons Codec</li>
+                <li>Apache Commons IO</li>
+            </ul>
+        </div>
+
+        <div class="policy-section">
+            <h2 class="policy-subtitle">
+                <i class="fas fa-file-contract"></i> Other Permissive Licenses
+            </h2>
+            <ul class="policy-list">
+                <li>Signal Protocol (Java)</li>
+                <li>Curve25519 Java</li>
+                <li>Javax Inject</li>
+            </ul>
+        </div>
+
+        <div class="policy-section">
+            <h2 class="policy-subtitle">
+                <i class="fas fa-external-link-alt"></i> License Texts
+            </h2>
+            <ul class="policy-list">
+                <li>Apache License 2.0: <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">https://www.apache.org/licenses/LICENSE-2.0</a></li>
+                <li>MIT License: <a href="https://opensource.org/licenses/MIT" target="_blank">https://opensource.org/licenses/MIT</a></li>
+                <li>BSD Licenses: <a href="https://opensource.org/licenses/BSD-3-Clause" target="_blank">https://opensource.org/licenses/BSD-3-Clause</a></li>
+            </ul>
+        </div>
+
+        <div class="policy-section">
+            <p class="policy-text">
+                This attribution page is generated based on the complete dependency list used in the 
+                Inyeon Ai Android application and is intended to comply with Google Play open source 
+                attribution requirements.
+            </p>
+        </div>
+    </div>
+</div>
 
 
     <!-- Footer -->
@@ -1085,6 +1224,7 @@
                         <li><a href="#" onclick="showPage('privacy')">Privacy Policy</a></li>
                         <li><a href="#" onclick="showPage('terms')">Terms & Conditions</a></li>
                         <li><a href="#" onclick="showPage('account-management')">Account Management</a></li>
+                    
                     </ul>
                 </div>
                 
@@ -1268,6 +1408,8 @@
             document.getElementById('navMenu').classList.remove('active');
         }
     });
+    
+
 </script>
 </body>
 </html>
