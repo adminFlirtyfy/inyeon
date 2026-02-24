@@ -1,1415 +1,570 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inyeon AI – Meaningful Connections</title>
 
-<title>Inyeon AI – Meaningful Connections</title>
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/app-logo.jpg">
 
-<!-- Favicon -->
-<link rel="icon" href="/favicon.ico" type="/favicon.ico">
-<link rel="apple-touch-icon" href="/app-logo.jpg">
+    <!-- SEO / Meta -->
+    <meta name="description" content="Inyeon AI helps you build meaningful connections — not endless swiping. Discover people who truly align with you.">
+    <meta property="og:title" content="Inyeon AI – Meaningful Connections">
+    <meta property="og:description" content="Meaningful connections, not endless swiping.">
+    <meta property="og:image" content="https://www.inyeonai.com/app-logo.jpg">
+    <meta property="og:url" content="https://www.inyeonai.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Inyeon AI">
+    <meta name="twitter:description" content="Meaningful connections, not endless swiping.">
+    <meta name="twitter:image" content="https://www.inyeonai.com/app-logo.jpg">
 
-<!-- SEO -->
-<meta name="description" content="Inyeon AI helps you build meaningful connections — not endless swiping. Discover people who truly align with you.">
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<!-- Open Graph (WhatsApp, LinkedIn, Google) -->
-<meta property="og:title" content="Inyeon AI – Meaningful Connections">
-<meta property="og:description" content="Meaningful connections, not endless swiping.">
-<meta property="og:image" content="https://www.inyeonai.com/app-logo.jpg">
-<meta property="og:url" content="https://www.inyeonai.com">
-<meta property="og:type" content="website">
-
-<!-- Twitter Preview -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Inyeon AI">
-<meta name="twitter:description" content="Meaningful connections, not endless swiping.">
-<meta name="twitter:image" content="https://www.inyeonai.com/app-logo.jpg">
-
-<!-- Fonts & Icons -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-   <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+    <style>
+        /* === GLOBAL STYLES === */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --primary-black: #111111;
-            --secondary-black: #1a1a1a;
-            --light-black: #2a2a2a;
-            --pure-white: #ffffff;
-            --off-white: #f8f8f8;
-            --light-gray: #e0e0e0;
-            --medium-gray: #888888;
-            --dark-gray: #444444;
-            --gradient-start: rgba(255,255,255,0.05);
-            --gradient-end: rgba(255,255,255,0);
-            --accent-color: #7c3aed;
-            --danger-color: #ef4444;
-            --success-color: #10b981;
+            --primary-black: #111111; --secondary-black: #1a1a1a; --light-black: #2a2a2a;
+            --pure-white: #ffffff; --off-white: #f8f8f8; --light-gray: #e0e0e0;
+            --medium-gray: #888888; --dark-gray: #444444;
+            --gradient-start: rgba(255,255,255,0.05); --gradient-end: rgba(255,255,255,0);
+            --accent-color: #7c3aed; --danger-color: #ef4444; --success-color: #10b981;
         }
-        
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--primary-black);
-            color: var(--pure-white);
-            line-height: 1.6;
-            overflow-x: hidden;
+            font-family: 'Inter', sans-serif; background-color: var(--primary-black);
+            color: var(--pure-white); line-height: 1.6; overflow-x: hidden;
         }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
         /* Header */
         header {
-            padding: 20px 0;
-            border-bottom: 1px solid var(--dark-gray);
-            position: sticky;
-            top: 0;
-            background-color: var(--primary-black);
-            z-index: 1000;
+            padding: 20px 0; border-bottom: 1px solid var(--dark-gray);
+            position: sticky; top: 0; background-color: var(--primary-black); z-index: 1000;
         }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
         .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
+            display: flex; align-items: center; gap: 12px; text-decoration: none;
         }
-        
         .logo-image {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, var(--accent-color), #a855f7);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--pure-white);
-            font-size: 20px;
-            font-weight: 700;
+            width: 40px; height: 40px; background: linear-gradient(135deg, var(--accent-color), #a855f7);
+            border-radius: 12px; display: flex; align-items: center; justify-content: center;
+            color: var(--pure-white); font-size: 20px; font-weight: 700;
         }
-        
-        .logo-text {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--pure-white);
-            letter-spacing: -0.5px;
-        }
-        
-        .logo-text span {
-            font-weight: 300;
-            color: var(--accent-color);
-        }
-        
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-        
-        .nav-link {
-            color: var(--medium-gray);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-link:hover {
-            color: var(--pure-white);
-        }
-        
+        .logo-text { font-size: 24px; font-weight: 700; color: var(--pure-white); letter-spacing: -0.5px; }
+        .logo-text span { font-weight: 300; color: var(--accent-color); }
+        .nav-menu { display: flex; align-items: center; gap: 30px; }
+        .nav-link { color: var(--medium-gray); text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
+        .nav-link:hover { color: var(--pure-white); }
         .download-btn-header {
-            background: var(--accent-color);
-            color: var(--pure-white);
-            padding: 12px 28px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
+            background: var(--accent-color); color: var(--pure-white); padding: 12px 28px;
+            border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;
+            border: none; cursor: pointer;
         }
-        
-        .download-btn-header:hover {
-            background: #6d28d9;
-            transform: translateY(-2px);
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--pure-white);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        /* Hero Section */
-        .hero {
-            padding: 100px 0 120px;
-            text-align: center;
-            position: relative;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 24px;
-            letter-spacing: -1px;
-            background: linear-gradient(to right, var(--pure-white), var(--light-gray));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--medium-gray);
-            margin-bottom: 48px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .download-btn-hero {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: var(--accent-color);
-            color: var(--pure-white);
-            padding: 20px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            margin-bottom: 30px;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .download-btn-hero:hover {
-            background: #6d28d9;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.3);
-        }
-        
-        .download-btn-hero i {
-            font-size: 1.3rem;
-        }
-        
-        /* Features Section */
-        .section {
-            padding: 100px 0;
-        }
-        
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 60px;
-            letter-spacing: -0.5px;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-        }
-        
-        .feature-card {
-            background: var(--secondary-black);
-            border-radius: 16px;
-            padding: 40px 30px;
-            text-align: center;
-            border: 1px solid var(--dark-gray);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--medium-gray);
-        }
-        
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 24px;
-            color: var(--pure-white);
-        }
-        
-        .feature-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-        
-        .feature-description {
-            color: var(--medium-gray);
-        }
-        
-        /* How It Works */
-        .steps {
-            display: flex;
-            justify-content: space-between;
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-        }
-        
-        .steps::before {
-            content: '';
-            position: absolute;
-            top: 40px;
-            left: 10%;
-            right: 10%;
-            height: 1px;
-            background: var(--dark-gray);
-            z-index: 1;
-        }
-        
-        .step {
-            text-align: center;
-            position: relative;
-            z-index: 2;
-            width: 30%;
-        }
-        
-        .step-number {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: var(--secondary-black);
-            border: 1px solid var(--dark-gray);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin: 0 auto 30px;
-            color: var(--pure-white);
-        }
-        
-        .step-title {
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-        
-        .step-description {
-            color: var(--medium-gray);
-        }
-        
-        /* Policy Pages */
-        .policy-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 80px 20px 120px;
-        }
-        
-        .policy-header {
-            margin-bottom: 50px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid var(--dark-gray);
-        }
-        
-        .policy-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            letter-spacing: -0.5px;
-        }
-        
-        .policy-updated {
-            color: var(--medium-gray);
-            font-size: 1rem;
-        }
-        
-        .policy-section {
-            margin-bottom: 50px;
-            padding: 30px;
-            background: var(--secondary-black);
-            border-radius: 12px;
-            border: 1px solid var(--dark-gray);
-        }
-        
-        .policy-subtitle {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: var(--pure-white);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .policy-subtitle i {
-            color: var(--accent-color);
-        }
-        
-        .policy-text {
-            color: var(--medium-gray);
-            margin-bottom: 20px;
-            font-size: 1.05rem;
-        }
-        
-        .policy-list {
-            color: var(--medium-gray);
-            margin-left: 25px;
-            margin-bottom: 20px;
-        }
-        
-        .policy-list li {
-            margin-bottom: 12px;
-            line-height: 1.7;
-        }
-        
-        .warning-box {
-            background: rgba(239, 68, 68, 0.1);
-            border-left: 4px solid var(--danger-color);
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-        
-        .warning-box .policy-text {
-            color: #fecaca;
-            margin-bottom: 0;
-        }
-        
-        .important-note {
-            background: rgba(124, 58, 237, 0.1);
-            border-left: 4px solid var(--accent-color);
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-        
-        .important-note .policy-text {
-            color: #ddd6fe;
-            margin-bottom: 0;
-        }
-        
-        .back-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--medium-gray);
-            text-decoration: none;
-            font-weight: 500;
-            margin-bottom: 30px;
-            transition: color 0.3s ease;
-            padding: 10px 20px;
-            border-radius: 8px;
-            background: var(--secondary-black);
-            border: 1px solid var(--dark-gray);
-        }
-        
-        .back-btn:hover {
-            color: var(--pure-white);
-            border-color: var(--medium-gray);
-        }
-        
-        /* Contact Form */
-        .contact-container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 80px 20px 120px;
-        }
-        
-        .contact-form {
-            background: var(--secondary-black);
-            border-radius: 16px;
-            padding: 40px;
-            border: 1px solid var(--dark-gray);
-        }
-        
-        .form-group {
-            margin-bottom: 25px;
-        }
-        
-        .form-label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: var(--pure-white);
-        }
-        
-        .form-input, .form-textarea {
-            width: 100%;
-            padding: 15px;
-            background: var(--primary-black);
-            border: 1px solid var(--dark-gray);
-            border-radius: 8px;
-            color: var(--pure-white);
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-        
-        .form-input:focus, .form-textarea:focus {
-            outline: none;
-            border-color: var(--accent-color);
-        }
-        
-        .form-textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-        
-        .submit-btn {
-            background: var(--accent-color);
-            color: var(--pure-white);
-            padding: 16px 32px;
-            border-radius: 50px;
-            border: none;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-            margin-top: 10px;
-        }
-        
-        .submit-btn:hover {
-            background: #6d28d9;
-            transform: translateY(-2px);
-        }
-        
-        .submit-btn:disabled {
-            background: var(--medium-gray);
-            cursor: not-allowed;
-            transform: none;
-        }
-        
-        .success-message {
-            color: var(--success-color);
-            font-weight: 600;
-            margin-top: 20px;
-            text-align: center;
-            display: none;
-        }
-        
-        .error-message {
-            color: var(--danger-color);
-            font-weight: 600;
-            margin-top: 20px;
-            text-align: center;
-            display: none;
-        }
-        
-        .email-link {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
-        .email-link:hover {
-            text-decoration: underline;
-        }
-        
+        .download-btn-header:hover { background: #6d28d9; transform: translateY(-2px); }
+        .mobile-menu-btn { display: none; background: none; border: none; color: var(--pure-white); font-size: 1.5rem; cursor: pointer; }
+
         /* Footer */
         footer {
-            padding: 60px 0 40px;
-            border-top: 1px solid var(--dark-gray);
-            margin-top: 60px;
+            padding: 60px 0 40px; border-top: 1px solid var(--dark-gray); margin-top: 60px;
         }
-        
         .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px;
         }
-        
-        .footer-col h3 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: var(--pure-white);
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-        
-        .footer-links a {
-            color: var(--medium-gray);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: var(--pure-white);
-        }
-        
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--pure-white);
-            text-decoration: none;
-            margin-bottom: 20px;
-        }
-        
-        .footer-logo-image {
-            width: 36px;
-            height: 36px;
-            background: linear-gradient(135deg, var(--accent-color), #a855f7);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 18px;
-        }
-        
-        .copyright {
-            text-align: center;
-            color: var(--medium-gray);
-            padding-top: 30px;
-            border-top: 1px solid var(--dark-gray);
-        }
-        
+        .footer-col h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; color: var(--pure-white); }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: var(--medium-gray); text-decoration: none; transition: color 0.3s ease; }
+        .footer-links a:hover { color: var(--pure-white); }
+        .copyright { text-align: center; color: var(--medium-gray); padding-top: 30px; border-top: 1px solid var(--dark-gray); }
         .platform-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--light-black);
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-weight: 600;
+            display: inline-flex; align-items: center; gap: 10px; background: var(--light-black);
+            padding: 12px 24px; border-radius: 50px; font-weight: 600; border: 1px solid var(--dark-gray);
+        }
+
+        /* Page visibility */
+        .page-content { display: none; }
+        .page-content.active { display: block; animation: fadeIn 0.3s ease; }
+        @keyframes fadeIn { from { opacity: 0.3; } to { opacity: 1; } }
+
+        /* Homepage sections */
+        .hero { padding: 100px 0 120px; text-align: center; }
+        .hero-content { max-width: 800px; margin: 0 auto; }
+        .hero h1 {
+            font-size: 3.5rem; font-weight: 700; line-height: 1.1; margin-bottom: 24px; letter-spacing: -1px;
+            background: linear-gradient(to right, var(--pure-white), var(--light-gray));
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+        }
+        .hero p { font-size: 1.25rem; color: var(--medium-gray); margin-bottom: 48px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .download-btn-hero {
+            display: inline-flex; align-items: center; gap: 12px; background: var(--accent-color);
+            color: var(--pure-white); padding: 20px 40px; border-radius: 50px; text-decoration: none;
+            font-size: 1.1rem; font-weight: 600; transition: all 0.3s ease; margin-bottom: 30px; border: none; cursor: pointer;
+        }
+        .download-btn-hero:hover { background: #6d28d9; transform: translateY(-3px); box-shadow: 0 10px 25px rgba(124,58,237,0.3); }
+        .section { padding: 100px 0; }
+        .section-title { font-size: 2.5rem; font-weight: 700; text-align: center; margin-bottom: 60px; letter-spacing: -0.5px; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+        .feature-card {
+            background: var(--secondary-black); border-radius: 16px; padding: 40px 30px; text-align: center;
+            border: 1px solid var(--dark-gray); transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .feature-card:hover { transform: translateY(-10px); border-color: var(--medium-gray); }
+        .feature-icon { font-size: 2.5rem; margin-bottom: 24px; color: var(--pure-white); }
+        .feature-title { font-size: 1.5rem; font-weight: 600; margin-bottom: 16px; }
+        .feature-description { color: var(--medium-gray); }
+
+        /* Steps */
+        .steps { display: flex; justify-content: space-between; max-width: 900px; margin: 0 auto; position: relative; }
+        .steps::before {
+            content: ''; position: absolute; top: 40px; left: 10%; right: 10%; height: 1px;
+            background: var(--dark-gray); z-index: 1;
+        }
+        .step { text-align: center; position: relative; z-index: 2; width: 30%; }
+        .step-number {
+            width: 80px; height: 80px; border-radius: 50%; background: var(--secondary-black);
+            border: 1px solid var(--dark-gray); display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem; font-weight: 700; margin: 0 auto 30px; color: var(--pure-white);
+        }
+        .step-title { font-size: 1.4rem; font-weight: 600; margin-bottom: 16px; }
+        .step-description { color: var(--medium-gray); }
+
+        /* Policy/Support pages styling */
+        .policy-container { max-width: 900px; margin: 0 auto; padding: 80px 20px 120px; }
+        .policy-header { margin-bottom: 50px; padding-bottom: 30px; border-bottom: 1px solid var(--dark-gray); }
+        .policy-title { font-size: 2.5rem; font-weight: 700; margin-bottom: 10px; letter-spacing: -0.5px; }
+        .policy-updated { color: var(--medium-gray); }
+        .policy-section {
+            margin-bottom: 50px; padding: 30px; background: var(--secondary-black); border-radius: 12px;
             border: 1px solid var(--dark-gray);
         }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .section {
-                padding: 70px 0;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .steps {
-                flex-direction: column;
-                gap: 50px;
-            }
-            
-            .steps::before {
-                display: none;
-            }
-            
-            .step {
-                width: 100%;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .nav-menu {
-                display: none;
-                position: absolute;
-                top: 80px;
-                left: 0;
-                right: 0;
-                background: var(--secondary-black);
-                padding: 20px;
-                flex-direction: column;
-                gap: 20px;
-                border-bottom: 1px solid var(--dark-gray);
-                z-index: 100;
-            }
-            
-            .nav-menu.active {
-                display: flex;
-            }
-            
-            .policy-section {
-                padding: 20px;
-            }
-            
-            .contact-form {
-                padding: 30px 20px;
-            }
+        .policy-subtitle { font-size: 1.5rem; font-weight: 600; margin-bottom: 20px; display: flex; gap: 10px; }
+        .policy-subtitle i { color: var(--accent-color); }
+        .policy-text { color: var(--medium-gray); margin-bottom: 20px; font-size: 1.05rem; }
+        .policy-list { color: var(--medium-gray); margin-left: 25px; margin-bottom: 20px; }
+
+        .back-btn {
+            display: inline-flex; align-items: center; gap: 8px; color: var(--medium-gray);
+            text-decoration: none; font-weight: 500; margin-bottom: 30px; transition: color 0.3s ease;
+            padding: 10px 20px; border-radius: 8px; background: var(--secondary-black);
+            border: 1px solid var(--dark-gray);
         }
-        
+        .back-btn:hover { color: var(--pure-white); border-color: var(--medium-gray); }
+
+        /* Contact form */
+        .contact-container { max-width: 600px; margin: 0 auto; padding: 80px 20px 120px; }
+        .contact-form { background: var(--secondary-black); border-radius: 16px; padding: 40px; border: 1px solid var(--dark-gray); }
+        .form-group { margin-bottom: 25px; }
+        .form-label { display: block; margin-bottom: 8px; font-weight: 500; color: var(--pure-white); }
+        .form-input, .form-textarea {
+            width: 100%; padding: 15px; background: var(--primary-black); border: 1px solid var(--dark-gray);
+            border-radius: 8px; color: var(--pure-white); font-size: 1rem; transition: border-color 0.3s ease;
+        }
+        .form-input:focus, .form-textarea:focus { outline: none; border-color: var(--accent-color); }
+        .form-textarea { min-height: 150px; resize: vertical; }
+        .submit-btn {
+            background: var(--accent-color); color: var(--pure-white); padding: 16px 32px; border-radius: 50px;
+            border: none; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; width: 100%; margin-top: 10px;
+        }
+        .submit-btn:hover { background: #6d28d9; transform: translateY(-2px); }
+        .success-message { color: var(--success-color); font-weight: 600; margin-top: 20px; text-align: center; display: none; }
+        .error-message { color: var(--danger-color); font-weight: 600; margin-top: 20px; text-align: center; display: none; }
+        .email-link { color: var(--accent-color); text-decoration: none; font-weight: 600; }
+
         /* Illustration */
         .illustration {
-            margin: 40px auto;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
+            margin: 40px auto; width: 200px; height: 200px; border-radius: 50%;
             background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
+            display: flex; align-items: center; justify-content: center; position: relative;
         }
-        
         .illustration::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            border: 1px solid var(--dark-gray);
-            animation: pulse 4s infinite ease-in-out;
+            content: ''; position: absolute; width: 100%; height: 100%; border-radius: 50%;
+            border: 1px solid var(--dark-gray); animation: pulse 4s infinite ease-in-out;
         }
-        
-        .illustration i {
-            font-size: 5rem;
-            color: var(--pure-white);
-        }
-        
+        .illustration i { font-size: 5rem; color: var(--pure-white); }
         @keyframes pulse {
             0% { transform: scale(1); opacity: 0.8; }
             50% { transform: scale(1.05); opacity: 0.4; }
             100% { transform: scale(1); opacity: 0.8; }
         }
-        
-        /* Utility */
-        .highlight {
-            color: var(--pure-white);
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .section { padding: 70px 0; }
+            .section-title { font-size: 2rem; }
+            .steps { flex-direction: column; gap: 50px; }
+            .steps::before { display: none; }
+            .step { width: 100%; }
+            .mobile-menu-btn { display: block; }
+            .nav-menu {
+                display: none; position: absolute; top: 80px; left: 0; right: 0;
+                background: var(--secondary-black); padding: 20px; flex-direction: column; gap: 20px;
+                border-bottom: 1px solid var(--dark-gray); z-index: 100;
+            }
+            .nav-menu.active { display: flex; }
+            .policy-section { padding: 20px; }
+            .contact-form { padding: 30px 20px; }
+        }
+
+        /* Legal notice banner - with REAL static links for Google */
+        .legal-notice {
+            margin-top: 40px;
+            padding: 20px;
+            background: var(--secondary-black);
+            border-radius: 12px;
+            border: 1px solid var(--dark-gray);
+            text-align: center;
+        }
+        .legal-notice a {
+            color: var(--accent-color);
+            text-decoration: none;
             font-weight: 600;
+            margin: 0 15px;
+        }
+        .legal-notice a:hover {
+            text-decoration: underline;
         }
         
-        .hide {
-            display: none !important;
-        }
-        
-        .show {
-            display: block !important;
-        }
-        
-        /* Page Content */
-        .page-content {
-            display: none;
-        }
-        
-        .page-content.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        /* Hide JavaScript navigation from crawlers but keep them functional */
+        .js-link {
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
+    <!-- ========== HEADER ========== -->
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo-container" onclick="showPage('home')">
-                    <img src="app-logo.jpg" alt="Inyeon AI Logo" class="logo-image">
+                <a href="/" class="logo-container" onclick="showPage('home'); return false;">
+                    <div class="logo-image">i</div>
                     <div class="logo-text">Inyeon<span>AI</span></div>
                 </a>
-                
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
-                
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><i class="fas fa-bars"></i></button>
                 <div class="nav-menu" id="navMenu">
-                    <a href="#" class="nav-link" onclick="showPage('home')">Home</a>
-                    <a href="#how-it-works" class="nav-link" onclick="scrollToSection('how-it-works')">How It Works</a>
-                    <a href="#" class="nav-link" onclick="showPage('support')">Support</a>
-                    <a href="#" class="nav-link" onclick="showPage('privacy')">Privacy</a>
-                    <a href="#" class="nav-link" onclick="showPage('terms')">Terms</a>
-                    <a href="#download" class="download-btn-header" onclick="downloadApp()">
-                        <i class="fab fa-android"></i> Download App
-                    </a>
+                    <a href="/" class="nav-link" onclick="showPage('home'); return false;">Home</a>
+                    <a href="/#how-it-works" class="nav-link" onclick="scrollToSection('how-it-works'); return false;">How It Works</a>
+                    <a href="/support" class="nav-link" onclick="showPage('support'); return false;">Support</a>
+                    <a href="/privacy" class="nav-link" onclick="showPage('privacy'); return false;">Privacy</a>
+                    <a href="/terms" class="nav-link" onclick="showPage('terms'); return false;">Terms</a>
+                    <a href="#" class="download-btn-header" onclick="downloadApp(); return false;"><i class="fab fa-android"></i> Download App</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Home Page -->
+    <!-- ========== HOME PAGE ========== -->
     <div id="home-page" class="page-content active">
-        <!-- Hero Section -->
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <div class="illustration">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h1>Destiny doesn’t swipe,<br>It discovers you</h1>
+                    <div class="illustration"><i class="fas fa-heart"></i></div>
+                    <h1>Destiny doesn't swipe,<br>It discovers you</h1>
                     <p>Inyeon AI helps you meet through moods, intent, and real connection. Experience the next generation of social discovery focused on what truly matters.</p>
-                    
-                    <a href="#download" class="download-btn-hero" onclick="downloadApp()">
-                        <i class="fab fa-android"></i> Download for Android
-                    </a>
-                    
-                    <div class="platform-badge">
-                        <i class="fab fa-android"></i> Available on Android
-                    </div>
+                    <a href="#" class="download-btn-hero" onclick="downloadApp(); return false;"><i class="fab fa-android"></i> Download for Android</a>
+                    <div class="platform-badge"><i class="fab fa-android"></i> Available on Android</div>
                 </div>
             </div>
         </section>
 
-        <!-- Why Inyeon AI -->
         <section class="section">
             <div class="container">
                 <h2 class="section-title">Why Inyeon AI</h2>
                 <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-ban"></i>
-                        </div>
-                        <h3 class="feature-title">Less swiping, more intention</h3>
-                        <p class="feature-description">Move beyond superficial judgments to connections based on shared values and genuine compatibility.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-cloud-moon"></i>
-                        </div>
-                        <h3 class="feature-title">Mood & moment-based matching</h3>
-                        <p class="feature-description">Connect based on how you're feeling right now, not just static profiles and outdated preferences.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-eye-slash"></i>
-                        </div>
-                        <h3 class="feature-title">Blind-date inspired experiences</h3>
-                        <p class="feature-description">Rediscover the excitement of genuine connection before appearance enters the equation.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-comment-dots"></i>
-                        </div>
-                        <h3 class="feature-title">Designed for real conversations</h3>
-                        <p class="feature-description">Thoughtful prompts and meaningful interactions that go beyond "hey" and lead to genuine connection.</p>
-                    </div>
+                    <div class="feature-card"><div class="feature-icon"><i class="fas fa-ban"></i></div><h3 class="feature-title">Less swiping, more intention</h3><p class="feature-description">Move beyond superficial judgments to connections based on shared values and genuine compatibility.</p></div>
+                    <div class="feature-card"><div class="feature-icon"><i class="fas fa-cloud-moon"></i></div><h3 class="feature-title">Mood & moment-based matching</h3><p class="feature-description">Connect based on how you're feeling right now, not just static profiles.</p></div>
+                    <div class="feature-card"><div class="feature-icon"><i class="fas fa-eye-slash"></i></div><h3 class="feature-title">Blind-date inspired experiences</h3><p class="feature-description">Rediscover the excitement of genuine connection before appearance enters the equation.</p></div>
+                    <div class="feature-card"><div class="feature-icon"><i class="fas fa-comment-dots"></i></div><h3 class="feature-title">Designed for real conversations</h3><p class="feature-description">Thoughtful prompts and meaningful interactions that go beyond "hey".</p></div>
                 </div>
             </div>
         </section>
 
-        <!-- How It Works -->
         <section class="section" id="how-it-works">
             <div class="container">
                 <h2 class="section-title">How It Works</h2>
                 <div class="steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h3 class="step-title">Choose your mood or intent</h3>
-                        <p class="step-description">Select how you're feeling or what you're looking for in this moment.</p>
-                    </div>
-                    
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h3 class="step-title">Get matched naturally</h3>
-                        <p class="step-description">Connect with people who share your current mindset and intentions.</p>
-                    </div>
-                    
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h3 class="step-title">Start meaningful conversations</h3>
-                        <p class="step-description">Engage in authentic dialogue with thoughtfully matched connections.</p>
-                    </div>
+                    <div class="step"><div class="step-number">1</div><h3 class="step-title">Choose your mood or intent</h3><p class="step-description">Select how you're feeling or what you're looking for in this moment.</p></div>
+                    <div class="step"><div class="step-number">2</div><h3 class="step-title">Get matched naturally</h3><p class="step-description">Connect with people who share your current mindset and intentions.</p></div>
+                    <div class="step"><div class="step-number">3</div><h3 class="step-title">Start meaningful conversations</h3><p class="step-description">Engage in authentic dialogue with thoughtfully matched connections.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CRITICAL FIX FOR GOOGLE: REAL STATIC LINKS ========== -->
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="legal-notice">
+                    <i class="fas fa-shield-alt" style="color: var(--accent-color); margin-right: 10px;"></i>
+                    <strong>Your privacy matters:</strong> Read our 
+                    <a href="/privacy" class="legal-link">Privacy Policy</a> 
+                    and 
+                    <a href="/terms" class="legal-link">Terms of Service</a>.
+                    <!-- These are REAL HTML links with href values - Google can crawl them! -->
+                    <!-- The JavaScript will intercept the click for smooth SPA navigation -->
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- Privacy Policy Page -->
+    <!-- ========== PRIVACY PAGE ========== -->
     <div id="privacy-page" class="page-content">
         <div class="policy-container">
-            <a href="#" class="back-btn" onclick="showPage('home')">
-                <i class="fas fa-arrow-left"></i> Back to Home
-            </a>
-            
-            <div class="policy-header">
-                <h1 class="policy-title">Privacy Policy</h1>
-                <p class="policy-updated">Last Updated: December 1, 2023</p>
-            </div>
-            
-            <div class="policy-section">
-                <h2 class="policy-subtitle"><i class="fas fa-user-shield"></i> Introduction</h2>
-                <p class="policy-text">Welcome to Inyeon AI ("we," "our," or "us"). We operate a dating and social connection app designed to facilitate meaningful relationships. Your privacy is critically important to us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our dating app.</p>
-            </div>
-            
-            <div class="policy-section">
-                <h2 class="policy-subtitle"><i class="fas fa-database"></i> Information We Collect</h2>
-                
-                <h3 style="color: var(--light-gray); margin: 20px 0 10px;">Personal Information</h3>
-                <p class="policy-text">When you create an account, we collect:</p>
-                <ul class="policy-list">
-                    <li>Email address, phone number, and password</li>
-                    <li>Your name, age, gender, and dating preferences</li>
-                    <li>Profile photos and videos</li>
-                    <li>Biographical information and interests</li>
-                    <li>Location data (with your permission)</li>
-                </ul>
-            </div>
-            
-            <div class="policy-section">
-                <h2 class="policy-subtitle"><i class="fas fa-cogs"></i> How We Use Your Information</h2>
-                <p class="policy-text">We use your information to:</p>
-                <ul class="policy-list">
-                    <li><strong>Create and manage your dating profile</strong></li>
-                    <li><strong>Match you with compatible users</strong> based on mood, intent, and preferences</li>
-                    <li><strong>Facilitate conversations</strong> and connections between users</li>
-                    <li><strong>Improve our matching algorithms</strong> and user experience</li>
-                    <li><strong>Ensure safety</strong> and prevent fraudulent activity</li>
-                </ul>
-            </div>
-            
-            <div class="policy-section">
-                <h2 class="policy-subtitle"><i class="fas fa-lock"></i> Data Security</h2>
-                <p class="policy-text">We implement industry-standard security measures to protect your personal information, including:</p>
-                <ul class="policy-list">
-                    <li>End-to-end encryption for messages</li>
-                    <li>Secure data storage with encryption at rest</li>
-                    <li>Regular security audits and vulnerability testing</li>
-                    <li>Access controls and authentication measures</li>
-                </ul>
-            </div>
+            <a href="/" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            <div class="policy-header"><h1 class="policy-title">Privacy Policy</h1><p class="policy-updated">Last Updated: December 1, 2023</p></div>
+            <div class="policy-section"><h2 class="policy-subtitle"><i class="fas fa-user-shield"></i> Introduction</h2><p class="policy-text">Welcome to Inyeon AI ("we," "our," or "us"). We operate a dating and social connection app designed to facilitate meaningful relationships. Your privacy is critically important to us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our dating app.</p></div>
+            <div class="policy-section"><h2 class="policy-subtitle"><i class="fas fa-database"></i> Information We Collect</h2><p class="policy-text">When you create an account, we collect: email address, phone number, password, name, age, gender, dating preferences, profile photos, biographical information, and location data (with permission).</p></div>
+            <div class="policy-section"><h2 class="policy-subtitle"><i class="fas fa-cogs"></i> How We Use Your Information</h2><p class="policy-text">We use your information to create/manage your profile, match you with compatible users, facilitate conversations, improve our algorithms, and ensure safety.</p></div>
+            <div class="policy-section"><h2 class="policy-subtitle"><i class="fas fa-lock"></i> Data Security</h2><p class="policy-text">We implement end-to-end encryption for messages, secure data storage, regular security audits, and access controls.</p></div>
         </div>
     </div>
 
-    <!-- Terms & Conditions Page -->
+    <!-- ========== TERMS PAGE ========== -->
     <div id="terms-page" class="page-content">
         <div class="policy-container">
-            <a href="#" class="back-btn" onclick="showPage('home')">
-                <i class="fas fa-arrow-left"></i> Back to Home
-            </a>
-            
-            <div class="policy-header">
-                <h1 class="policy-title">Terms & Conditions</h1>
-                <p class="policy-updated">Last Updated: December 1, 2023</p>
-            </div>
-            
-            <div class="policy-section">
-                <h2 class="policy-subtitle"><i class="fas fa-file-contract"></i> Agreement to Terms</h2>
-                <p class="policy-text">By accessing or using Inyeon AI ("the App"), you agree to be bound by these Terms and Conditions ("Terms"). If you disagree with any part of the Terms, you may not access the App.</p>
-            </div>
-            
-            <div class="policy-section">
-                <h2 class="policy-subtitle"><i class="fas fa-user-check"></i> Eligibility Requirements</h2>
-                <p class="policy-text">To use Inyeon AI, you must:</p>
-                <ul class="policy-list">
-                    <li>Be at least 18 years old</li>
-                    <li>Be legally eligible to enter into binding contracts</li>
-                    <li>Not be prohibited from using dating services</li>
-                    <li>Not have been previously removed from Inyeon AI for violations</li>
-                </ul>
-            </div>
-            
-            <div class="policy-section">
-                <h2 class="policy-subtitle"><i class="fas fa-ban"></i> Prohibited Conduct</h2>
-                <p class="policy-text">You agree not to:</p>
-                <ul class="policy-list">
-                    <li><strong>Harass, threaten, or intimidate</strong> other users</li>
-                    <li><strong>Share explicit or pornographic content</strong></li>
-                    <li><strong>Impersonate others</strong> or create fake profiles</li>
-                    <li><strong>Solicit money or financial information</strong> from other users</li>
-                    <li><strong>Engage in catfishing</strong> or misrepresent your identity</li>
-                </ul>
-            </div>
+            <a href="/" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            <div class="policy-header"><h1 class="policy-title">Terms & Conditions</h1><p class="policy-updated">Last Updated: December 1, 2023</p></div>
+            <div class="policy-section"><h2 class="policy-subtitle"><i class="fas fa-file-contract"></i> Agreement to Terms</h2><p class="policy-text">By accessing or using Inyeon AI, you agree to be bound by these Terms.</p></div>
+            <div class="policy-section"><h2 class="policy-subtitle"><i class="fas fa-user-check"></i> Eligibility</h2><p class="policy-text">You must be at least 18 years old to use this service.</p></div>
+            <div class="policy-section"><h2 class="policy-subtitle"><i class="fas fa-ban"></i> Prohibited Conduct</h2><p class="policy-text">Harassment, sharing explicit content, impersonation, soliciting money, or misrepresentation is strictly forbidden.</p></div>
         </div>
     </div>
 
-    <!-- Support Page -->
+    <!-- ========== SUPPORT PAGE ========== -->
     <div id="support-page" class="page-content">
         <div class="contact-container">
-            <a href="#" class="back-btn" onclick="showPage('home')">
-                <i class="fas fa-arrow-left"></i> Back to Home
-            </a>
-            
+            <a href="/" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
             <h1 class="policy-title">Support</h1>
-            <p class="policy-text" style="text-align: center; margin-bottom: 40px;">Contact us for any questions or issues. We'll get back to you as soon as possible.</p>
-            
+            <p class="policy-text" style="text-align:center; margin-bottom:40px;">Contact us for any questions or issues.</p>
             <div class="contact-form">
                 <form id="supportForm">
-                    <div class="form-group">
-                        <label class="form-label" for="name">Full Name</label>
-                        <input type="text" id="name" name="name" class="form-input" placeholder="Enter your full name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="form-label" for="email">Email Address</label>
-                        <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email address" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="form-label" for="problem">What can we help you with?</label>
-                        <textarea id="problem" name="problem" class="form-textarea" placeholder="Describe your issue or question..." required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn" id="submitBtn">
-                        Send Message
-                    </button>
-                    
-                    <div class="success-message" id="successMessage">
-                        Thank you! Your message has been sent. We'll get back to you soon.
-                    </div>
-                    
-                    <div class="error-message" id="errorMessage">
-                        Something went wrong. Please try again or email us directly.
-                    </div>
+                    <div class="form-group"><label class="form-label" for="name">Full Name</label><input type="text" id="name" name="name" class="form-input" required></div>
+                    <div class="form-group"><label class="form-label" for="email">Email</label><input type="email" id="email" name="email" class="form-input" required></div>
+                    <div class="form-group"><label class="form-label" for="problem">Message</label><textarea id="problem" name="problem" class="form-textarea" required></textarea></div>
+                    <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
+                    <div class="success-message" id="successMessage">Thank you! We'll get back to you soon.</div>
+                    <div class="error-message" id="errorMessage">Something went wrong. Email us directly: support@inyeonai.com</div>
                 </form>
-                
-                <div style="margin-top: 40px; text-align: center;">
-                    <p class="policy-text">Or email us directly at:</p>
-                    <a href="mailto:support@inyeonai.com" class="email-link" style="font-size: 1.2rem;">support@inyeonai.com</a>
-                </div>
             </div>
         </div>
     </div>
-     <!-- Account Page -->
+
+    <!-- ========== ACCOUNT MANAGEMENT PAGE ========== -->
     <div id="account-management-page" class="page-content">
         <div class="policy-container">
-            <a href="#" class="back-btn" onclick="showPage('home')">
-            <i class="fas fa-arrow-left"></i> Back to Home</a>
-
-        <div class="policy-header">
-            <h1 class="policy-title">Account Management</h1>
-            <p class="policy-updated">Last Updated: January 2026</p>
+            <a href="/" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            <div class="policy-header"><h1 class="policy-title">Account Management</h1><p class="policy-updated">Last Updated: January 2026</p></div>
+            <div class="policy-section"><h2 class="policy-subtitle"><i class="fas fa-user-cog"></i> Managing Your Account</h2><p class="policy-text">You can update or delete your account at any time directly from within the app.</p></div>
+            <div class="policy-section"><h2 class="policy-subtitle"><i class="fas fa-trash-alt"></i> Delete Account</h2><p class="policy-text">Go to Settings → Delete Account to permanently remove your profile and data.</p></div>
         </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-user-cog"></i> Managing Your Account
-            </h2>
-            <p class="policy-text">
-                Inyeon AI gives you full control over your account and personal data.
-                You can update or delete your account at any time directly from within the app.
-            </p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-edit"></i> Update Account Information
-            </h2>
-            <p class="policy-text">
-                You can update your profile details, photos, preferences, and other
-                personal information from the app settings.
-            </p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-trash-alt"></i> Delete Account
-            </h2>
-            <p class="policy-text">
-                You may permanently delete your account at any time by following these steps:
-            </p>
-
-            <ul class="policy-list">
-                <li>Open the Inyeon AI app</li>
-                <li>Go to <strong>Settings</strong></li>
-                <li>Select <strong>Delete Account</strong></li>
-                <li>Confirm your choice</li>
-            </ul>
-
-            <p class="policy-text">
-                Once deleted:
-            </p>
-            <ul class="policy-list">
-                <li>Your profile, photos, and personal information are permanently removed</li>
-                <li>Your chats and matches are deleted</li>
-                <li>Some data may be retained temporarily for legal or security reasons (up to 30 days)</li>
-            </ul>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-envelope"></i> Need Help?
-            </h2>
-            <p class="policy-text">
-                If you experience any issues managing or deleting your account, you can contact us at:
-            </p>
-            <p class="policy-text">
-                <strong>Email:</strong> support@inyeonai.com
-            </p>
-        </div>
-        <div class="open-source-section" onclick="showPage('open-source')" style="cursor:pointer;">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-envelope"></i> How Inyeon Ai Works ?
-            </h2>
-            <p class="policy-text">
-                Open Source Libraries and Data Attributions
-            </p>
-        </div>
-
     </div>
-    </div>
+
+    <!-- ========== OPEN SOURCE PAGE ========== -->
     <div id="open-source-page" class="page-content">
-    <div class="policy-container">
-        <a href="#" class="back-btn" onclick="showPage('home')">
-            <i class="fas fa-arrow-left"></i> Back to Home
-        </a>
-
-        <div class="policy-header">
-            <h1 class="policy-title">Open Source Libraries and Data Attributions</h1>
-            <p class="policy-updated">Last Updated: January 2026</p>
-        </div>
-
-        <div class="policy-section">
-            <p class="policy-text">
-                Inyeon Ai uses open source software to build a reliable and secure experience. 
-                We thank the open source community for making this possible.
-            </p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-code"></i> Libraries Used in This App
-            </h2>
-            <p class="policy-text">
-                The following open source libraries are used in Inyeon Ai, based on the complete 
-                dependency list included in the Android build.
-            </p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-file-contract"></i> Apache License 2.0
-            </h2>
-            <ul class="policy-list">
-                <li>AndroidX Libraries (Activity, AppCompat, Lifecycle, Navigation, Room, WorkManager, CameraX, Media3, RecyclerView, ViewPager, ConstraintLayout, Security, Emoji, Credentials, etc.)</li>
-                <li>Google Play Services (Auth, Ads, Wallet, Maps, Location, Identity, Measurement, SafetyNet, FIDO, Tasks, Basement, Base, Stats, AppSet)</li>
-                <li>Firebase SDK (Analytics, Auth, Firestore, Realtime Database, Messaging, Functions, Dynamic Links, Installations, App Check, Encoders)</li>
-                <li>Google APIs & Clients (Google HTTP Client, OAuth Client, Drive API, Identity Services)</li>
-                <li>Material Components for Android</li>
-                <li>Android Billing Client</li>
-                <li>Google User Messaging Platform (UMP)</li>
-                <li>Google Play Integrity API</li>
-                <li>Smack (XMPP) libraries including OMEMO, Signal, TCP, IM, Extensions, Experimental modules</li>
-                <li>gRPC libraries (Core, Stub, API, Android, OkHttp, Protobuf Lite)</li>
-                <li>OkHttp, Retrofit, Okio</li>
-                <li>Guava (including ListenableFuture & FailureAccess)</li>
-                <li>JetBrains Kotlin (Stdlib, BOM, Annotations)</li>
-                <li>Kotlin Coroutines</li>
-                <li>Volley Networking Library</li>
-                <li>Timber Logging Library</li>
-                <li>Lottie Animation Library</li>
-                <li>Razorpay Android SDK</li>
-                <li>Tink Cryptography Library</li>
-                <li>AndroidX Profile Installer</li>
-                <li>AndroidX Startup Runtime</li>
-                <li>AndroidX Core Utilities</li>
-            </ul>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-file-contract"></i> MIT License
-            </h2>
-            <ul class="policy-list">
-                <li>Facebook Fresco (Image Pipeline, UI, Animated Formats, Vito, Drawee)</li>
-                <li>Facebook SoLoader</li>
-                <li>Glide & Glide Transformations</li>
-                <li>Brotli Decoder</li>
-                <li>UCrop Image Cropper</li>
-                <li>CardStackView</li>
-                <li>Amplituda Audio Visualization</li>
-                <li>CircleIndicator</li>
-                <li>SwipeLayout</li>
-                <li>HSLuv Color Library</li>
-            </ul>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-file-contract"></i> BSD / Similar Permissive Licenses
-            </h2>
-            <ul class="policy-list">
-                <li>MiniDNS</li>
-                <li>JSR-305</li>
-                <li>Checker Framework Qualifiers</li>
-                <li>Animal Sniffer Annotations</li>
-                <li>PerfMark API</li>
-                <li>J2ObjC Annotations</li>
-                <li>Error Prone Annotations</li>
-                <li>OpenCensus</li>
-                <li>Apache Commons Codec</li>
-                <li>Apache Commons IO</li>
-            </ul>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-file-contract"></i> Other Permissive Licenses
-            </h2>
-            <ul class="policy-list">
-                <li>Signal Protocol (Java)</li>
-                <li>Curve25519 Java</li>
-                <li>Javax Inject</li>
-            </ul>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-external-link-alt"></i> License Texts
-            </h2>
-            <ul class="policy-list">
-                <li>Apache License 2.0: <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">https://www.apache.org/licenses/LICENSE-2.0</a></li>
-                <li>MIT License: <a href="https://opensource.org/licenses/MIT" target="_blank">https://opensource.org/licenses/MIT</a></li>
-                <li>BSD Licenses: <a href="https://opensource.org/licenses/BSD-3-Clause" target="_blank">https://opensource.org/licenses/BSD-3-Clause</a></li>
-            </ul>
-        </div>
-
-        <div class="policy-section">
-            <p class="policy-text">
-                This attribution page is generated based on the complete dependency list used in the 
-                Inyeon Ai Android application and is intended to comply with Google Play open source 
-                attribution requirements.
-            </p>
+        <div class="policy-container">
+            <a href="/" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            <div class="policy-header"><h1 class="policy-title">Open Source Libraries</h1><p class="policy-updated">Last Updated: January 2026</p></div>
+            <div class="policy-section"><p class="policy-text">Inyeon AI uses open source software including AndroidX, Firebase, Material Components, OkHttp, Kotlin Coroutines, and many others under Apache 2.0, MIT, and BSD licenses.</p></div>
         </div>
     </div>
-</div>
 
-
-    <!-- Footer -->
+    <!-- ========== FOOTER ========== -->
     <footer>
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Inyeon AI</h3>
-                    <p style="color: var(--medium-gray); margin-bottom: 15px;">Meaningful connections through mood, intent, and destiny.</p>
-                    <div class="platform-badge" style="margin-top: 10px;">
-                        <i class="fab fa-android"></i> Android App
-                    </div>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Explore</h3>
-                    <ul class="footer-links">
-                        <li><a href="#" onclick="showPage('home')">Home</a></li>
-                        <li><a href="#" onclick="scrollToSection('how-it-works')">How It Works</a></li>
-                        <li><a href="#" onclick="showPage('support')">Support</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Legal</h3>
-                    <ul class="footer-links">
-                        <li><a href="#" onclick="showPage('privacy')">Privacy Policy</a></li>
-                        <li><a href="#" onclick="showPage('terms')">Terms & Conditions</a></li>
-                        <li><a href="#" onclick="showPage('account-management')">Account Management</a></li>
-                    
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Contact</h3>
-                    <ul class="footer-links">
-                        <li><a href="#" onclick="showPage('support')">Contact Support</a></li>
-                        <li><a href="mailto:support@inyeonai.com">Email Us</a></li>
-                    </ul>
-                </div>
+                <div class="footer-col"><h3>Inyeon AI</h3><p style="color: var(--medium-gray); margin-bottom:15px;">Meaningful connections through mood, intent, and destiny.</p><div class="platform-badge"><i class="fab fa-android"></i> Android App</div></div>
+                <div class="footer-col"><h3>Explore</h3><ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/#how-it-works">How It Works</a></li>
+                    <li><a href="/support">Support</a></li>
+                </ul></div>
+                <div class="footer-col"><h3>Legal</h3><ul class="footer-links">
+                    <!-- REAL STATIC LINKS in footer too -->
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/terms">Terms & Conditions</a></li>
+                    <li><a href="/account-management">Account Management</a></li>
+                </ul></div>
+                <div class="footer-col"><h3>Contact</h3><ul class="footer-links">
+                    <li><a href="/support">Contact Support</a></li>
+                    <li><a href="mailto:support@inyeonai.com">Email Us</a></li>
+                </ul></div>
             </div>
-            
-            <div class="copyright">
-                &copy; 2023 Inyeon AI. All rights reserved.
-            </div>
+            <div class="copyright">&copy; 2023 Inyeon AI. All rights reserved.</div>
         </div>
     </footer>
 
     <script>
-    // Mobile menu toggle
-    document.addEventListener('DOMContentLoaded', function() {
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navMenu = document.getElementById('navMenu');
-        
-        // Mobile menu toggle
-        mobileMenuBtn.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-        });
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!event.target.closest('.nav-menu') && !event.target.closest('.mobile-menu-btn')) {
-                navMenu.classList.remove('active');
+        (function() {
+            // Mobile menu
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const navMenu = document.getElementById('navMenu');
+            if (mobileBtn) {
+                mobileBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    navMenu.classList.toggle('active');
+                });
+                document.addEventListener('click', function(event) {
+                    if (!event.target.closest('.nav-menu') && !event.target.closest('.mobile-menu-btn')) {
+                        navMenu.classList.remove('active');
+                    }
+                });
             }
-        });
-        
-        // Check URL on page load
-        const urlParams = new URLSearchParams(window.location.search);
-        const page = urlParams.get('page');
-        if (page) {
-            showPage(page);
-        }
-        
-        // Handle browser back/forward buttons
-        window.addEventListener('popstate', function(event) {
-            const urlParams = new URLSearchParams(window.location.search);
-            const page = urlParams.get('page') || 'home';
-            showPage(page);
-        });
-        
-        // Setup form submission
-        setupSupportForm();
-    });
-    
-    // Navigation functions
-    function showPage(pageName) {
-        // Hide all pages
-        document.querySelectorAll('.page-content').forEach(page => {
-            page.classList.remove('active');
-        });
-        
-        // Show the selected page
-        const pageElement = document.getElementById(pageName + '-page');
-        if (pageElement) {
-            pageElement.classList.add('active');
-        }
-        
-        // Update URL without reloading
-        const newUrl = pageName === 'home' 
-            ? window.location.pathname 
-            : `${window.location.pathname}?page=${pageName}`;
-        history.pushState({page: pageName}, '', newUrl);
-        
-        // Close mobile menu
-        document.getElementById('navMenu').classList.remove('active');
-        
-        // Scroll to top
-        window.scrollTo(0, 0);
-    }
-    
-    function scrollToSection(sectionId) {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            // If we're not on home page, go to home page first
-            const currentPage = document.querySelector('.page-content.active');
-            if (currentPage.id !== 'home-page') {
-                showPage('home');
-                // Wait for page transition then scroll
-                setTimeout(() => {
-                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 100);
-            } else {
-                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
-        
-        // Close mobile menu
-        document.getElementById('navMenu').classList.remove('active');
-    }
-    
-    function downloadApp() {
-        // Replace with your actual app download link
-        window.open('https://play.google.com/store/apps/details?id=com.example.inyeonai', '_blank');
-        
-        // Close mobile menu
-        document.getElementById('navMenu').classList.remove('active');
-    }
-    
-    // Support form setup
-    function setupSupportForm() {
-        const form = document.getElementById('supportForm');
-        const submitBtn = document.getElementById('submitBtn');
-        const successMessage = document.getElementById('successMessage');
-        const errorMessage = document.getElementById('errorMessage');
-        
-        if (!form) return;
-        
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Reset messages
-            successMessage.style.display = 'none';
-            errorMessage.style.display = 'none';
-            
-            // Show loading state
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-            
-            // Get form data
-            const formData = new FormData(form);
-            const data = {
-                name: formData.get('name'),
-                email: formData.get('email'),
-                problem: formData.get('problem')
-            };
-            
-            // REPLACE THIS WITH YOUR GOOGLE SHEETS SCRIPT URL
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbzYJcZNAhBuCLszC88N86EfTGcIFvl2ZNQcJou_TV81_lCUQuSWFkH-W1VYmJ2JMr9r/exec';
-            
-            // Send to Google Sheets
-            fetch(scriptURL, {
-                method: 'POST',
-                mode: 'no-cors', // Important for Google Apps Script
-                body: JSON.stringify(data),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })
-            .then(() => {
-                // Since we use no-cors, we can't read the response
-                // But we assume success if the request went through
-                successMessage.style.display = 'block';
-                form.reset();
-                
-                // Hide success message after 5 seconds
-                setTimeout(() => {
-                    successMessage.style.display = 'none';
-                }, 5000);
-            })
-            .catch(error => {
-                console.error('Error!', error.message);
-                errorMessage.style.display = 'block';
-                
-                // Hide error message after 5 seconds
-                setTimeout(() => {
-                    errorMessage.style.display = 'none';
-                }, 5000);
-            })
-            .finally(() => {
-                // Reset button
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            });
-        });
-    }
-    
-    // Close mobile menu on resize if window becomes larger
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
-            document.getElementById('navMenu').classList.remove('active');
-        }
-    });
-    
 
-</script>
+            // Page navigation - intercept clicks on links with href but provide smooth SPA navigation
+            window.showPage = function(pageName) {
+                document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
+                const target = document.getElementById(pageName + '-page');
+                if (target) target.classList.add('active');
+
+                // Update URL without reload
+                const url = pageName === 'home' ? '/' : '/' + pageName;
+                history.pushState({ page: pageName }, '', url);
+
+                navMenu.classList.remove('active');
+                window.scrollTo(0, 0);
+            };
+
+            // Handle all link clicks for SPA navigation
+            document.addEventListener('click', function(e) {
+                // Find closest anchor tag
+                const link = e.target.closest('a');
+                if (!link) return;
+                
+                const href = link.getAttribute('href');
+                if (!href) return;
+                
+                // Handle internal navigation for SPA
+                if (href.startsWith('/')) {
+                    e.preventDefault();
+                    
+                    if (href === '/') {
+                        showPage('home');
+                    } else if (href === '/privacy') {
+                        showPage('privacy');
+                    } else if (href === '/terms') {
+                        showPage('terms');
+                    } else if (href === '/support') {
+                        showPage('support');
+                    } else if (href === '/account-management') {
+                        showPage('account-management');
+                    } else if (href === '/open-source') {
+                        showPage('open-source');
+                    } else if (href.includes('#')) {
+                        // Handle anchor links
+                        const [path, hash] = href.split('#');
+                        if (path === '/' || path === '') {
+                            showPage('home');
+                            setTimeout(() => {
+                                const section = document.getElementById(hash);
+                                if (section) section.scrollIntoView({ behavior: 'smooth' });
+                            }, 150);
+                        }
+                    }
+                }
+                // External links (mailto:, http://, etc.) work normally
+            });
+
+            window.scrollToSection = function(sectionId) {
+                const currentActive = document.querySelector('.page-content.active');
+                if (!currentActive || currentActive.id !== 'home-page') {
+                    showPage('home');
+                    setTimeout(() => {
+                        const section = document.getElementById(sectionId);
+                        if (section) section.scrollIntoView({ behavior: 'smooth' });
+                    }, 150);
+                } else {
+                    const section = document.getElementById(sectionId);
+                    if (section) section.scrollIntoView({ behavior: 'smooth' });
+                }
+                navMenu.classList.remove('active');
+            };
+
+            window.downloadApp = function() {
+                window.open('https://play.google.com/store/apps/details?id=com.example.inyeonai', '_blank');
+                navMenu.classList.remove('active');
+            };
+
+            // Handle initial load / popstate
+            function initialPage() {
+                const path = window.location.pathname;
+                if (path === '/' || path === '') {
+                    showPage('home');
+                } else if (path === '/privacy') {
+                    showPage('privacy');
+                } else if (path === '/terms') {
+                    showPage('terms');
+                } else if (path === '/support') {
+                    showPage('support');
+                } else if (path === '/account-management') {
+                    showPage('account-management');
+                } else if (path === '/open-source') {
+                    showPage('open-source');
+                } else {
+                    showPage('home');
+                }
+            }
+            
+            window.addEventListener('popstate', function(e) {
+                initialPage();
+            });
+            
+            initialPage();
+
+            // Support form (Google Sheets)
+            const form = document.getElementById('supportForm');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const submitBtn = document.getElementById('submitBtn');
+                    const success = document.getElementById('successMessage');
+                    const error = document.getElementById('errorMessage');
+                    success.style.display = 'none';
+                    error.style.display = 'none';
+
+                    const originalText = submitBtn.textContent;
+                    submitBtn.textContent = 'Sending...';
+                    submitBtn.disabled = true;
+
+                    const data = {
+                        name: document.getElementById('name').value,
+                        email: document.getElementById('email').value,
+                        problem: document.getElementById('problem').value
+                    };
+
+                    const scriptURL = 'https://script.google.com/macros/s/AKfycbzYJcZNAhBuCLszC88N86EfTGcIFvl2ZNQcJou_TV81_lCUQuSWFkH-W1VYmJ2JMr9r/exec';
+
+                    fetch(scriptURL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        body: JSON.stringify(data),
+                        headers: { 'Content-Type': 'application/json' }
+                    })
+                    .then(() => {
+                        success.style.display = 'block';
+                        form.reset();
+                        setTimeout(() => { success.style.display = 'none'; }, 5000);
+                    })
+                    .catch(() => {
+                        error.style.display = 'block';
+                        setTimeout(() => { error.style.display = 'none'; }, 5000);
+                    })
+                    .finally(() => {
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    });
+                });
+            }
+
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) navMenu.classList.remove('active');
+            });
+        })();
+    </script>
 </body>
 </html>
