@@ -14,7 +14,8 @@
     { "src": "/sitemap.xml", "dest": "/public/sitemap.xml" },
     { "src": "/robots.txt", "dest": "/public/robots.txt" },
     { "src": "/app-logo.jpg", "dest": "/public/app-logo.jpg" },
-     { "src": "/favicon.ico", "dest": "/public/favicon.ico" },
+    { "src": "/favicon.ico", "dest": "/public/favicon.ico" },
+    { "src": "/googleaed1d32c1fbbd602.html", "dest": "/googleaed1d32c1fbbd602.html" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
