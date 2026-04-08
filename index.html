@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.inyeonai.com/" />
+    <link rel="canonical" href="https://www.inyeonai.com/" id="canonical-tag">
     <meta name="google-site-verification" content="uAyoyqZtzPR9sAKlY6QLkX_4UBEpAuNjBL0BPU0CCiw" />
     <title>Inyeon AI – AI Dating App for Meaningful Connections</title>
     <script type="application/ld+json"> 
@@ -1225,173 +1225,192 @@
     </footer>
 
     <script>
-        (function() {
-            // Mobile menu
-            const mobileBtn = document.getElementById('mobileMenuBtn');
-            const navMenu = document.getElementById('navMenu');
-            if (mobileBtn) {
-                mobileBtn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    navMenu.classList.toggle('active');
-                });
-                document.addEventListener('click', function(event) {
-                    if (!event.target.closest('.nav-menu') && !event.target.closest('.mobile-menu-btn')) {
-                        navMenu.classList.remove('active');
-                    }
-                });
+    (function() {
+        // Mobile menu
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        if (mobileBtn) {
+            mobileBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('.nav-menu') && !event.target.closest('.mobile-menu-btn')) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        }
+
+        // ✅ Canonical + title map
+        const pageMeta = {
+            'home':               { canonical: 'https://www.inyeonai.com/',                   title: 'Inyeon AI — AI Dating App' },
+            'privacy':            { canonical: 'https://www.inyeonai.com/privacy',            title: 'Privacy Policy — Inyeon AI' },
+            'terms':              { canonical: 'https://www.inyeonai.com/terms',              title: 'Terms & Conditions — Inyeon AI' },
+            'support':            { canonical: 'https://www.inyeonai.com/support',            title: 'Support — Inyeon AI' },
+            'faq':                { canonical: 'https://www.inyeonai.com/faq',                title: 'FAQ — Inyeon AI' },
+            'account-management': { canonical: 'https://www.inyeonai.com/account-management', title: 'Account Management — Inyeon AI' },
+            'open-source':        { canonical: 'https://www.inyeonai.com/open-source',        title: 'Open Source Attributions — Inyeon AI' },
+        };
+
+        // Page navigation
+        window.showPage = function(pageName) {
+            document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
+            const target = document.getElementById(pageName + '-page');
+            if (target) target.classList.add('active');
+
+            // Update URL without reload
+            const url = pageName === 'home' ? '/' : '/' + pageName;
+            history.pushState({ page: pageName }, '', url);
+
+            // ✅ Update canonical tag
+            const meta = pageMeta[pageName] || pageMeta['home'];
+            let canonicalTag = document.getElementById('canonical-tag');
+            if (canonicalTag) {
+                canonicalTag.setAttribute('href', meta.canonical);
             }
 
-            // Page navigation - intercept clicks on links with href but provide smooth SPA navigation
-            window.showPage = function(pageName) {
-                document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
-                const target = document.getElementById(pageName + '-page');
-                if (target) target.classList.add('active');
+            // ✅ Update page title
+            document.title = meta.title;
 
-                // Update URL without reload
-                const url = pageName === 'home' ? '/' : '/' + pageName;
-                history.pushState({ page: pageName }, '', url);
+            navMenu.classList.remove('active');
+            window.scrollTo(0, 0);
+        };
 
-                navMenu.classList.remove('active');
-                window.scrollTo(0, 0);
-            };
-
-            // Handle all link clicks for SPA navigation
-            document.addEventListener('click', function(e) {
-                // Find closest anchor tag
-                const link = e.target.closest('a');
-                if (!link) return;
+        // Handle all link clicks for SPA navigation
+        document.addEventListener('click', function(e) {
+            const link = e.target.closest('a');
+            if (!link) return;
+            
+            const href = link.getAttribute('href');
+            if (!href) return;
+            
+            if (href.startsWith('/')) {
+                e.preventDefault();
                 
-                const href = link.getAttribute('href');
-                if (!href) return;
-                
-                // Handle internal navigation for SPA
-                if (href.startsWith('/')) {
-                    e.preventDefault();
-                    
-                    if (href === '/') {
+                if (href === '/') {
+                    showPage('home');
+                } else if (href === '/privacy') {
+                    showPage('privacy');
+                } else if (href === '/terms') {
+                    showPage('terms');
+                } else if (href === '/support') {
+                    showPage('support');
+                } else if (href === '/faq') {
+                    showPage('faq');
+                } else if (href === '/account-management') {
+                    showPage('account-management');
+                } else if (href === '/open-source') {
+                    showPage('open-source');
+                } else if (href.includes('#')) {
+                    const [path, hash] = href.split('#');
+                    if (path === '/' || path === '') {
                         showPage('home');
-                    } else if (href === '/privacy') {
-                        showPage('privacy');
-                    } else if (href === '/terms') {
-                        showPage('terms');
-                    } else if (href === '/support') {
-                        showPage('support');
-                    } else if (href === '/faq') {
-                        showPage('faq');
-                    }else if (href === '/account-management') {
-                        showPage('account-management');
-                    } else if (href === '/open-source') {
-                        showPage('open-source');
-                    } else if (href.includes('#')) {
-                        // Handle anchor links
-                        const [path, hash] = href.split('#');
-                        if (path === '/' || path === '') {
-                            showPage('home');
-                            setTimeout(() => {
-                                const section = document.getElementById(hash);
-                                if (section) section.scrollIntoView({ behavior: 'smooth' });
-                            }, 150);
-                        }
+                        setTimeout(() => {
+                            const section = document.getElementById(hash);
+                            if (section) section.scrollIntoView({ behavior: 'smooth' });
+                        }, 150);
                     }
                 }
-                // External links (mailto:, http://, etc.) work normally
-            });
+            }
+        });
 
-            window.scrollToSection = function(sectionId) {
-                const currentActive = document.querySelector('.page-content.active');
-                if (!currentActive || currentActive.id !== 'home-page') {
-                    showPage('home');
-                    setTimeout(() => {
-                        const section = document.getElementById(sectionId);
-                        if (section) section.scrollIntoView({ behavior: 'smooth' });
-                    }, 150);
-                } else {
+        window.scrollToSection = function(sectionId) {
+            const currentActive = document.querySelector('.page-content.active');
+            if (!currentActive || currentActive.id !== 'home-page') {
+                showPage('home');
+                setTimeout(() => {
                     const section = document.getElementById(sectionId);
                     if (section) section.scrollIntoView({ behavior: 'smooth' });
-                }
-                navMenu.classList.remove('active');
-            };
-
-            window.downloadApp = function() {
-                window.open('https://play.google.com/store/apps/details?id=com.sandhyanand.flirtyfy', '_blank');
-                navMenu.classList.remove('active');
-            };
-
-            // Handle initial load / popstate
-            function initialPage() {
-                const path = window.location.pathname;
-                if (path === '/' || path === '') {
-                    showPage('home');
-                } else if (path === '/privacy') {
-                    showPage('privacy');
-                } else if (path === '/terms') {
-                    showPage('terms');
-                } else if (path === '/support') {
-                    showPage('support');
-                } else if (path === '/account-management') {
-                    showPage('account-management');
-                } else if (path === '/open-source') {
-                    showPage('open-source');
-                } else {
-                    showPage('home');
-                }
+                }, 150);
+            } else {
+                const section = document.getElementById(sectionId);
+                if (section) section.scrollIntoView({ behavior: 'smooth' });
             }
-            
-            window.addEventListener('popstate', function(e) {
-                initialPage();
-            });
-            
+            navMenu.classList.remove('active');
+        };
+
+        window.downloadApp = function() {
+            window.open('https://play.google.com/store/apps/details?id=com.sandhyanand.flirtyfy', '_blank');
+            navMenu.classList.remove('active');
+        };
+
+        // Handle initial load / popstate
+        function initialPage() {
+            const path = window.location.pathname;
+            if (path === '/' || path === '') {
+                showPage('home');
+            } else if (path === '/privacy') {
+                showPage('privacy');
+            } else if (path === '/terms') {
+                showPage('terms');
+            } else if (path === '/support') {
+                showPage('support');
+            } else if (path === '/faq') {
+                showPage('faq');
+            } else if (path === '/account-management') {
+                showPage('account-management');
+            } else if (path === '/open-source') {
+                showPage('open-source');
+            } else {
+                showPage('home');
+            }
+        }
+        
+        window.addEventListener('popstate', function(e) {
             initialPage();
+        });
+        
+        initialPage();
 
-            // Support form (Google Sheets)
-            const form = document.getElementById('supportForm');
-            if (form) {
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    const submitBtn = document.getElementById('submitBtn');
-                    const success = document.getElementById('successMessage');
-                    const error = document.getElementById('errorMessage');
-                    success.style.display = 'none';
-                    error.style.display = 'none';
+        // Support form (Google Sheets)
+        const form = document.getElementById('supportForm');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const submitBtn = document.getElementById('submitBtn');
+                const success = document.getElementById('successMessage');
+                const error = document.getElementById('errorMessage');
+                success.style.display = 'none';
+                error.style.display = 'none';
 
-                    const originalText = submitBtn.textContent;
-                    submitBtn.textContent = 'Sending...';
-                    submitBtn.disabled = true;
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
 
-                    const data = {
-                        name: document.getElementById('name').value,
-                        email: document.getElementById('email').value,
-                        problem: document.getElementById('problem').value
-                    };
+                const data = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    problem: document.getElementById('problem').value
+                };
 
-                    const scriptURL = 'https://script.google.com/macros/s/AKfycbzYJcZNAhBuCLszC88N86EfTGcIFvl2ZNQcJou_TV81_lCUQuSWFkH-W1VYmJ2JMr9r/exec';
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbzYJcZNAhBuCLszC88N86EfTGcIFvl2ZNQcJou_TV81_lCUQuSWFkH-W1VYmJ2JMr9r/exec';
 
-                    fetch(scriptURL, {
-                        method: 'POST',
-                        mode: 'no-cors',
-                        body: JSON.stringify(data),
-                        headers: { 'Content-Type': 'application/json' }
-                    })
-                    .then(() => {
-                        success.style.display = 'block';
-                        form.reset();
-                        setTimeout(() => { success.style.display = 'none'; }, 5000);
-                    })
-                    .catch(() => {
-                        error.style.display = 'block';
-                        setTimeout(() => { error.style.display = 'none'; }, 5000);
-                    })
-                    .finally(() => {
-                        submitBtn.textContent = originalText;
-                        submitBtn.disabled = false;
-                    });
+                fetch(scriptURL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    body: JSON.stringify(data),
+                    headers: { 'Content-Type': 'application/json' }
+                })
+                .then(() => {
+                    success.style.display = 'block';
+                    form.reset();
+                    setTimeout(() => { success.style.display = 'none'; }, 5000);
+                })
+                .catch(() => {
+                    error.style.display = 'block';
+                    setTimeout(() => { error.style.display = 'none'; }, 5000);
+                })
+                .finally(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
                 });
-            }
-
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768) navMenu.classList.remove('active');
             });
-        })();
+        }
+
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) navMenu.classList.remove('active');
+        });
+    })();
     </script>
 </body>
 </html>
