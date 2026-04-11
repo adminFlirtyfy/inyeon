@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.inyeonai.com/" id="canonical-tag">
+    <!-- Must be blank -->
+    <link rel="canonical" href="" id="canonical-tag">
     <meta name="google-site-verification" content="uAyoyqZtzPR9sAKlY6QLkX_4UBEpAuNjBL0BPU0CCiw" />
     <title>Inyeon AI – AI Dating App for Meaningful Connections</title>
     <script type="application/ld+json"> 
@@ -1243,13 +1244,13 @@
 
         // ✅ Canonical + title map
         const pageMeta = {
-            'home':               { canonical: 'https://www.inyeonai.com/',                   title: 'Inyeon AI — AI Dating App' },
-            'privacy':            { canonical: 'https://www.inyeonai.com/privacy',            title: 'Privacy Policy — Inyeon AI' },
-            'terms':              { canonical: 'https://www.inyeonai.com/terms',              title: 'Terms & Conditions — Inyeon AI' },
-            'support':            { canonical: 'https://www.inyeonai.com/support',            title: 'Support — Inyeon AI' },
-            'faq':                { canonical: 'https://www.inyeonai.com/faq',                title: 'FAQ — Inyeon AI' },
-            'account-management': { canonical: 'https://www.inyeonai.com/account-management', title: 'Account Management — Inyeon AI' },
-            'open-source':        { canonical: 'https://www.inyeonai.com/open-source',        title: 'Open Source Attributions — Inyeon AI' },
+            'home':               { canonical: 'https://www.inyeonai.com/',                   title: 'Inyeon AI – AI Dating App for Meaningful Connections', description: 'Inyeon AI is an AI-powered dating app designed for meaningful connections and serious relationships.', ogUrl: 'https://www.inyeonai.com/' },
+            'privacy':            { canonical: 'https://www.inyeonai.com/privacy',            title: 'Privacy Policy',               description: 'Read the Inyeon AI privacy policy to understand how we protect your data.', ogUrl: 'https://www.inyeonai.com/privacy' },
+            'terms':              { canonical: 'https://www.inyeonai.com/terms',              title: 'Terms & Conditions',            description: 'Read the Inyeon AI terms and conditions of use.', ogUrl: 'https://www.inyeonai.com/terms' },
+            'support':            { canonical: 'https://www.inyeonai.com/support',            title: 'Support',                       description: 'Get help and support for the Inyeon AI dating app.', ogUrl: 'https://www.inyeonai.com/support' },
+            'faq':                { canonical: 'https://www.inyeonai.com/faq',                title: 'What is Inyeon AI?',                           description: 'Frequently asked questions about Inyeon AI.', ogUrl: 'https://www.inyeonai.com/faq' },
+            'account-management': { canonical: 'https://www.inyeonai.com/account-management', title: 'How to Use Inyeon AI ?',            description: 'Manage your Inyeon AI account settings, data, and preferences.', ogUrl: 'https://www.inyeonai.com/account-management' },
+            'open-source':        { canonical: 'https://www.inyeonai.com/open-source',        title: 'Open Source Attributions — Inyeon AI',      description: 'Open source libraries and attributions used in Inyeon AI.', ogUrl: 'https://www.inyeonai.com/open-source' },
         };
 
         // Page navigation
@@ -1274,6 +1275,19 @@
 
             navMenu.classList.remove('active');
             window.scrollTo(0, 0);
+            // Update meta description
+            const descTag = document.querySelector('meta[name="description"]');
+            if (descTag) descTag.setAttribute('content', meta.description);
+
+           // Update OG tags
+           const ogUrl = document.querySelector('meta[property="og:url"]');
+           if (ogUrl) ogUrl.setAttribute('content', meta.ogUrl);
+
+           const ogTitle = document.querySelector('meta[property="og:title"]');
+           if (ogTitle) ogTitle.setAttribute('content', meta.title);
+
+           const ogDesc = document.querySelector('meta[property="og:description"]');
+           if (ogDesc) ogDesc.setAttribute('content', meta.description);
         };
 
         // Handle all link clicks for SPA navigation
