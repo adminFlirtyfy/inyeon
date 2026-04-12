@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow" />
-    <!-- Must be blank -->
-    <link rel="canonical" href="" id="canonical-tag">
+    <link rel="canonical" href="https://www.inyeonai.com/">
     <meta name="google-site-verification" content="uAyoyqZtzPR9sAKlY6QLkX_4UBEpAuNjBL0BPU0CCiw" />
     <title>Inyeon AI – AI Dating App for Meaningful Connections</title>
     <script type="application/ld+json"> 
@@ -26,7 +25,6 @@
     </script>
     <script src='https://www.noupe.com/embed/019d6224bf1971df8b7127754ce3a8224a1f.js'></script>
 
-
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="/app-logo.jpg">
@@ -34,9 +32,9 @@
     <!-- SEO / Meta -->
     <meta name="description" content="Inyeon AI is an AI-powered dating app designed for meaningful connections and serious relationships. It uses personality-based matchmaking, compatibility insights, and privacy-first encrypted chat to help users find genuine partners.">
     <meta property="og:title" content="Inyeon AI – AI Dating App for Meaningful Connections">
-   <meta property="og:description" content="Not just swipes. Find real connections with AI-powered matchmaking.">
+    <meta property="og:description" content="Not just swipes. Find real connections with AI-powered matchmaking.">
     <meta property="og:image" content="https://www.inyeonai.com/app-logo.jpg">
-    <meta property="og:url" content="https://www.inyeonai.com">
+    <meta property="og:url" content="https://www.inyeonai.com/">
     <meta property="og:type" content="website">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -51,7 +49,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* === GLOBAL STYLES === */
+        /* === GLOBAL STYLES (same as original) === */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --primary-black: #111111; --secondary-black: #1a1a1a; --light-black: #2a2a2a;
@@ -110,11 +108,6 @@
             display: inline-flex; align-items: center; gap: 10px; background: var(--light-black);
             padding: 12px 24px; border-radius: 50px; font-weight: 600; border: 1px solid var(--dark-gray);
         }
-
-        /* Page visibility */
-        .page-content { display: none; }
-        .page-content.active { display: block; animation: fadeIn 0.3s ease; }
-        @keyframes fadeIn { from { opacity: 0.3; } to { opacity: 1; } }
 
         /* Homepage sections */
         .hero { padding: 100px 0 120px; text-align: center; }
@@ -236,36 +229,13 @@
             .contact-form { padding: 30px 20px; }
         }
 
-        /* Legal notice banner - with REAL static links for Google */
-        .legal-notice {
-            margin-top: 40px;
-            padding: 20px;
-            background: var(--secondary-black);
-            border-radius: 12px;
-            border: 1px solid var(--dark-gray);
-            text-align: center;
-        }
-        .legal-notice a {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 600;
-            margin: 0 15px;
-        }
-        .legal-notice a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Hide JavaScript navigation from crawlers but keep them functional */
-        .js-link {
-            cursor: pointer;
-        }
+        /* Additional styles from original */
         .faq-list {
            display: flex;
            flex-direction: column;
            gap: 20px;
            margin-top: 10px;
         }
-
         .faq-item {
             border: 1px solid rgba(255,255,255,0.08);
             border-radius: 12px;
@@ -273,11 +243,9 @@
             background: rgba(255,255,255,0.03);
             transition: border-color 0.2s ease;
         }
-
         .faq-item:hover {
             border-color: rgba(255,255,255,0.18);
         }
-
         .faq-question {
             font-size: 1.05rem;
             font-weight: 600;
@@ -312,15 +280,6 @@
             left: 0;
             color: rgba(255,255,255,0.3);
         }
-        .policy-subtitle {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .policy-subtitle i {
-            flex-shrink: 0;
-        }
-        /* Philosophy block */
         .inyeon-philosophy {
             text-align: center;
             padding: 40px 20px;
@@ -343,7 +302,6 @@
             opacity: 0.6;
             margin: 0;
         }
-        /* Section subtitle */
         .section-subtitle {
             text-align: center;
             opacity: 0.45;
@@ -352,7 +310,6 @@
             margin-bottom: 36px;
             letter-spacing: 0.04em;
         }
-        /* Privacy promise block */
         .privacy-promise {
             text-align: center;
             padding: 50px 30px;
@@ -378,7 +335,6 @@
             opacity: 0.6;
             margin: 0;
         }
-        /* CTA block */
         .cta-block {
             text-align: center;
             padding: 50px 20px;
@@ -398,7 +354,8 @@
             font-size: 0.8rem;
             opacity: 0.35;
             letter-spacing: 0.05em;
-        }.support-cards {
+        }
+        .support-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 16px;
@@ -448,7 +405,6 @@
         .support-card:hover .support-card-link {
             opacity: 0.7;
         }
-        /* Select dropdown matches dark theme */
         select.form-input {
             appearance: none;
             -webkit-appearance: none;
@@ -461,745 +417,142 @@
     </style>
 </head>
 <body>
-    <!-- ========== HEADER ========== -->
+    <!-- HEADER -->
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="/" class="logo-container" onclick="showPage('home'); return false;">
+                <a href="/" class="logo-container">
                     <img src="app-logo.jpg" alt="Inyeon AI Logo" class="logo-image">
                     <div class="logo-text">Inyeon<span>AI</span></div>
                 </a>
                 <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><i class="fas fa-bars"></i></button>
                 <div class="nav-menu" id="navMenu">
-                    <a href="/" class="nav-link" onclick="showPage('home'); return false;">Home</a>
-                    <a href="/#how-it-works" class="nav-link" onclick="scrollToSection('how-it-works'); return false;">How It Works</a>
-                    <a href="/support" class="nav-link" onclick="showPage('support'); return false;">Support</a>
-                    <a href="/privacy" class="nav-link" onclick="showPage('privacy'); return false;">Privacy</a>
-                    <a href="/terms" class="nav-link" onclick="showPage('terms'); return false;">Terms</a>
-                    <a href="#" class="download-btn-header" onclick="downloadApp(); return false;"><i class="fab fa-android"></i> Download App</a>
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/#how-it-works" class="nav-link" id="howItWorksLink">How It Works</a>
+                    <a href="support.html" class="nav-link">Support</a>
+                    <a href="privacy.html" class="nav-link">Privacy</a>
+                    <a href="terms.html" class="nav-link">Terms</a>
+                    <a href="#" class="download-btn-header" id="downloadBtnHeader"><i class="fab fa-android"></i> Download App</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- ========== HOME PAGE ========== -->
-    <div id="home-page" class="page-content active">
-
-    <!-- HERO -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="illustration"><i class="fas fa-heart"></i></div>
-                <h1>Destiny doesn't swipe,<br>It discovers you</h1>
-                <p>Inyeon AI is a free AI dating app inspired by the Korean philosophy of inyeon — the invisible thread connecting two people before they ever meet. Match through mood, intent, and personality. Your data stays yours. Your connection is real.</p>
-                <div class="platform-badge"><i class="fab fa-android"></i> Available on Android · Open Testing · April 2026</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHAT IS INYEON -->
-    <section class="section">
-        <div class="container">
-            <div class="inyeon-philosophy">
-                <p class="philosophy-korean">인연</p>
-                <p class="philosophy-text">In Korean philosophy, inyeon is the belief that every meaningful connection carries a bond shaped long before the moment you meet. It is not coincidence. It is not an algorithm. It is something deeper — and it is what this app is built to honour.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHY INYEON AI -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Why Inyeon AI</h2>
-            <p class="section-subtitle">Built different. On purpose.</p>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-robot"></i></div>
-                    <h3 class="feature-title">AI That Truly Understands You</h3>
-                    <p class="feature-description">Most apps track what you swipe. Inyeon AI reads your intent — your personality, your mood, your values — and matches you with people who genuinely align with who you are.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-lock"></i></div>
-                    <h3 class="feature-title">Your Data. Your Device. Always.</h3>
-                    <p class="feature-description">Your chats are stored locally on your device, encrypted — just like WhatsApp. We cannot read them. We do not sell them. Back up to Google Drive anytime. You own everything.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-brain"></i></div>
-                    <h3 class="feature-title">Free Psychology Tests</h3>
-                    <p class="feature-description">Big Five personality, love languages, attachment style — all free, all built in. Know yourself better before you find someone else. The clearest path to the right person starts with understanding who you are.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-cloud-moon"></i></div>
-                    <h3 class="feature-title">Mood & Moment-Based Matching</h3>
-                    <p class="feature-description">Tell the app how you are feeling right now. Match with someone who is in the same headspace. Connection starts before the first message.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-eye-slash"></i></div>
-                    <h3 class="feature-title">Incognito Mode & Privacy Controls</h3>
-                    <p class="feature-description">Browse invisibly. Control read receipts and typing indicators. Your presence on the app is entirely on your terms — not the platform's.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-comment-dots"></i></div>
-                    <h3 class="feature-title">Full Message Control</h3>
-                    <p class="feature-description">Delete for everyone. Edit what you sent. No other dating app in the world offers both together. Your words, your control — always.</p>
+    <!-- HOME PAGE CONTENT -->
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="illustration"><i class="fas fa-heart"></i></div>
+                    <h1>Destiny doesn't swipe,<br>It discovers you</h1>
+                    <p>Inyeon AI is a free AI dating app inspired by the Korean philosophy of inyeon — the invisible thread connecting two people before they ever meet. Match through mood, intent, and personality. Your data stays yours. Your connection is real.</p>
+                    <div class="platform-badge"><i class="fab fa-android"></i> Available on Android · Open Testing · April 2026</div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- HOW IT WORKS -->
-    <section class="section" id="how-it-works">
-        <div class="container">
-            <h2 class="section-title">How It Works</h2>
-            <p class="section-subtitle">Simple. Intentional. Yours.</p>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3 class="step-title">Know Yourself First</h3>
-                    <p class="step-description">Take free personality assessments — Big Five, love languages, attachment style. The AI uses your results to understand who you really are, not just what you look like.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3 class="step-title">Set Your Mood & Intent</h3>
-                    <p class="step-description">Tell the app how you are feeling and what you are looking for right now. The AI matches you with people who share your current mindset and genuine intentions.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3 class="step-title">Your Match Waits Seven Days</h3>
-                    <p class="step-description">Every match stays active for seven days — enough time to think, enough time to decide. No pressure. No endless inbox. Just the right moment.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3 class="step-title">Chat Freely. Privately.</h3>
-                    <p class="step-description">Chat for free with every match. Encrypted. Local. Delete or edit any message at any time. The conversation belongs to you — not us.</p>
+        <section class="section">
+            <div class="container">
+                <div class="inyeon-philosophy">
+                    <p class="philosophy-korean">인연</p>
+                    <p class="philosophy-text">In Korean philosophy, inyeon is the belief that every meaningful connection carries a bond shaped long before the moment you meet. It is not coincidence. It is not an algorithm. It is something deeper — and it is what this app is built to honour.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- PRIVACY PROMISE -->
-    <section class="section">
-        <div class="container">
-            <div class="privacy-promise">
-                <div class="promise-icon"><i class="fas fa-shield-alt"></i></div>
-                <h2 class="promise-title">The Privacy-First Dating App</h2>
-                <p class="promise-text">We built Inyeon AI for people who are tired of giving their most personal moments to platforms that profit from them. Your chats live on your device. Your data is never sold. Your matches, your tests, your conversations — yours completely. This is what a free dating app in 2026 should look like.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- DOWNLOAD CTA -->
-    <section class="section">
-        <div class="container">
-            <div class="cta-block">
-                <h2 class="cta-title">Your inyeon is waiting.</h2>
-                <p class="cta-subtitle">Free. Private. Real. Download Inyeon AI on Android today.</p>
-                <a href="#" class="download-btn-hero" onclick="downloadApp(); return false;">
-                    <i class="fab fa-android"></i> Download Free on Android
-                </a>
-                <p class="cta-note">Open testing live · April 2026 · iOS coming soon</p>
-            </div>
-        </div>
-    </section>
-
-</div>
-
-<!-- ========== PRIVACY PAGE ========== -->
-    <div id="privacy-page" class="page-content">
-    <div class="policy-container">
-        <a href="/" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
-        <div class="policy-header">
-            <h1 class="policy-title">Privacy Policy</h1>
-            <p class="policy-updated">Last Updated: April 7, 2026</p>
-            <p class="policy-text" style="margin-top:12px;">At Inyeon AI, privacy is not a policy we follow — it is the principle we were built on. This document explains exactly what data we collect, what we do with it, and — more importantly — what we will never do with it. Please read it fully. You deserve to know.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-user-shield"></i> 1. Who We Are</h2>
-            <p class="policy-text">Inyeon AI ("we," "our," or "us") operates a privacy-first AI dating and connection platform available at inyeonai.com and on Android. We are built around the Korean philosophical concept of inyeon — the belief that meaningful connections are deeper than an algorithm. Our approach to your data reflects that same belief: your personal life is yours, not ours to monetise.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-database"></i> 2. Information We Collect</h2>
-            <p class="policy-text">We collect only what is necessary to make Inyeon AI work for you. This includes:</p>
-            <ul class="policy-list">
-                <li><strong>Account Information:</strong> Your name, email address, phone number, age, and gender when you register</li>
-                <li><strong>Profile Information:</strong> Photos, biographical details, dating preferences, and any information you choose to share on your profile</li>
-                <li><strong>Psychology Assessment Results:</strong> Your responses to personality tests such as the Big Five, love languages, and attachment style — used solely to improve your matches</li>
-                <li><strong>Mood & Intent Data:</strong> Your mood selections and intent settings at the time of matching — used by the AI to find compatible connections</li>
-                <li><strong>Location Data:</strong> Your approximate location, only if you grant permission, used only for proximity-based matching</li>
-                <li><strong>Device Information:</strong> Basic device type and operating system version for technical support and app optimisation</li>
-                <li><strong>Usage Data:</strong> How you interact with the app — features used, time spent — to improve the product. This data is anonymised and never tied to your identity for advertising purposes</li>
-            </ul>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-comment-dots"></i> 3. Your Messages — Stored on Your Device, Not Ours</h2>
-            <p class="policy-text">This is the most important section of this policy. Your chat messages are stored locally on your device, fully encrypted — the same way WhatsApp stores your conversations. Your messages never pass through or live on Inyeon AI servers. We cannot read them. We do not have access to them. No employee of Inyeon AI can ever view your private conversations.</p>
-            <p class="policy-text" style="margin-top:12px;">You can securely back up your chats to Google Drive at any time and restore them on a new device. Your backup is encrypted with your account credentials — only you can access it. If you delete the app or clear your data without a backup, your messages are gone permanently. We recommend backing up regularly if your conversations matter to you.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-cogs"></i> 4. How We Use Your Information</h2>
-            <p class="policy-text">We use your data for one purpose: to make Inyeon AI work better for you. Specifically:</p>
-            <ul class="policy-list">
-                <li>To create and manage your profile and account</li>
-                <li>To power the AI matching system — matching you based on personality, mood, and intent</li>
-                <li>To personalise your experience and improve match quality over time</li>
-                <li>To send you important app notifications and updates</li>
-                <li>To detect and prevent fraud, abuse, and safety violations</li>
-                <li>To comply with legal obligations where required</li>
-            </ul>
-            <p class="policy-text" style="margin-top:14px;">We do not use your data to serve you advertisements. We do not build advertising profiles. We do not sell your data to third parties. Ever.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-share-alt"></i> 5. When We Share Your Information</h2>
-            <p class="policy-text">We do not sell, rent, or trade your personal data. We share information only in the following limited circumstances:</p>
-            <ul class="policy-list">
-                <li><strong>With other users:</strong> Only the profile information you choose to make visible — your name, photos, bio, and preferences</li>
-                <li><strong>Service providers:</strong> Trusted third-party providers who help us operate the app (such as cloud infrastructure and analytics), bound by strict confidentiality agreements</li>
-                <li><strong>Legal requirements:</strong> When required by law, court order, or to protect the safety of our users or the public</li>
-                <li><strong>Child safety reports:</strong> Incidents involving CSAE are reported to NCMEC and relevant law enforcement without exception</li>
-            </ul>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-lock"></i> 6. How We Protect Your Data</h2>
-            <p class="policy-text">Security is built into every layer of Inyeon AI:</p>
-            <ul class="policy-list">
-                <li>All messages are end-to-end encrypted and stored locally on your device</li>
-                <li>Account data in transit is protected using industry-standard TLS encryption</li>
-                <li>Sensitive data at rest is encrypted using AES-256</li>
-                <li>We conduct regular security audits and vulnerability assessments</li>
-                <li>Access to user data within our systems is strictly limited and logged</li>
-                <li>Google Drive backups are encrypted with your personal credentials</li>
-            </ul>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-eye-slash"></i> 7. Privacy Modes & Controls</h2>
-            <p class="policy-text">Inyeon AI gives you active control over your privacy — not just passive promises. These controls are available to every user at no cost:</p>
-            <ul class="policy-list">
-                <li><strong>Incognito Mode:</strong> Your profile is hidden from users you have not matched with</li>
-                <li><strong>Read Receipts:</strong> You can disable read receipts so others do not know when you have read their messages</li>
-                <li><strong>Typing Indicators:</strong> You can turn off typing indicators at any time</li>
-                <li><strong>Delete for Everyone:</strong> Delete any message from both sides of a conversation instantly</li>
-                <li><strong>Edit Messages:</strong> Edit any message you have sent at any time</li>
-                <li><strong>Account Deletion:</strong> Permanently delete your account and all associated data from within app settings</li>
-            </ul>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-user-cog"></i> 8. Your Rights Over Your Data</h2>
-            <p class="policy-text">You have full rights over your personal data at all times:</p>
-            <ul class="policy-list">
-                <li><strong>Access:</strong> Request a copy of the data we hold about you</li>
-                <li><strong>Correction:</strong> Update or correct your personal information at any time within the app</li>
-                <li><strong>Deletion:</strong> Delete your account and all associated data permanently through app settings</li>
-                <li><strong>Portability:</strong> Export your data in a readable format upon request</li>
-                <li><strong>Objection:</strong> Object to how we use your data by contacting us at support@inyeonai.com</li>
-            </ul>
-            <p class="policy-text" style="margin-top:14px;">To exercise any of these rights, contact us at <a href="mailto:support@inyeonai.com" style="color:inherit;text-decoration:underline;">support@inyeonai.com</a>. We will respond within 48 hours.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-clock"></i> 9. Data Retention</h2>
-            <p class="policy-text">We retain your account data only for as long as your account is active. When you delete your account, your profile, photos, preferences, and personality test results are permanently deleted within 30 days. Your messages are stored on your device and are deleted immediately when you remove the app or clear app data — we hold no copies. Some anonymised, non-identifiable usage data may be retained for product improvement purposes.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-baby"></i> 10. Children's Privacy</h2>
-            <p class="policy-text">Inyeon AI is strictly for users aged 18 and above. We do not knowingly collect data from anyone under 18. If we discover that a minor has created an account, it is immediately deleted. If you believe a minor is using the app, please report it to support@inyeonai.com immediately.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-shield-alt"></i> 11. Child Safety & Zero Tolerance Policy</h2>
-            <p class="policy-text">Inyeon AI maintains an absolute zero-tolerance policy toward Child Sexual Abuse and Exploitation (CSAE) in any form.</p>
-            <ul class="policy-list">
-                <li><i class="fas fa-check-circle" style="color:#4CAF50;margin-right:8px;"></i><strong>Strict Prohibition:</strong> Any CSAE content or behaviour results in immediate permanent ban</li>
-                <li><i class="fas fa-check-circle" style="color:#4CAF50;margin-right:8px;"></i><strong>Immediate Removal:</strong> All offending content is removed without delay</li>
-                <li><i class="fas fa-check-circle" style="color:#4CAF50;margin-right:8px;"></i><strong>Reported to Authorities:</strong> All incidents are reported to NCMEC and relevant law enforcement</li>
-                <li><i class="fas fa-check-circle" style="color:#4CAF50;margin-right:8px;"></i><strong>Dedicated Reporting:</strong> Report safety concerns directly to <a href="mailto:support@inyeonai.com" style="color:inherit;text-decoration:underline;">support@inyeonai.com</a></li>
-            </ul>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-map-marker-alt"></i> 12. Governing Law</h2>
-            <p class="policy-text">This Privacy Policy is governed by the laws of India. By using Inyeon AI, you consent to the collection and use of your information as described in this policy under Indian jurisdiction.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-sync-alt"></i> 13. Changes to This Policy</h2>
-            <p class="policy-text">We may update this Privacy Policy from time to time. When we make significant changes, we will notify you through the app or by email. The "Last Updated" date at the top of this page reflects the most recent revision. Continued use of Inyeon AI after changes are posted constitutes your acceptance of the updated policy.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-envelope"></i> 14. Contact Us</h2>
-            <p class="policy-text">If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your data, please reach out to us at <a href="mailto:support@inyeonai.com" style="color:inherit;text-decoration:underline;">support@inyeonai.com</a>. We take every inquiry seriously and will respond within 48 hours.</p>
-        </div>
-
-    </div>
-</div>
-
-    <!-- ========== TERMS PAGE ========== -->
-    <div id="terms-page" class="page-content">
-    <div class="policy-container">
-        <a href="/" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
-        <div class="policy-header">
-            <h1 class="policy-title">Terms & Conditions</h1>
-            <p class="policy-updated">Last Updated: April 7, 2026</p>
-            <p class="policy-text" style="margin-top:12px;">Please read these terms carefully before using Inyeon AI. By downloading or using the app, you agree to be bound by these terms. If you do not agree, please do not use the service.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-file-contract"></i> 1. Agreement to Terms</h2>
-            <p class="policy-text">By accessing or using Inyeon AI — including the mobile application, website at inyeonai.com, and any related services — you confirm that you have read, understood, and agree to these Terms & Conditions. These terms form a legally binding agreement between you and Inyeon AI. We may update these terms from time to time and will notify you of significant changes through the app or website.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-user-check"></i> 2. Eligibility</h2>
-            <p class="policy-text">You must be at least 18 years of age to create an account or use Inyeon AI. By using the app, you confirm that you are 18 or older and that all information you provide during registration is accurate, honest, and your own. Inyeon AI reserves the right to suspend or permanently ban any account found to belong to a minor.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-id-card"></i> 3. Your Account</h2>
-            <p class="policy-text">You are responsible for maintaining the security of your account and for all activity that occurs under it. Do not share your login credentials with anyone. Use a strong, unique password. If you suspect unauthorised access to your account, contact us immediately at support@inyeonai.com. Inyeon AI is not liable for any loss or damage arising from your failure to protect your account credentials.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-heart"></i> 4. How Inyeon AI Works</h2>
-            <p class="policy-text">Inyeon AI is an AI-powered dating and connection platform. We use personality assessments, mood-based inputs, and behavioural signals to suggest compatible matches. Matches remain active for seven days. We do not guarantee that any match will result in a relationship, and we are not responsible for the actions or behaviour of other users. The AI is a tool to help you find connection — the rest is up to you.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-lock"></i> 5. Privacy & Your Data</h2>
-            <p class="policy-text">Your privacy is not a feature — it is the foundation. Your chats are stored locally on your device and encrypted. Inyeon AI does not store your messages on our servers. You can back up your chats securely to Google Drive and restore them at any time. You own your data. We do not sell it, share it with advertisers, or use it for purposes beyond improving your experience on the platform. For full details, please read our <a href="/privacy" style="color:inherit;text-decoration:underline;">Privacy Policy</a>.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-ban"></i> 6. Prohibited Conduct</h2>
-            <p class="policy-text">To protect all users, the following are strictly prohibited on Inyeon AI:</p>
-            <ul class="policy-list">
-                <li>Harassment, abuse, threats, or intimidation of any user</li>
-                <li>Sharing explicit, sexual, or graphic content without consent</li>
-                <li>Impersonating another person or creating a fake profile</li>
-                <li>Soliciting money, gifts, or financial information from other users</li>
-                <li>Using the app to promote commercial services, spam, or advertising</li>
-                <li>Attempting to access another user's account or private data</li>
-                <li>Any conduct that violates applicable laws or regulations</li>
-                <li>Sharing another user's private information without their consent</li>
-            </ul>
-            <p class="policy-text" style="margin-top:14px;">Violations will result in immediate account suspension or permanent ban. Serious violations will be reported to relevant authorities.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-child"></i> 7. Child Safety — Zero Tolerance</h2>
-            <p class="policy-text">Inyeon AI has an absolute zero-tolerance policy toward any content or behaviour involving the sexual exploitation or abuse of minors (CSAE). Any such content is immediately removed. The responsible account is permanently banned. All incidents are reported to NCMEC and relevant law enforcement without exception. If you encounter any such content, report it immediately to <a href="mailto:support@inyeonai.com" style="color:inherit;text-decoration:underline;">support@inyeonai.com</a>.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-comment-slash"></i> 8. Message Control & Deletion</h2>
-            <p class="policy-text">Inyeon AI gives you full control over your conversations. You may delete any message for everyone in a conversation at any time. You may also edit messages you have already sent. Because messages are stored locally on each user's device, deletion requests are processed immediately within the app. Inyeon AI is not responsible for any copies of messages that a recipient may have saved outside the app before deletion.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-brain"></i> 9. Psychology Tests & AI Features</h2>
-            <p class="policy-text">The personality assessments available in Inyeon AI — including the Big Five model, love languages, and attachment style tests — are provided for informational and matching purposes only. They are not clinical diagnostic tools and should not be treated as professional psychological advice. The AI matching system uses your results to improve compatibility suggestions, but does not guarantee any outcome. Always use your own judgment when meeting new people.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-user-slash"></i> 10. Account Suspension & Termination</h2>
-            <p class="policy-text">We reserve the right to suspend or permanently terminate any account that violates these terms, engages in harmful behaviour, or poses a risk to other users or the platform. You may delete your own account at any time through the app settings. Upon deletion, your profile, photos, and personal data are permanently removed. Some data may be retained for up to 30 days for legal or security reasons before being fully purged.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-exclamation-triangle"></i> 11. Disclaimers & Limitation of Liability</h2>
-            <p class="policy-text">Inyeon AI is provided on an "as is" basis. We do not guarantee uninterrupted availability of the service. We are not responsible for the accuracy of user-provided information, the behaviour of other users, or any outcome resulting from connections made through the app. To the maximum extent permitted by law, Inyeon AI's liability for any claim arising from use of the service is limited to the amount you paid to use the service in the three months prior to the claim — which for most users is zero, as the app is free.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-gavel"></i> 12. Governing Law</h2>
-            <p class="policy-text">These Terms are governed by the laws of India. Any disputes arising from or relating to these Terms or your use of Inyeon AI shall be subject to the exclusive jurisdiction of the courts located in India. If any provision of these Terms is found to be unenforceable, the remaining provisions will continue in full force and effect.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-envelope"></i> 13. Contact Us</h2>
-            <p class="policy-text">If you have any questions about these Terms & Conditions, please contact us at <a href="mailto:support@inyeonai.com" style="color:inherit;text-decoration:underline;">support@inyeonai.com</a>. We will respond within 48 hours.</p>
-        </div>
-    </div>
-    </div>
-
-    <!-- ========== SUPPORT PAGE ========== -->
-    <div id="support-page" class="page-content">
-    <div class="policy-container">
-        <a href="/" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
-        <div class="policy-header">
-            <h1 class="policy-title">Support</h1>
-            <p class="policy-updated">We typically respond within 48 hours</p>
-            <p class="policy-text" style="margin-top:12px;">Have a question, found a bug, or need help with your account? We are here. Fill in the form below or reach out directly — every message is read by a real person.</p>
-        </div>
-
-        <!-- QUICK HELP CARDS -->
-        <div class="support-cards">
-            <div class="support-card" onclick="showPage('faq')">
-                <div class="support-card-icon"><i class="fas fa-question-circle"></i></div>
-                <h3 class="support-card-title">FAQ</h3>
-                <p class="support-card-text">Quick answers to the most common questions about Inyeon AI.</p>
-                <span class="support-card-link">Browse FAQ <i class="fas fa-arrow-right"></i></span>
-            </div>
-            <div class="support-card" onclick="showPage('account-management')">
-                <div class="support-card-icon"><i class="fas fa-user-cog"></i></div>
-                <h3 class="support-card-title">Account Help</h3>
-                <p class="support-card-text">Update your profile, manage your data, or delete your account.</p>
-                <span class="support-card-link">Manage Account <i class="fas fa-arrow-right"></i></span>
-            </div>
-            <div class="support-card" onclick="showPage('privacy')">
-                <div class="support-card-icon"><i class="fas fa-lock"></i></div>
-                <h3 class="support-card-title">Privacy</h3>
-                <p class="support-card-text">Learn how your data is protected and what rights you have.</p>
-                <span class="support-card-link">Read Privacy Policy <i class="fas fa-arrow-right"></i></span>
-            </div>
-        </div>
-
-        <!-- CONTACT FORM -->
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-paper-plane"></i> Send Us a Message</h2>
-            <p class="policy-text" style="margin-bottom:24px;">Describe your issue in as much detail as possible — this helps us resolve it faster.</p>
-            <div class="contact-form">
-                <form id="supportForm">
-                    <div class="form-group">
-                        <label class="form-label" for="name">Full Name</label>
-                        <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Why Inyeon AI</h2>
+                <p class="section-subtitle">Built different. On purpose.</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-robot"></i></div>
+                        <h3 class="feature-title">AI That Truly Understands You</h3>
+                        <p class="feature-description">Most apps track what you swipe. Inyeon AI reads your intent — your personality, your mood, your values — and matches you with people who genuinely align with who you are.</p>
                     </div>
-                    <div class="form-group">
-                        <label class="form-label" for="email">Email Address</label>
-                        <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-lock"></i></div>
+                        <h3 class="feature-title">Your Data. Your Device. Always.</h3>
+                        <p class="feature-description">Your chats are stored locally on your device, encrypted — just like WhatsApp. We cannot read them. We do not sell them. Back up to Google Drive anytime. You own everything.</p>
                     </div>
-                    <div class="form-group">
-                        <label class="form-label" for="category">Topic</label>
-                        <select id="category" name="category" class="form-input">
-                            <option value="">Select a topic</option>
-                            <option value="account">Account & Profile</option>
-                            <option value="matching">Matching & AI</option>
-                            <option value="chat">Chat & Messages</option>
-                            <option value="privacy">Privacy & Data</option>
-                            <option value="bug">Bug Report</option>
-                            <option value="safety">Safety & Trust</option>
-                            <option value="other">Other</option>
-                        </select>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                        <h3 class="feature-title">Free Psychology Tests</h3>
+                        <p class="feature-description">Big Five personality, love languages, attachment style — all free, all built in. Know yourself better before you find someone else. The clearest path to the right person starts with understanding who you are.</p>
                     </div>
-                    <div class="form-group">
-                        <label class="form-label" for="problem">Message</label>
-                        <textarea id="problem" name="problem" class="form-textarea" placeholder="Tell us what happened or what you need help with..." required></textarea>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-cloud-moon"></i></div>
+                        <h3 class="feature-title">Mood & Moment-Based Matching</h3>
+                        <p class="feature-description">Tell the app how you are feeling right now. Match with someone who is in the same headspace. Connection starts before the first message.</p>
                     </div>
-                    <button type="submit" class="submit-btn" id="submitBtn">
-                        <i class="fas fa-paper-plane" style="margin-right:8px;"></i>Send Message
-                    </button>
-                    <div class="success-message" id="successMessage">
-                        <i class="fas fa-check-circle" style="margin-right:8px;"></i>Thank you — we will get back to you within 48 hours.
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-eye-slash"></i></div>
+                        <h3 class="feature-title">Incognito Mode & Privacy Controls</h3>
+                        <p class="feature-description">Browse invisibly. Control read receipts and typing indicators. Your presence on the app is entirely on your terms — not the platform's.</p>
                     </div>
-                    <div class="error-message" id="errorMessage">
-                        <i class="fas fa-exclamation-circle" style="margin-right:8px;"></i>Something went wrong. Email us directly at <a href="mailto:support@inyeonai.com" style="color:inherit;text-decoration:underline;">support@inyeonai.com</a>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-comment-dots"></i></div>
+                        <h3 class="feature-title">Full Message Control</h3>
+                        <p class="feature-description">Delete for everyone. Edit what you sent. No other dating app in the world offers both together. Your words, your control — always.</p>
                     </div>
-                </form>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <!-- DIRECT CONTACT -->
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-envelope"></i> Contact Directly</h2>
-            <p class="policy-text">Prefer to email us directly? We are always reachable at <a href="mailto:support@inyeonai.com" style="color:inherit;text-decoration:underline;">support@inyeonai.com</a>. For urgent safety or child protection concerns, please mark your subject line as <strong>URGENT</strong> — these are prioritised immediately.</p>
-        </div>
-
-        <!-- SAFETY REPORT -->
-        <div class="policy-section">
-            <h2 class="policy-subtitle"><i class="fas fa-shield-alt"></i> Report a Safety Concern</h2>
-            <p class="policy-text">If you have encountered harassment, abuse, impersonation, or any content that made you feel unsafe — please report it. Your safety is our highest priority. Every safety report is reviewed by a real person, not an automated system. Reports can be made anonymously.</p>
-            <p class="policy-text" style="margin-top:12px;"><strong>Email:</strong> <a href="mailto:support@inyeonai.com" style="color:inherit;text-decoration:underline;">support@inyeonai.com</a> with subject line <strong>SAFETY REPORT</strong></p>
-        </div>
-
-    </div>
-</div>
-
-     <!-- ========== FAQ PAGE ========== -->
-   <div id="faq-page" class="page-content">
-    <div class="contact-container">
-        <a href="/" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
-        <h1 class="policy-title">Frequently Asked Questions</h1>
-        <p class="policy-text" style="text-align:center; margin-bottom:40px;">Everything you want to know about Inyeon AI — answered honestly.</p>
-
-        <div class="faq-list">
-
-            <div class="faq-item">
-                <h3 class="faq-question">Is Inyeon AI free?</h3>
-                <p class="faq-answer">Yes — completely free. Download the app, create your profile, take personality tests, match with people, and chat — all without paying anything. No hidden subscription, no paywall to send messages, no credit system. Inyeon AI is a free dating app built on the belief that real connection should never be locked behind a price tag.</p>
+        <section class="section" id="how-it-works">
+            <div class="container">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Simple. Intentional. Yours.</p>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Know Yourself First</h3>
+                        <p class="step-description">Take free personality assessments — Big Five, love languages, attachment style. The AI uses your results to understand who you really are, not just what you look like.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Set Your Mood & Intent</h3>
+                        <p class="step-description">Tell the app how you are feeling and what you are looking for right now. The AI matches you with people who share your current mindset and genuine intentions.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Your Match Waits Seven Days</h3>
+                        <p class="step-description">Every match stays active for seven days — enough time to think, enough time to decide. No pressure. No endless inbox. Just the right moment.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3 class="step-title">Chat Freely. Privately.</h3>
+                        <p class="step-description">Chat for free with every match. Encrypted. Local. Delete or edit any message at any time. The conversation belongs to you — not us.</p>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="faq-item">
-                <h3 class="faq-question">Is Inyeon AI an AI dating app? How does the AI work?</h3>
-                <p class="faq-answer">Yes. Inyeon AI is an AI-powered dating app that goes beyond swiping on photos. The AI studies your mood, your intent, your personality profile, and how you interact — then matches you with people who genuinely align with who you are, not just what you look like. It acts on what you actually want, not just what you clicked on. The more you use it, the better it understands you.</p>
+        <section class="section">
+            <div class="container">
+                <div class="privacy-promise">
+                    <div class="promise-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h2 class="promise-title">The Privacy-First Dating App</h2>
+                    <p class="promise-text">We built Inyeon AI for people who are tired of giving their most personal moments to platforms that profit from them. Your chats live on your device. Your data is never sold. Your matches, your tests, your conversations — yours completely. This is what a free dating app in 2026 should look like.</p>
+                </div>
             </div>
+        </section>
 
-            <div class="faq-item">
-                <h3 class="faq-question">What are the free psychology tests and how do they help?</h3>
-                <p class="faq-answer">Inyeon AI includes free psychology assessments built directly into the app — including the Big Five personality model, love languages, and attachment style tests. These are tools that most people pay for or never access at all. When you complete them, the AI uses your results to understand how you think, how you love, and what kind of connection you are looking for. The tests do not just help the algorithm — they help you understand yourself first. Because the clearest path to finding the right person starts with knowing who you are.</p>
+        <section class="section">
+            <div class="container">
+                <div class="cta-block">
+                    <h2 class="cta-title">Your inyeon is waiting.</h2>
+                    <p class="cta-subtitle">Free. Private. Real. Download Inyeon AI on Android today.</p>
+                    <a href="#" class="download-btn-hero" id="downloadBtnHero">
+                        <i class="fab fa-android"></i> Download Free on Android
+                    </a>
+                    <p class="cta-note">Open testing live · April 2026 · iOS coming soon</p>
+                </div>
             </div>
+        </section>
+    </main>
 
-            <div class="faq-item">
-                <h3 class="faq-question">Does the AI truly understand me?</h3>
-                <p class="faq-answer">That is exactly what we built it to do. Most dating apps track your behavior — what you swiped, how long you looked at a photo. Inyeon AI goes deeper. It reads your intent: what you are actually looking for, how you communicate, what your personality says about your compatibility. Combined with your psychology test results and mood at the time of matching, the AI builds a picture of you that no simple swipe can capture. The more you engage authentically, the more accurately it matches you.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">Who owns my data? What happens to my messages?</h3>
-                <p class="faq-answer">You own your data — fully and completely. Inyeon AI stores your chats locally on your device, encrypted, the same way WhatsApp stores your messages. Your conversations never live on our servers. We cannot read them. We do not sell them. No advertiser ever sees them. If you get a new phone or clear your app data, you can securely back up your chats to Google Drive and restore them anytime — just like WhatsApp backup. Your data is yours. We are just the space where connection happens.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">What privacy modes does Inyeon AI offer?</h3>
-                <p class="faq-answer">Inyeon AI is built privacy-first from the ground up. You can browse and match in Incognito Mode — meaning your profile is not visible to people you have not matched with. You control your read receipts, so you can read messages without the sender knowing. Typing indicators can be turned on or off depending on how much presence you want to show. These are not premium features — they are yours by default, because your comfort and privacy matter more than engagement metrics.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">Can I delete or edit messages after sending?</h3>
-                <p class="faq-answer">Yes — and this is something no other dating app in the world currently offers together. You can delete any message for everyone in the conversation, just like WhatsApp. You can also edit a message you already sent, so a typo or second thought does not define your conversation forever. Your words, your control.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">Is chat with matches really free?</h3>
-                <p class="faq-answer">Completely free. Once you match with someone on Inyeon AI, you can chat with them without any limit, without purchasing coins, without upgrading to a premium plan. We believe the conversation is the most important part of connection — it should never be monetised against you.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">How long do matches last?</h3>
-                <p class="faq-answer">Each match stays active for seven days. This is intentional. Inyeon AI is not designed to keep you endlessly scrolling through an inbox of forgotten conversations. Seven days gives you real time to think, to decide, and to start something meaningful — without pressure. If both people are interested, the conversation will happen within that window. Inyeon is not something you rush.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">What is Inyeon? What does the name mean?</h3>
-                <p class="faq-answer">Inyeon (인연) is a Korean philosophical concept describing the invisible thread that connects two people — not by accident, but by something deeper. It is the idea that every meaningful relationship carries a bond shaped before the moment you meet. We named the app Inyeon AI because we believe technology should honour that depth, not replace it. We are not building a swiping machine. We are building a space where fate and intention meet.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">Is Inyeon AI available on iPhone?</h3>
-                <p class="faq-answer">Currently Inyeon AI is available on Android only and is in open testing as of April 2026. iOS support is on the way. If you want to be notified when the iPhone version launches, follow us or check back at inyeonai.com.</p>
-            </div>
-
-        </div>
-
-       </div>
-    </div>
-    <!-- ========== ACCOUNT MANAGEMENT PAGE ========== -->
-    <div id="account-management-page" class="page-content">
-    <div class="policy-container">
-        <a href="/" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
-        <div class="policy-header">
-            <h1 class="policy-title">Account Management</h1>
-            <p class="policy-updated">Last Updated: April 7, 2026</p>
-            <p class="policy-text" style="margin-top:12px;">Inyeon AI is built around one principle — you are in control. Your account, your data, your decisions. Here is everything you need to know about managing your presence on Inyeon AI.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-user-cog"></i> 1. Managing Your Account
-            </h2>
-            <p class="policy-text">You have full control over your account and personal data at all times. Every setting, every preference, every piece of information you shared — you can update or remove it whenever you choose, directly from within the app. No need to contact support for routine changes.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-edit"></i> 2. Update Your Profile & Preferences
-            </h2>
-            <p class="policy-text">You can update any of the following at any time from the app settings:</p>
-            <ul class="policy-list">
-                <li>Your name, age, and bio</li>
-                <li>Profile photos and display picture</li>
-                <li>Dating preferences and relationship intent</li>
-                <li>Personality test results — retake any assessment whenever you feel you have grown</li>
-                <li>Privacy settings including incognito mode, read receipts, and typing indicators</li>
-                <li>Notification preferences</li>
-                <li>Google Drive backup settings for your encrypted chat history</li>
-            </ul>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-shield-alt"></i> 3. Your Data — Stored on Your Device
-            </h2>
-            <p class="policy-text">Unlike most apps, Inyeon AI stores your chat messages locally on your device, fully encrypted. We do not hold copies of your conversations on our servers. You own them completely. You can back up your chats securely to Google Drive at any time and restore them on a new device. Your backup is encrypted with your credentials — only you can access it.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-comment-slash"></i> 4. Message Control
-            </h2>
-            <p class="policy-text">Inyeon AI gives you full control over every conversation you have:</p>
-            <ul class="policy-list">
-                <li><strong>Delete for Everyone:</strong> Remove any message from both sides of a conversation instantly — a feature no other dating app currently offers</li>
-                <li><strong>Edit Messages:</strong> Correct or update any message you have already sent at any time</li>
-                <li><strong>Clear Chat:</strong> Clear an entire conversation locally from your device at any time</li>
-            </ul>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-trash-alt"></i> 5. Delete Your Account
-            </h2>
-            <p class="policy-text">You may permanently delete your account at any time. No waiting period, no retention tactics, no dark patterns. Here is how:</p>
-            <ul class="policy-list">
-                <li>Open the Inyeon AI app</li>
-                <li>Go to <strong>Settings</strong></li>
-                <li>Select <strong>Account</strong></li>
-                <li>Tap <strong>Delete Account</strong></li>
-                <li>Confirm your choice</li>
-            </ul>
-            <p class="policy-text" style="margin-top:14px;">Once your account is deleted:</p>
-            <ul class="policy-list">
-                <li>Your profile, photos, bio, and personal information are permanently removed</li>
-                <li>All your matches and conversations are deleted</li>
-                <li>Your personality test results and AI preference data are erased</li>
-                <li>You will no longer appear in anyone's matches or search results</li>
-                <li>Some anonymised data may be retained for up to 30 days for legal or security reasons before being fully purged</li>
-            </ul>
-            <p class="policy-text" style="margin-top:14px;">Account deletion is permanent and cannot be undone. If you think you may return, consider deactivating your profile instead — this hides you from the app without deleting your data.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-moon"></i> 6. Deactivate Instead of Delete
-            </h2>
-            <p class="policy-text">If you need a break from Inyeon AI but are not ready to leave permanently, you can deactivate your account. While deactivated your profile is hidden from all users, you will not appear in any matches, and no one can contact you. Your data is preserved. You can reactivate at any time simply by logging back in.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-envelope"></i> 7. Need Help?
-            </h2>
-            <p class="policy-text">If you experience any issues managing or deleting your account, our support team is here to help. We respond within 48 hours.</p>
-            <p class="policy-text" style="margin-top:10px;"><strong>Email:</strong> <a href="mailto:support@inyeonai.com" style="color:inherit;text-decoration:underline;">support@inyeonai.com</a></p>
-        </div>
-
-        <div class="policy-section" style="cursor:pointer;" onclick="showPage('open-source')">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-code-branch"></i> 8. Open Source Attributions
-            </h2>
-            <p class="policy-text">Inyeon AI is built on the shoulders of the open source community. We are grateful for the libraries and tools that make this app possible. View our full list of open source libraries and data attributions used in the Android build.</p>
-            <p class="policy-text" style="margin-top:10px; opacity:0.5; font-size:0.85rem;">Tap to view full attributions <i class="fas fa-arrow-right" style="margin-left:6px;"></i></p>
-        </div>
-
-    </div>
-    </div>
-
-    <!-- ========== OPEN SOURCE PAGE ========== -->
-    <div id="open-source-page" class="page-content">
-    <div class="policy-container">
-        <a href="/" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
-        <div class="policy-header">
-            <h1 class="policy-title">Open Source Attributions</h1>
-            <p class="policy-updated">Last Updated: April 7, 2026</p>
-            <p class="policy-text" style="margin-top:12px;">Inyeon AI is built on the foundation of the open source community. We are deeply grateful to every developer, contributor, and maintainer whose work made this app possible. This page lists all open source libraries used in the Inyeon AI Android application, in compliance with Google Play attribution requirements.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-file-contract"></i> Apache License 2.0
-            </h2>
-            <p class="policy-text" style="margin-bottom:14px;">Full license text: <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" style="color:inherit;text-decoration:underline;">apache.org/licenses/LICENSE-2.0</a></p>
-            <ul class="policy-list">
-                <li><strong>AndroidX Libraries</strong> — Activity, AppCompat, Lifecycle, Navigation, Room, WorkManager, CameraX, Media3, RecyclerView, ViewPager, ConstraintLayout, Security, Emoji, Credentials</li>
-                <li><strong>Google Play Services</strong> — Auth, Ads, Wallet, Maps, Location, Identity, Measurement, SafetyNet, FIDO, Tasks, Basement, Base, Stats, AppSet</li>
-                <li><strong>Firebase SDK</strong> — Analytics, Auth, Firestore, Realtime Database, Messaging, Functions, Dynamic Links, Installations, App Check, Encoders</li>
-                <li><strong>Google APIs & Clients</strong> — Google HTTP Client, OAuth Client, Drive API, Identity Services</li>
-                <li><strong>Material Components for Android</strong></li>
-                <li><strong>Android Billing Client</strong></li>
-                <li><strong>Google User Messaging Platform (UMP)</strong></li>
-                <li><strong>Google Play Integrity API</strong></li>
-                <li><strong>Smack (XMPP)</strong> — OMEMO, Signal, TCP, IM, Extensions, Experimental modules</li>
-                <li><strong>gRPC Libraries</strong> — Core, Stub, API, Android, OkHttp, Protobuf Lite</li>
-                <li><strong>OkHttp, Retrofit, Okio</strong></li>
-                <li><strong>Guava</strong> — including ListenableFuture & FailureAccess</li>
-                <li><strong>JetBrains Kotlin</strong> — Stdlib, BOM, Annotations</li>
-                <li><strong>Kotlin Coroutines</strong></li>
-                <li><strong>Volley Networking Library</strong></li>
-                <li><strong>Timber Logging Library</strong></li>
-                <li><strong>Lottie Animation Library</strong></li>
-                <li><strong>Razorpay Android SDK</strong></li>
-                <li><strong>Tink Cryptography Library</strong></li>
-                <li><strong>AndroidX Profile Installer</strong></li>
-                <li><strong>AndroidX Startup Runtime</strong></li>
-                <li><strong>AndroidX Core Utilities</strong></li>
-            </ul>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-file-alt"></i> MIT License
-            </h2>
-            <p class="policy-text" style="margin-bottom:14px;">Full license text: <a href="https://opensource.org/licenses/MIT" target="_blank" style="color:inherit;text-decoration:underline;">opensource.org/licenses/MIT</a></p>
-            <ul class="policy-list">
-                <li><strong>Facebook Fresco</strong> — Image Pipeline, UI, Animated Formats, Vito, Drawee</li>
-                <li><strong>Facebook SoLoader</strong></li>
-                <li><strong>Glide & Glide Transformations</strong></li>
-                <li><strong>Brotli Decoder</strong></li>
-                <li><strong>UCrop Image Cropper</strong></li>
-                <li><strong>CardStackView</strong></li>
-                <li><strong>Amplituda Audio Visualization</strong></li>
-                <li><strong>CircleIndicator</strong></li>
-                <li><strong>SwipeLayout</strong></li>
-                <li><strong>HSLuv Color Library</strong></li>
-            </ul>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-file-code"></i> BSD & Similar Permissive Licenses
-            </h2>
-            <p class="policy-text" style="margin-bottom:14px;">Full license text: <a href="https://opensource.org/licenses/BSD-3-Clause" target="_blank" style="color:inherit;text-decoration:underline;">opensource.org/licenses/BSD-3-Clause</a></p>
-            <ul class="policy-list">
-                <li><strong>MiniDNS</strong></li>
-                <li><strong>JSR-305</strong></li>
-                <li><strong>Checker Framework Qualifiers</strong></li>
-                <li><strong>Animal Sniffer Annotations</strong></li>
-                <li><strong>PerfMark API</strong></li>
-                <li><strong>J2ObjC Annotations</strong></li>
-                <li><strong>Error Prone Annotations</strong></li>
-                <li><strong>OpenCensus</strong></li>
-                <li><strong>Apache Commons Codec</strong></li>
-                <li><strong>Apache Commons IO</strong></li>
-            </ul>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-key"></i> Other Permissive Licenses
-            </h2>
-            <ul class="policy-list">
-                <li><strong>Signal Protocol (Java)</strong> — End-to-end encryption foundation</li>
-                <li><strong>Curve25519 Java</strong> — Elliptic curve cryptography</li>
-                <li><strong>Javax Inject</strong> — Dependency injection</li>
-            </ul>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-heart"></i> A Note of Gratitude
-            </h2>
-            <p class="policy-text">Every library listed here represents thousands of hours of work by developers who chose to share their craft with the world. Inyeon AI would not exist without the open source ecosystem. We are committed to giving back — respecting every license, attributing every contribution, and building on this foundation with care.</p>
-            <p class="policy-text" style="margin-top:12px;">This attribution page is maintained in compliance with Google Play open source attribution requirements and reflects the complete dependency list used in the current Inyeon AI Android build.</p>
-        </div>
-
-        <div class="policy-section">
-            <h2 class="policy-subtitle">
-                <i class="fas fa-envelope"></i> Questions About Licensing?
-            </h2>
-            <p class="policy-text">If you have any questions about our use of open source software or licensing compliance, please contact us at <a href="mailto:support@inyeonai.com" style="color:inherit;text-decoration:underline;">support@inyeonai.com</a>. We will respond within 48 hours.</p>
-        </div>
-
-    </div>
-    </div>
-
-    <!-- ========== FOOTER ========== -->
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -1207,18 +560,17 @@
                 <div class="footer-col"><h3>Explore</h3><ul class="footer-links">
                     <li><a href="/">Home</a></li>
                     <li><a href="/#how-it-works">How It Works</a></li>
-                    <li><a href="/support">Support</a></li>
+                    <li><a href="support.html">Support</a></li>
                 </ul></div>
                 <div class="footer-col"><h3>Legal</h3><ul class="footer-links">
-                    <!-- REAL STATIC LINKS in footer too -->
-                    <li><a href="/privacy">Privacy Policy</a></li>
-                    <li><a href="/terms">Terms & Conditions</a></li>
-                    <li><a href="/account-management">Account Management</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="account-management.html">Account Management</a></li>
                 </ul></div>
                 <div class="footer-col"><h3>Contact</h3><ul class="footer-links">
-                    <li><a href="/support">Contact Support</a></li>
+                    <li><a href="support.html">Contact Support</a></li>
                     <li><a href="mailto:support@inyeonai.com">Email Us</a></li>
-                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
                 </ul></div>
             </div>
             <div class="copyright">&copy; 2026 Inyeon AI. All rights reserved.</div>
@@ -1226,205 +578,52 @@
     </footer>
 
     <script>
-    (function() {
-        // Mobile menu
-        const mobileBtn = document.getElementById('mobileMenuBtn');
-        const navMenu = document.getElementById('navMenu');
-        if (mobileBtn) {
-            mobileBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                navMenu.classList.toggle('active');
-            });
-            document.addEventListener('click', function(event) {
-                if (!event.target.closest('.nav-menu') && !event.target.closest('.mobile-menu-btn')) {
-                    navMenu.classList.remove('active');
-                }
-            });
-        }
-
-        // ✅ Canonical + title map
-        const pageMeta = {
-            'home':               { canonical: 'https://www.inyeonai.com/',                   title: 'Inyeon AI – AI Dating App for Meaningful Connections', description: 'Inyeon AI is an AI-powered dating app designed for meaningful connections and serious relationships.', ogUrl: 'https://www.inyeonai.com/' },
-            'privacy':            { canonical: 'https://www.inyeonai.com/privacy',            title: 'Privacy Policy',               description: 'Read the Inyeon AI privacy policy to understand how we protect your data.', ogUrl: 'https://www.inyeonai.com/privacy' },
-            'terms':              { canonical: 'https://www.inyeonai.com/terms',              title: 'Terms & Conditions',            description: 'Read the Inyeon AI terms and conditions of use.', ogUrl: 'https://www.inyeonai.com/terms' },
-            'support':            { canonical: 'https://www.inyeonai.com/support',            title: 'Support',                       description: 'Get help and support for the Inyeon AI dating app.', ogUrl: 'https://www.inyeonai.com/support' },
-            'faq':                { canonical: 'https://www.inyeonai.com/faq',                title: 'What is Inyeon AI?',                           description: 'Frequently asked questions about Inyeon AI.', ogUrl: 'https://www.inyeonai.com/faq' },
-            'account-management': { canonical: 'https://www.inyeonai.com/account-management', title: 'How to Use Inyeon AI ?',            description: 'Manage your Inyeon AI account settings, data, and preferences.', ogUrl: 'https://www.inyeonai.com/account-management' },
-            'open-source':        { canonical: 'https://www.inyeonai.com/open-source',        title: 'Open Source Attributions — Inyeon AI',      description: 'Open source libraries and attributions used in Inyeon AI.', ogUrl: 'https://www.inyeonai.com/open-source' },
-        };
-
-        // Page navigation
-        window.showPage = function(pageName) {
-            document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
-            const target = document.getElementById(pageName + '-page');
-            if (target) target.classList.add('active');
-
-            // Update URL without reload
-            const url = pageName === 'home' ? '/' : '/' + pageName;
-            history.pushState({ page: pageName }, '', url);
-
-            // ✅ Update canonical tag
-            const meta = pageMeta[pageName] || pageMeta['home'];
-            let canonicalTag = document.getElementById('canonical-tag');
-            if (canonicalTag) {
-                canonicalTag.setAttribute('href', meta.canonical);
-            }
-
-            // ✅ Update page title
-            document.title = meta.title;
-
-            navMenu.classList.remove('active');
-            window.scrollTo(0, 0);
-            // Update meta description
-            const descTag = document.querySelector('meta[name="description"]');
-            if (descTag) descTag.setAttribute('content', meta.description);
-
-           // Update OG tags
-           const ogUrl = document.querySelector('meta[property="og:url"]');
-           if (ogUrl) ogUrl.setAttribute('content', meta.ogUrl);
-
-           const ogTitle = document.querySelector('meta[property="og:title"]');
-           if (ogTitle) ogTitle.setAttribute('content', meta.title);
-
-           const ogDesc = document.querySelector('meta[property="og:description"]');
-           if (ogDesc) ogDesc.setAttribute('content', meta.description);
-        };
-
-        // Handle all link clicks for SPA navigation
-        document.addEventListener('click', function(e) {
-            const link = e.target.closest('a');
-            if (!link) return;
-            
-            const href = link.getAttribute('href');
-            if (!href) return;
-            
-            if (href.startsWith('/')) {
-                e.preventDefault();
-                
-                if (href === '/') {
-                    showPage('home');
-                } else if (href === '/privacy') {
-                    showPage('privacy');
-                } else if (href === '/terms') {
-                    showPage('terms');
-                } else if (href === '/support') {
-                    showPage('support');
-                } else if (href === '/faq') {
-                    showPage('faq');
-                } else if (href === '/account-management') {
-                    showPage('account-management');
-                } else if (href === '/open-source') {
-                    showPage('open-source');
-                } else if (href.includes('#')) {
-                    const [path, hash] = href.split('#');
-                    if (path === '/' || path === '') {
-                        showPage('home');
-                        setTimeout(() => {
-                            const section = document.getElementById(hash);
-                            if (section) section.scrollIntoView({ behavior: 'smooth' });
-                        }, 150);
-                    }
-                }
-            }
-        });
-
-        window.scrollToSection = function(sectionId) {
-            const currentActive = document.querySelector('.page-content.active');
-            if (!currentActive || currentActive.id !== 'home-page') {
-                showPage('home');
-                setTimeout(() => {
-                    const section = document.getElementById(sectionId);
-                    if (section) section.scrollIntoView({ behavior: 'smooth' });
-                }, 150);
-            } else {
-                const section = document.getElementById(sectionId);
-                if (section) section.scrollIntoView({ behavior: 'smooth' });
-            }
-            navMenu.classList.remove('active');
-        };
-
-        window.downloadApp = function() {
-            window.open('https://play.google.com/store/apps/details?id=com.sandhyanand.flirtyfy', '_blank');
-            navMenu.classList.remove('active');
-        };
-
-        // Handle initial load / popstate
-        function initialPage() {
-            const path = window.location.pathname;
-            if (path === '/' || path === '') {
-                showPage('home');
-            } else if (path === '/privacy') {
-                showPage('privacy');
-            } else if (path === '/terms') {
-                showPage('terms');
-            } else if (path === '/support') {
-                showPage('support');
-            } else if (path === '/faq') {
-                showPage('faq');
-            } else if (path === '/account-management') {
-                showPage('account-management');
-            } else if (path === '/open-source') {
-                showPage('open-source');
-            } else {
-                showPage('home');
-            }
-        }
-        
-        window.addEventListener('popstate', function(e) {
-            initialPage();
-        });
-        
-        initialPage();
-
-        // Support form (Google Sheets)
-        const form = document.getElementById('supportForm');
-        if (form) {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const submitBtn = document.getElementById('submitBtn');
-                const success = document.getElementById('successMessage');
-                const error = document.getElementById('errorMessage');
-                success.style.display = 'none';
-                error.style.display = 'none';
-
-                const originalText = submitBtn.textContent;
-                submitBtn.textContent = 'Sending...';
-                submitBtn.disabled = true;
-
-                const data = {
-                    name: document.getElementById('name').value,
-                    email: document.getElementById('email').value,
-                    problem: document.getElementById('problem').value
-                };
-
-                const scriptURL = 'https://script.google.com/macros/s/AKfycbzYJcZNAhBuCLszC88N86EfTGcIFvl2ZNQcJou_TV81_lCUQuSWFkH-W1VYmJ2JMr9r/exec';
-
-                fetch(scriptURL, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    body: JSON.stringify(data),
-                    headers: { 'Content-Type': 'application/json' }
-                })
-                .then(() => {
-                    success.style.display = 'block';
-                    form.reset();
-                    setTimeout(() => { success.style.display = 'none'; }, 5000);
-                })
-                .catch(() => {
-                    error.style.display = 'block';
-                    setTimeout(() => { error.style.display = 'none'; }, 5000);
-                })
-                .finally(() => {
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
+        (function() {
+            // Mobile menu toggle
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const navMenu = document.getElementById('navMenu');
+            if (mobileBtn) {
+                mobileBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    navMenu.classList.toggle('active');
                 });
-            });
-        }
+                document.addEventListener('click', function(event) {
+                    if (!event.target.closest('.nav-menu') && !event.target.closest('.mobile-menu-btn')) {
+                        navMenu.classList.remove('active');
+                    }
+                });
+            }
 
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) navMenu.classList.remove('active');
-        });
-    })();
+            // Download function
+            window.downloadApp = function() {
+                window.open('https://play.google.com/store/apps/details?id=com.sandhyanand.flirtyfy', '_blank');
+                navMenu.classList.remove('active');
+            };
+
+            const downloadBtnHeader = document.getElementById('downloadBtnHeader');
+            const downloadBtnHero = document.getElementById('downloadBtnHero');
+            if (downloadBtnHeader) downloadBtnHeader.addEventListener('click', (e) => { e.preventDefault(); downloadApp(); });
+            if (downloadBtnHero) downloadBtnHero.addEventListener('click', (e) => { e.preventDefault(); downloadApp(); });
+
+            // Smooth scroll for #how-it-works link on home page
+            const howItWorksLink = document.getElementById('howItWorksLink');
+            if (howItWorksLink) {
+                howItWorksLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const section = document.getElementById('how-it-works');
+                    if (section) section.scrollIntoView({ behavior: 'smooth' });
+                    navMenu.classList.remove('active');
+                });
+            }
+
+            // Handle hash links from other pages (e.g., /#how-it-works)
+            if (window.location.hash === '#how-it-works') {
+                setTimeout(() => {
+                    const section = document.getElementById('how-it-works');
+                    if (section) section.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+        })();
     </script>
 </body>
 </html>
