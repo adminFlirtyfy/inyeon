@@ -2,3 +2,22 @@
   uses: 'vercel/repository-dispatch/actions/status@v1'
   with:
     name: Vercel - inyeon: lint
+
+- name: Ping IndexNow
+  run: |
+    curl -X POST https://api.indexnow.org/IndexNow \
+      -H "Content-Type: application/json; charset=utf-8" \
+      -d '{
+        "host": "www.inyeonai.com",
+        "key": "6d64bcd03ff94a4094bd6f380ad76700",
+        "keyLocation": "https://www.inyeonai.com/6d64bcd03ff94a4094bd6f380ad76700.txt",
+        "urlList": [
+          "https://www.inyeonai.com/",
+          "https://www.inyeonai.com/privacy",
+          "https://www.inyeonai.com/terms",
+          "https://www.inyeonai.com/faq",
+          "https://www.inyeonai.com/support",
+          "https://www.inyeonai.com/account-management",
+          "https://www.inyeonai.com/open-source"
+        ]
+      }'
