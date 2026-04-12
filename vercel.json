@@ -23,10 +23,6 @@
     { "src": "/robots.txt", "dest": "/public/robots.txt" },
     { "src": "/app-logo.jpg", "dest": "/public/app-logo.jpg" },
     { "src": "/favicon.ico", "dest": "/public/favicon.ico" },
-    { "src": "/googleaed1d32c1fbbd602.html", "dest": "/public/googleaed1d32c1fbbd602.html" },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
+    { "src": "/googleaed1d32c1fbbd602.html", "dest": "/public/googleaed1d32c1fbbd602.html" }
   ]
 }
