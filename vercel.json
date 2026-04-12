@@ -20,6 +20,7 @@
     { "src": "/open-source", "dest": "/open-source.html" },
     { "src": "/sitemap.xml", "dest": "/public/sitemap.xml" },
     { "src": "/robots.txt", "dest": "/public/robots.txt" },
+    { "src": "/6d64bcd03ff94a4094bd6f380ad76700.txt", "dest": "/public/6d64bcd03ff94a4094bd6f380ad76700.txt" },
     { "src": "/app-logo.jpg", "dest": "/public/app-logo.jpg" },
     { "src": "/favicon.ico", "dest": "/public/favicon.ico" },
     { "src": "/googleaed1d32c1fbbd602.html", "dest": "/public/googleaed1d32c1fbbd602.html" },
