@@ -16,6 +16,7 @@
     { "src": "/terms", "dest": "/terms.html" },
     { "src": "/support", "dest": "/support.html" },
     { "src": "/faq", "dest": "/faq.html" },
+    { "src": "/link", "dest": "/link.html" },
     { "src": "/account-management", "dest": "/account-management.html" },
     { "src": "/open-source", "dest": "/open-source.html" },
     { "src": "/sitemap.xml", "dest": "/public/sitemap.xml" },
