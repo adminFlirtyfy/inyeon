@@ -19,9 +19,14 @@
     { "src": "/link", "dest": "/link.html" },
     { "src": "/account-management", "dest": "/account-management.html" },
     { "src": "/accountmanagement", "dest": "/account-management.html" },
+    { "src": "/account", "dest": "/account-management.html" },
+    
     { "src": "/open-source", "dest": "/open-source.html" },
     { "src": "/sitemap.xml", "dest": "/public/sitemap.xml" },
     { "src": "/robots.txt", "dest": "/public/robots.txt" },
+    { "src": "/llms.txt", "dest": "/public/llms.txt" },
+    { "src": "/llms-full.txt", "dest": "/public/llms-full.txt" },
+    
     { "src": "/6d64bcd03ff94a4094bd6f380ad76700.txt", "dest": "/public/6d64bcd03ff94a4094bd6f380ad76700.txt" },
     { "src": "/lvu83gh7rekn4rmbjrgcyboagigrzx.html", "dest": "/public/lvu83gh7rekn4rmbjrgcyboagigrzx.html" },
     { "src": "/app-logo.jpg", "dest": "/public/app-logo.jpg" },
