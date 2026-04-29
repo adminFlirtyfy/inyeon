@@ -441,14 +441,19 @@
             background-position: right 16px center;
             padding-right: 40px;
         }
-         .social-links li {
-           display: inline-block;
-           margin-right: 15px;
+         .social-icons {
+           display: flex;
+           gap: 15px;
+           align-items: center;
+           flex-wrap: wrap;
          }
-      .social-links li a {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
+      .social-icons a {
+        color: var(--medium-gray);  /* or your theme color */
+        font-size: 20px;
+        transition: color 0.2s ease;
+      }
+      .social-icons a:hover {
+        color: var(--accent-color); /* your brand color, e.g., #ff6b6b */
       }
     </style>
 </head>
@@ -623,14 +628,14 @@
         </div>
         <!-- NEW: Social Media Column -->
         <div class="footer-col">
-           <h3>Follow Inyeon AI</h3>
-                <ul class="footer-links social-links">
-                    <li><a href="https://twitter.com/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a></li>
-                    <li><a href="https://linkedin.com/company/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                    <li><a href="https://youtube.com/@inyeonai" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i> YouTube</a></li>
-                    <li><a href="https://instagram.com/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a></li>
-                    <li><a href="https://facebook.com/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i> Facebook</a></li>
-                </ul>
+                <h3>Follow</h3>
+                <div class="social-icons">
+                    <a href="https://twitter.com/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com/company/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://youtube.com/@inyeonai" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://instagram.com/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                </div>
             </div>
         </div>
         <div class="copyright">&copy; 2026 Inyeon AI. All rights reserved.</div>
