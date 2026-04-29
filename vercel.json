@@ -10,6 +10,37 @@
       "use": "@vercel/static"
     }
   ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://launchigniter.com https://www.shipit.buzz; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+        }
+      ]
+    }
+  ],
   "routes": [
     { "src": "/", "dest": "/index.html" },
     { "src": "/privacy", "dest": "/privacy.html" },
@@ -20,13 +51,11 @@
     { "src": "/account-management", "dest": "/account-management.html" },
     { "src": "/accountmanagement", "dest": "/account-management.html" },
     { "src": "/account", "dest": "/account-management.html" },
-    
     { "src": "/open-source", "dest": "/open-source.html" },
     { "src": "/sitemap.xml", "dest": "/public/sitemap.xml" },
     { "src": "/robots.txt", "dest": "/public/robots.txt" },
     { "src": "/llms.txt", "dest": "/public/llms.txt" },
     { "src": "/llms-full.txt", "dest": "/public/llms-full.txt" },
-    
     { "src": "/6d64bcd03ff94a4094bd6f380ad76700.txt", "dest": "/public/6d64bcd03ff94a4094bd6f380ad76700.txt" },
     { "src": "/lvu83gh7rekn4rmbjrgcyboagigrzx.html", "dest": "/public/lvu83gh7rekn4rmbjrgcyboagigrzx.html" },
     { "src": "/app-logo.jpg", "dest": "/public/app-logo.jpg" },
