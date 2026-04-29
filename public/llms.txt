@@ -1,0 +1,29 @@
+# Inyeon AI
+
+> Inyeon AI is a free AI-powered intentional dating app inspired by the Korean philosophy of inyeon — the invisible thread connecting two people before they ever meet. Available globally on Android, it matches people through mood, personality, and genuine intent — not photos or swipes. All chats are encrypted and stored locally on the user's device. Data is never sold.
+
+## Core Features
+- AI matching based on Big Five personality, love languages, and attachment style
+- Mood and moment-based matching — match with someone in the same headspace right now
+- Privacy-first: chats stored locally on device, encrypted, never read or sold by Inyeon AI
+- Full message control: delete for everyone and edit sent messages
+- Incognito mode and granular privacy controls
+- Seven-day match window to encourage intentional connection
+- Free in-app psychology tests: Big Five, love languages, attachment style
+- Available free on Android globally; iOS coming soon
+
+## Pages
+- [Home](https://www.inyeonai.com/)
+- [How It Works](https://www.inyeonai.com/#how-it-works)
+- [FAQ](https://www.inyeonai.com/faq.html)
+- [Support](https://www.inyeonai.com/support.html)
+- [Privacy Policy](https://www.inyeonai.com/privacy.html)
+- [Terms & Conditions](https://www.inyeonai.com/terms.html)
+- [Account Management](https://www.inyeonai.com/account-management.html)
+
+## Contact
+- Support: https://www.inyeonai.com/support.html
+- Email: support@inyeonai.com
+
+## Optional
+- [llms-full.txt](https://www.inyeonai.com/llms-full.txt)

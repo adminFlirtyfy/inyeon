@@ -1,0 +1,94 @@
+# Inyeon AI — Full Content Reference
+
+> Inyeon AI is a free AI-powered intentional dating app inspired by the Korean philosophy of inyeon — the invisible thread connecting two people before they ever meet. It matches users globally through mood, personality, and genuine intent — not photos or swipes. Available on Android. iOS coming soon.
+
+---
+
+## About Inyeon AI
+
+Inyeon AI was built for people who are tired of superficial swipe-based dating. The app is rooted in the Korean concept of inyeon (인연) — the belief that every meaningful connection carries a bond shaped long before the moment two people meet. It is not coincidence. It is not a simple algorithm. It is something deeper, and Inyeon AI is built to honour that.
+
+The app is free, privacy-first, and intentional by design.
+
+---
+
+## How It Works
+
+**Step 1 — Know Yourself First**
+Users take free in-app personality assessments including the Big Five personality test, love languages, and attachment style. The AI uses these results to understand who the user really is — not just what they look like.
+
+**Step 2 — Set Mood and Intent**
+Users tell the app how they are feeling right now and what they are looking for. The AI matches them with people who share their current mindset and genuine intentions.
+
+**Step 3 — Seven-Day Match Window**
+Every match stays active for seven days — enough time to think, enough time to decide. No pressure, no endless inbox, just the right moment.
+
+**Step 4 — Chat Freely and Privately**
+Users chat for free with every match. Chats are encrypted, stored locally on the device, and can be deleted or edited at any time.
+
+---
+
+## Key Features
+
+**AI Personality Matching**
+Inyeon AI reads user intent, personality, mood, and values — not just swipe patterns — and matches users with people who genuinely align with who they are.
+
+**Privacy-First Architecture**
+Chats are stored locally on the user's device, encrypted — similar to WhatsApp's approach. Inyeon AI cannot read user messages and does not sell user data. Users can back up to Google Drive at any time.
+
+**Free Psychology Tests**
+Big Five personality test, love languages assessment, and attachment style test — all free, all built into the app. Users understand themselves better before finding someone else.
+
+**Mood and Moment-Based Matching**
+Users set their current mood and the app matches them with someone in the same headspace. Connection starts before the first message.
+
+**Incognito Mode and Privacy Controls**
+Users can browse invisibly, control read receipts, and toggle typing indicators. Presence on the app is entirely on the user's terms.
+
+**Full Message Control**
+Users can delete messages for everyone and edit sent messages. No other dating app in the world currently offers both features together.
+
+**Seven-Day Match Expiry**
+Matches expire after seven days to encourage intentionality and reduce passive ghosting behaviour.
+
+---
+
+## Philosophy
+
+The name Inyeon comes from Korean philosophy. Inyeon (인연) is the belief that every meaningful human connection is shaped by an invisible thread — a bond that exists long before the two people actually meet. The app is built to honour this idea by slowing down the dating process, encouraging self-knowledge, and prioritising genuine compatibility over surface-level attraction.
+
+---
+
+## Privacy Commitment
+
+Inyeon AI was built for people who are tired of giving their most personal moments to platforms that profit from them. Key privacy commitments:
+- Chats live on the user's device, not on Inyeon AI servers
+- User data is never sold to third parties
+- Matches, test results, and conversations belong entirely to the user
+- Incognito mode and granular privacy controls are built in at no cost
+
+---
+
+## Availability
+
+- Platform: Android (globally available, free download)
+- iOS: Coming soon
+- Website: https://www.inyeonai.com
+- Support: https://www.inyeonai.com/support.html
+- Email: support@inyeonai.com
+
+---
+
+## Pages Index
+
+- Home: https://www.inyeonai.com/
+- How It Works: https://www.inyeonai.com/#how-it-works
+- FAQ: https://www.inyeonai.com/faq.html
+- Support: https://www.inyeonai.com/support.html
+- Privacy Policy: https://www.inyeonai.com/privacy.html
+- Terms & Conditions: https://www.inyeonai.com/terms.html
+- Account Management: https://www.inyeonai.com/account-management.html
+
+---
+
+© 2026 Inyeon AI. All rights reserved.
