@@ -455,6 +455,12 @@
       .social-icons a:hover {
         color: var(--accent-color); /* your brand color, e.g., #ff6b6b */
       }
+      .footer-col:last-child .social-icons {
+        display: flex;
+        justify-content: center;  /* centers icons horizontally */
+        gap: 15px;
+        flex-wrap: wrap;
+      }
     </style>
 </head>
 <body>
@@ -628,7 +634,6 @@
         </div>
         <!-- NEW: Social Media Column -->
         <div class="footer-col">
-                <h3>Follow</h3>
                 <div class="social-icons">
                     <a href="https://twitter.com/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     <a href="https://linkedin.com/company/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
