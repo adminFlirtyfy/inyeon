@@ -862,7 +862,7 @@
                 </div>
                 <button class="carousel-nav prev" aria-label="Previous badges">‹</button>
                 <button class="carousel-nav next" aria-label="Next badges">›</button>
-                          </div>
+            </div>
         </div>
     </footer>
 
@@ -914,39 +914,43 @@
             }
             
             // Carousel logic
-            const carousel = document.getElementById('badgeCarousel');
-            const prevBtn = document.querySelector('.carousel-nav.prev');
-            const nextBtn = document.querySelector('.carousel-nav.next');
-            const autoBtn = document.getElementById('autoPlayBtn');
-            let autoInterval = null;
-            let isPlaying = false;
-            
+             document.addEventListener('DOMContentLoaded', function() {
+                const carousel = document.getElementById('badgeCarousel');
+                const prevBtn = document.querySelector('.carousel-nav.prev');
+                const nextBtn = document.querySelector('.carousel-nav.next');
+                // Debug: check if elements exist
+               if (!carousel) {
+                console.error('Carousel not found – check ID "badgeCarousel"');
+                return;
+            }
+            if (!prevBtn || !nextBtn) {
+            console.error('Prev/next buttons not found – check classes "carousel-nav prev/next"');
+               return;
+            }
             function scrollCarouselTo(direction) {
-                if (!carousel) return;
                 const snapWidth = carousel.clientWidth;
-                const currentScroll = carousel.scrollLeft;
-                let targetScroll;
-                if (direction === 'next') {
-                    targetScroll = currentScroll + snapWidth;
-                } else {
-                    targetScroll = currentScroll - snapWidth;
+                if (snapWidth === 0) {
+                    console.warn('Carousel width = 0 – maybe hidden by CSS?');
+                    return;
                 }
+                const currentScroll = carousel.scrollLeft;
+                let targetScroll = direction === 'next'
+                ? currentScroll + snapWidth
+                : currentScroll - snapWidth;
                 targetScroll = Math.max(0, Math.min(targetScroll, carousel.scrollWidth - carousel.clientWidth));
                 carousel.scrollTo({ left: targetScroll, behavior: 'smooth' });
             }
-            
-            if (nextBtn) {
-                nextBtn.addEventListener('click', () => {
-                    if (isPlaying) stopAutoPlay();
-                    scrollCarouselTo('next');
-                });
-            }
-            if (prevBtn) {
-                prevBtn.addEventListener('click', () => {
-                    if (isPlaying) stopAutoPlay();
-                    scrollCarouselTo('prev');
-                });
-            }
+            nextBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                scrollCarouselTo('next');
+            });
+            prevBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                scrollCarouselTo('prev');
+            });
+            console.log('Carousel buttons initialized successfully');
+        });
+           
             
             
         })();
