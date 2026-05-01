@@ -143,9 +143,7 @@
     .footer-grid {
         display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px;
     }
-    .footer-col 
-     h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; color: var(--pure-white);
-     }
+    .footer-col h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; color: var(--pure-white); }
     .footer-links { list-style: none; }
     .footer-links li { margin-bottom: 12px; }
     .footer-links a { color: var(--medium-gray); text-decoration: none; transition: color 0.3s ease; }
@@ -154,9 +152,7 @@
         padding-top: 30px; border-top: 1px solid var(--dark-gray);
         margin-top: 30px; 
     }
-    .featured-on { text-align: left; color: var(--pure-white); 
-        
-    }
+    .featured-on { text-align: left; color: var(--pure-white); margin-top: 30px; font-size: 1.2rem; font-weight: 600; }
     .platform-badge {
         display: inline-flex; align-items: center; gap: 10px; background: var(--light-black);
         padding: 12px 24px; border-radius: 50px; font-weight: 600; border: 1px solid var(--dark-gray);
@@ -282,7 +278,7 @@
         .contact-form { padding: 30px 20px; }
     }
 
-    /* Additional styles from original */
+    /* Additional styles */
     .faq-list {
        display: flex;
        flex-direction: column;
@@ -468,39 +464,38 @@
         padding-right: 40px;
     }
     
-    /* Social icons styles - only centered for the social column */
+    /* Social icons styles - fixed alignment */
     .social-icons {
         display: flex;
         gap: 20px;
-        align-items: left;
+        align-items: center;
         flex-wrap: wrap;
-        justify-content: left;
+        justify-content: flex-start;
+        margin-top: 15px;
     }
     .social-icons a {
         color: var(--medium-gray);
-        font-size: 22px;
+        font-size: 24px;
         transition: color 0.2s ease;
+        text-decoration: none;
     }
     .social-icons a:hover {
         color: var(--accent-color);
     }
-    /* The social column uses the same class but we also add a wrapper */
     .social-col {
         text-align: left;
-        margin: 30px 0 20px;
+        margin: 20px 0 0;
     }
     
-    /* Carousel styles */
+    /* Carousel styles - FIXED (removed invalid nested h3) */
     .carousel-wrapper {
-        
         position: relative;
         width: 100%;
         max-width: 1200px;
-        margin: 40px auto 0;
+        margin: 20px auto 0;
         font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
     }
     .badge-carousel {
-        h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; color: var(--pure-white);}
         display: flex;
         gap: 1.5rem;
         overflow-x: auto;
@@ -509,18 +504,10 @@
         padding: 1rem 0.5rem 1.5rem 0.5rem;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;  /* Firefox */
-        -ms-overflow-style: none;
+        -ms-overflow-style: none;  /* IE/Edge */
     }
     .badge-carousel::-webkit-scrollbar {
-        display: none;
-    }
-    .badge-carousel::-webkit-scrollbar-track {
-        background: #f1f1f1;
-        border-radius: 10px;
-    }
-    .badge-carousel::-webkit-scrollbar-thumb {
-        background: #ccc;
-        border-radius: 10px;
+        display: none;  /* Chrome/Safari */
     }
     .badge-item {
         flex: 0 0 auto;
@@ -577,25 +564,6 @@
     .carousel-nav.next {
         right: 0;
     }
-    .auto-play-btn {
-        display: block;
-        margin: 0.5rem auto 0;
-        background: #2c3e66;
-        color: white;
-        border: none;
-        border-radius: 30px;
-        padding: 6px 20px;
-        font-size: 0.85rem;
-        font-weight: 500;
-        cursor: pointer;
-        transition: background 0.2s;
-    }
-    .auto-play-btn:hover {
-        background: #1e2a47;
-    }
-    .auto-play-btn.playing {
-        background: #e67e22;
-    }
     @media (max-width: 768px) {
         .badge-carousel {
             gap: 1rem;
@@ -610,15 +578,11 @@
         .badge-item img {
             max-height: 50px;
         }
-        .auto-play-btn {
-            font-size: 0.75rem;
-            padding: 5px 16px;
-        }
         .social-icons {
             gap: 15px;
         }
         .social-icons a {
-            font-size: 20px;
+            font-size: 22px;
         }
     }
 </style>
@@ -772,15 +736,15 @@
                 <div class="footer-col">
                     <h3>Inyeon AI</h3>
                     <p style="color: var(--medium-gray); margin-bottom:15px;">Meaningful connections through mood, intent, and destiny.</p>
-                     <!-- Social Media Column (centered) -->
+                    <!-- Social Media Column (moved inside first column as per your structure) -->
                     <div class="social-col">
-                      <div class="social-icons">
-                        <a href="https://twitter.com/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://linkedin.com/company/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://youtube.com/@inyeonai" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="https://instagram.com/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://facebook.com/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                      </div>
+                        <div class="social-icons">
+                            <a href="https://twitter.com/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://linkedin.com/company/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://youtube.com/@inyeonai" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="https://instagram.com/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://facebook.com/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -808,17 +772,23 @@
                     </ul>
                 </div>
             </div>
-            
-           
 
             <div class="copyright">&copy; 2026 Inyeon AI. All rights reserved.</div>
-            <div class="featured-on"> Featured On</div>
+            <div class="featured-on">Featured On</div>
             
             <!-- Carousel wrapper -->
             <div class="carousel-wrapper">
-                
                 <div class="badge-carousel" id="badgeCarousel">
-                    
+                    <div class="badge-item">
+                        <a href="https://www.producthunt.com/products/inyeon-ai-dating-app?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-inyeon-ai-dating-app" target="_blank" rel="noopener noreferrer">
+                            <img alt="Inyeon AI Dating APP - Destiny doesn't swipe, It discovers you. | Product Hunt" 
+                                width="250" 
+                                height="54" 
+                                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1129289&amp;theme=light&amp;
+                                t=1777678359875">
+                        </a>
+
+                    </div>
                     <div class="badge-item">
                         <a href="https://launchigniter.com/product/inyeon-ai-dating-app?ref=badge-inyeon-ai-dating-app" target="_blank">
                             <img src="https://launchigniter.com/api/badge/inyeon-ai-dating-app?theme=light" alt="Featured on LaunchIgniter" width="212" height="55" />
@@ -860,8 +830,8 @@
                         </a>
                     </div>
                 </div>
-                <button class="carousel-nav prev" aria-label="Previous badges">‹</button>
-                <button class="carousel-nav next" aria-label="Next badges">›</button>
+                <button class="carousel-nav prev" type="button" aria-label="Previous badges">‹</button>
+                <button class="carousel-nav next" type="button" aria-label="Next badges">›</button>
             </div>
         </div>
     </footer>
@@ -913,46 +883,45 @@
                 }, 100);
             }
             
-            // Carousel logic
-             document.addEventListener('DOMContentLoaded', function() {
+            // Carousel logic - FIXED (removed any undefined variables)
+            document.addEventListener('DOMContentLoaded', function() {
                 const carousel = document.getElementById('badgeCarousel');
                 const prevBtn = document.querySelector('.carousel-nav.prev');
                 const nextBtn = document.querySelector('.carousel-nav.next');
-                // Debug: check if elements exist
-               if (!carousel) {
-                console.error('Carousel not found – check ID "badgeCarousel"');
-                return;
-            }
-            if (!prevBtn || !nextBtn) {
-            console.error('Prev/next buttons not found – check classes "carousel-nav prev/next"');
-               return;
-            }
-            function scrollCarouselTo(direction) {
-                const snapWidth = carousel.clientWidth;
-                if (snapWidth === 0) {
-                    console.warn('Carousel width = 0 – maybe hidden by CSS?');
+
+                if (!carousel) {
+                    console.error('Carousel not found – check ID "badgeCarousel"');
                     return;
                 }
-                const currentScroll = carousel.scrollLeft;
-                let targetScroll = direction === 'next'
-                ? currentScroll + snapWidth
-                : currentScroll - snapWidth;
-                targetScroll = Math.max(0, Math.min(targetScroll, carousel.scrollWidth - carousel.clientWidth));
-                carousel.scrollTo({ left: targetScroll, behavior: 'smooth' });
-            }
-            nextBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                scrollCarouselTo('next');
+                if (!prevBtn || !nextBtn) {
+                    console.error('Prev/next buttons not found – check classes "carousel-nav prev/next"');
+                    return;
+                }
+
+                function scrollCarouselTo(direction) {
+                    const snapWidth = carousel.clientWidth;
+                    if (snapWidth === 0) {
+                        console.warn('Carousel width = 0 – maybe hidden by CSS?');
+                        return;
+                    }
+                    const currentScroll = carousel.scrollLeft;
+                    let targetScroll = direction === 'next'
+                        ? currentScroll + snapWidth
+                        : currentScroll - snapWidth;
+                    targetScroll = Math.max(0, Math.min(targetScroll, carousel.scrollWidth - carousel.clientWidth));
+                    carousel.scrollTo({ left: targetScroll, behavior: 'smooth' });
+                }
+
+                nextBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    scrollCarouselTo('next');
+                });
+                prevBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    scrollCarouselTo('prev');
+                });
+                console.log('Carousel buttons initialized successfully');
             });
-            prevBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                scrollCarouselTo('prev');
-            });
-            console.log('Carousel buttons initialized successfully');
-        });
-           
-            
-            
         })();
     </script>
 </body>
