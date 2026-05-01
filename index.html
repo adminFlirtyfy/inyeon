@@ -45,8 +45,6 @@
 <meta property="og:url" content="https://www.inyeonai.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Inyeon AI">
-<meta itemprop="name" content="Inyeon AI"/>
-<meta itemprop="url" content="https://www.inyeonai.com"/>    
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
@@ -474,9 +472,9 @@
     .social-icons {
         display: flex;
         gap: 20px;
-        align-items: center;
+        align-items: left;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: left;
     }
     .social-icons a {
         color: var(--medium-gray);
@@ -488,7 +486,7 @@
     }
     /* The social column uses the same class but we also add a wrapper */
     .social-col {
-        text-align: center;
+        text-align: left;
         margin: 30px 0 20px;
     }
     
@@ -774,7 +772,16 @@
                 <div class="footer-col">
                     <h3>Inyeon AI</h3>
                     <p style="color: var(--medium-gray); margin-bottom:15px;">Meaningful connections through mood, intent, and destiny.</p>
-                    <div class="platform-badge"><i class="fab fa-android"></i> Android App</div>
+                     <!-- Social Media Column (centered) -->
+                    <div class="social-col">
+                      <div class="social-icons">
+                        <a href="https://twitter.com/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com/company/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://youtube.com/@inyeonai" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://instagram.com/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                      </div>
+                    </div>
                 </div>
                 <div class="footer-col">
                     <h3>Explore</h3>
@@ -802,16 +809,7 @@
                 </div>
             </div>
             
-            <!-- Social Media Column (centered) -->
-            <div class="social-col">
-                <div class="social-icons">
-                    <a href="https://twitter.com/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="https://linkedin.com/company/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://youtube.com/@inyeonai" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://instagram.com/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://facebook.com/inyeonai" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                </div>
-            </div>
+           
 
             <div class="copyright">&copy; 2026 Inyeon AI. All rights reserved.</div>
             <div class="featured-on"> Featured On</div>
