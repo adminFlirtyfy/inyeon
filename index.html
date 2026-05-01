@@ -150,7 +150,13 @@
     .footer-links li { margin-bottom: 12px; }
     .footer-links a { color: var(--medium-gray); text-decoration: none; transition: color 0.3s ease; }
     .footer-links a:hover { color: var(--pure-white); }
-    .copyright { text-align: center; color: var(--medium-gray); padding-top: 30px; border-top: 1px solid var(--dark-gray); margin-top: 30px; }
+    .copyright { text-align: center; color: var(--medium-gray); 
+        padding-top: 30px; border-top: 1px solid var(--dark-gray);
+        margin-top: 30px; 
+    }
+    .featured-on { text-align: left; color: var(--pure-white); 
+        
+    }
     .platform-badge {
         display: inline-flex; align-items: center; gap: 10px; background: var(--light-black);
         padding: 12px 24px; border-radius: 50px; font-weight: 600; border: 1px solid var(--dark-gray);
@@ -486,7 +492,7 @@
     
     /* Carousel styles */
     .carousel-wrapper {
-        h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; color: var(--pure-white);}
+        
         position: relative;
         width: 100%;
         max-width: 1200px;
@@ -494,6 +500,7 @@
         font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
     }
     .badge-carousel {
+        h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; color: var(--pure-white);}
         display: flex;
         gap: 1.5rem;
         overflow-x: auto;
@@ -805,11 +812,13 @@
             </div>
 
             <div class="copyright">&copy; 2026 Inyeon AI. All rights reserved.</div>
+            <div class="featured-on"> Featured On</div>
             
             <!-- Carousel wrapper -->
             <div class="carousel-wrapper">
-                <h3>Featured On</h3>
+                
                 <div class="badge-carousel" id="badgeCarousel">
+                    
                     <div class="badge-item">
                         <a href="https://launchigniter.com/product/inyeon-ai-dating-app?ref=badge-inyeon-ai-dating-app" target="_blank">
                             <img src="https://launchigniter.com/api/badge/inyeon-ai-dating-app?theme=light" alt="Featured on LaunchIgniter" width="212" height="55" />
