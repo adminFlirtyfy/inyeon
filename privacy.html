@@ -174,7 +174,7 @@
                 mobileBtn.addEventListener('click', function(e) { e.stopPropagation(); navMenu.classList.toggle('active'); });
                 document.addEventListener('click', function(event) { if (!event.target.closest('.nav-menu') && !event.target.closest('.mobile-menu-btn')) navMenu.classList.remove('active'); });
             }
-            window.downloadApp = function() { window.open('https://play.google.com/store/apps/details?id=com.sandhyanand.flirtyfy', '_blank'); navMenu.classList.remove('active'); };
+             window.downloadApp = function() { window.open('https://play.google.com/store/apps/details?id=com.sandhyanand.flirtyfy', '_blank'); navMenu.classList.remove('active'); };
             document.getElementById('downloadBtnHeader').addEventListener('click', (e) => { e.preventDefault(); downloadApp(); });
         })();
     </script>
