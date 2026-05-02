@@ -158,12 +158,28 @@
             const mobileBtn = document.getElementById('mobileMenuBtn');
             const navMenu = document.getElementById('navMenu');
             if (mobileBtn) {
-                mobileBtn.addEventListener('click', function(e) { e.stopPropagation(); navMenu.classList.toggle('active'); });
-                document.addEventListener('click', function(event) { if (!event.target.closest('.nav-menu') && !event.target.closest('.mobile-menu-btn')) navMenu.classList.remove('active'); });
+                mobileBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    navMenu.classList.toggle('active');
+                });
+                document.addEventListener('click', function(event) {
+                    if (!event.target.closest('.nav-menu') && !event.target.closest('.mobile-menu-btn')) {
+                        navMenu.classList.remove('active');
+                    }
+                });
             }
-            window.downloadApp = function() { window.open('https://play.google.com/store/apps/details?id=com.sandhyanand.flirtyfy', '_blank'); navMenu.classList.remove('active'); };
-            document.getElementById('downloadBtnHeader').addEventListener('click', (e) => { e.preventDefault(); downloadApp(); });
-        })();
+
+            // Download function
+            window.downloadApp = function() {
+                window.open('https://play.google.com/store/apps/details?id=com.sandhyanand.flirtyfy', '_blank');
+                if (navMenu) navMenu.classList.remove('active');
+            };
+
+            const downloadBtnHeader = document.getElementById('downloadBtnHeader');
+            const downloadBtnHero = document.getElementById('downloadBtnHero');
+            if (downloadBtnHeader) downloadBtnHeader.addEventListener('click', (e) => { e.preventDefault(); downloadApp(); });
+            if (downloadBtnHero) downloadBtnHero.addEventListener('click', (e) => { e.preventDefault(); downloadApp(); });
+      })();
     </script>
 </body>
 </html>
