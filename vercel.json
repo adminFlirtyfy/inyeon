@@ -20,16 +20,27 @@
   "routes": [
     { "src": "/", "dest": "/index.html" },
     { "src": "/index.html", "dest": "/", "status": 301 },
-    { "src": "/download", "dest": "https://play.google.com/store/apps/details?id=com.sandhyanand.flirtyfy", "status": 301 }
     { "src": "/privacy", "dest": "/privacy.html" },
+    { "src": "/privacy.html", "dest": "/privacy", "status": 301 },
+
     { "src": "/terms", "dest": "/terms.html" },
+    { "src": "/terms.html", "dest": "/terms", "status": 301 },
+
     { "src": "/support", "dest": "/support.html" },
+    { "src": "/support.html", "dest": "/support", "status": 301 },
+
     { "src": "/faq", "dest": "/faq.html" },
+    { "src": "/faq.html", "dest": "/faq", "status": 301 },
+
     { "src": "/link", "dest": "/link.html" },
-    { "src": "/account-management", "dest": "/account-management.html" },
-    { "src": "/accountmanagement", "dest": "/account-management.html" },
-    { "src": "/account", "dest": "/account-management.html" },
+     { "src": "/account-management", "dest": "/account-management.html" },
+    { "src": "/account-management.html", "dest": "/account-management", "status": 301 },
+
+    { "src": "/accountmanagement", "dest": "/account-management", "status": 301 },
+    { "src": "/account", "dest": "/account-management", "status": 301 },
+
     { "src": "/open-source", "dest": "/open-source.html" },
+    { "src": "/open-source.html", "dest": "/open-source", "status": 301 },
     { "src": "/sitemap.xml", "dest": "/public/sitemap.xml" },
     { "src": "/robots.txt", "dest": "/public/robots.txt" },
     { "src": "/llms.txt", "dest": "/public/llms.txt" },
