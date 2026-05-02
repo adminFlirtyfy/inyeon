@@ -19,7 +19,6 @@
   ],
   "routes": [
     { "src": "/", "dest": "/index.html" },
-    { "src": "/#", "dest": "https://play.google.com/store/apps/details?id=com.sandhyanand.flirtyfy" },
     { "src": "/privacy", "dest": "/privacy.html" },
     { "src": "/terms", "dest": "/terms.html" },
     { "src": "/support", "dest": "/support.html" },
