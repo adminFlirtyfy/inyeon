@@ -19,6 +19,7 @@
   ],
   "routes": [
     { "src": "/", "dest": "/index.html" },
+    { "src": "/index.html", "dest": "/", "status": 301 },
     { "src": "/privacy", "dest": "/privacy.html" },
     { "src": "/terms", "dest": "/terms.html" },
     { "src": "/support", "dest": "/support.html" },
