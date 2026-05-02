@@ -20,6 +20,7 @@
   "routes": [
     { "src": "/", "dest": "/index.html" },
     { "src": "/index.html", "dest": "/", "status": 301 },
+    { "src": "/download", "dest": "https://play.google.com/store/apps/details?id=com.sandhyanand.flirtyfy", "status": 301 }
     { "src": "/privacy", "dest": "/privacy.html" },
     { "src": "/terms", "dest": "/terms.html" },
     { "src": "/support", "dest": "/support.html" },
