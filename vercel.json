@@ -1,30 +1,23 @@
 {
   "version": 2,
-  "headers": [
+  "builds": [
     {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()" },
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://launchigniter.com https://www.shipit.buzz https://www.bing.com https://*.bing.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://www.bing.com https://*.bing.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" }
-      ]
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "public/**/*",
+      "use": "@vercel/static"
     }
   ],
-  "builds": [
-    { "src": "*.html", "use": "@vercel/static" },
-    { "src": "public/**/*", "use": "@vercel/static" }
-  ],
   "routes": [
-    { "src": "/", "dest": "/index.html" },
-    { "src": "/privacy", "dest": "/privacy.html" },
-    { "src": "/terms", "dest": "/terms.html" },
-    { "src": "/support", "dest": "/support.html" },
-    { "src": "/faq", "dest": "/faq.html" },
-    { "src": "/link", "dest": "/link.html" },
-    { "src": "/account-management", "dest": "/account-management.html" },
+    { "src": "/", "dest": "/index.html", "headers": { "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload", "X-Frame-Options": "SAMEORIGIN", "X-Content-Type-Options": "nosniff", "Referrer-Policy": "strict-origin-when-cross-origin", "Permissions-Policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()", "Content-Security-Policy": "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://launchigniter.com https://www.shipit.buzz; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" } },
+    { "src": "/privacy", "dest": "/privacy.html", "headers": { "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload", "X-Frame-Options": "SAMEORIGIN", "X-Content-Type-Options": "nosniff", "Referrer-Policy": "strict-origin-when-cross-origin", "Permissions-Policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()", "Content-Security-Policy": "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://launchigniter.com https://www.shipit.buzz; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" } },
+    { "src": "/terms", "dest": "/terms.html", "headers": { "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload", "X-Frame-Options": "SAMEORIGIN", "X-Content-Type-Options": "nosniff", "Referrer-Policy": "strict-origin-when-cross-origin", "Permissions-Policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()", "Content-Security-Policy": "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://launchigniter.com https://www.shipit.buzz; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" } },
+    { "src": "/support", "dest": "/support.html", "headers": { "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload", "X-Frame-Options": "SAMEORIGIN", "X-Content-Type-Options": "nosniff", "Referrer-Policy": "strict-origin-when-cross-origin", "Permissions-Policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()", "Content-Security-Policy": "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://launchigniter.com https://www.shipit.buzz; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" } },
+    { "src": "/faq", "dest": "/faq.html", "headers": { "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload", "X-Frame-Options": "SAMEORIGIN", "X-Content-Type-Options": "nosniff", "Referrer-Policy": "strict-origin-when-cross-origin", "Permissions-Policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()", "Content-Security-Policy": "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://launchigniter.com https://www.shipit.buzz; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" } },
+    { "src": "/link", "dest": "/link.html", "headers": { "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload", "X-Frame-Options": "SAMEORIGIN", "X-Content-Type-Options": "nosniff", "Referrer-Policy": "strict-origin-when-cross-origin", "Permissions-Policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()", "Content-Security-Policy": "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://launchigniter.com https://www.shipit.buzz; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" } },
+    { "src": "/account-management", "dest": "/account-management.html", "headers": { "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload", "X-Frame-Options": "SAMEORIGIN", "X-Content-Type-Options": "nosniff", "Referrer-Policy": "strict-origin-when-cross-origin", "Permissions-Policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()", "Content-Security-Policy": "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://launchigniter.com https://www.shipit.buzz; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" } },
     { "src": "/accountmanagement", "dest": "/account-management.html" },
     { "src": "/account", "dest": "/account-management.html" },
     { "src": "/open-source", "dest": "/open-source.html" },
@@ -36,7 +29,7 @@
     { "src": "/lvu83gh7rekn4rmbjrgcyboagigrzx.html", "dest": "/public/lvu83gh7rekn4rmbjrgcyboagigrzx.html" },
     { "src": "/app-logo.jpg", "dest": "/public/app-logo.jpg" },
     { "src": "/favicon.ico", "dest": "/public/favicon.ico" },
-    { "src": "/googleaed1d32c1fbbd602.html", "dest": "/public/googleaed1d32c1fbbd602.html" }
-    // No catch‑all route – API functions (e.g., mybling console) will now work again
+    { "src": "/googleaed1d32c1fbbd602.html", "dest": "/public/googleaed1d32c1fbbd602.html" },
+    { "src": "/(.*)", "dest": "/$1", "headers": { "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload", "X-Frame-Options": "SAMEORIGIN", "X-Content-Type-Options": "nosniff", "Referrer-Policy": "strict-origin-when-cross-origin", "Permissions-Policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()", "Content-Security-Policy": "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://launchigniter.com https://www.shipit.buzz; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" } }
   ]
 }
