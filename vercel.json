@@ -45,6 +45,7 @@
     { "src": "/llms.txt", "dest": "/public/llms.txt" },
     { "src": "/llms-full.txt", "dest": "/public/llms-full.txt" },
     { "src": "/6d64bcd03ff94a4094bd6f380ad76700.txt", "dest": "/public/6d64bcd03ff94a4094bd6f380ad76700.txt" },
+    { "src": "/yandex_e06a10bdb506dce7.html", "dest": "/public/yandex_e06a10bdb506dce7.html" },
     { "src": "/lvu83gh7rekn4rmbjrgcyboagigrzx.html", "dest": "/public/lvu83gh7rekn4rmbjrgcyboagigrzx.html" },
     { "src": "/app-logo.jpg", "dest": "/public/app-logo.jpg" },
     { "src": "/favicon.ico", "dest": "/public/favicon.ico" },
