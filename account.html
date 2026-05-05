@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Inyeon AI">
+    <meta name="google-site-verification" content="uAyoyqZtzPR9sAKlY6QLkX_4UBEpAuNjBL0BPU0CCiw">
+    
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+    <link rel="apple-touch-icon" href="/app-logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="canonical" href="https://www.inyeonai.com/account">
+    <title>Account Management – Inyeon AI | Manage Your Profile & Settings</title>
+    <meta name="description" content="Manage your Inyeon AI account settings, profile preferences, and security options. Delete account, edit messages, and control your data.">
+    <meta name="keywords" content="Inyeon AI account, manage profile, account settings, delete account, AI dating profile, data control">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Inyeon AI | Account Management">
+    <meta property="og:description" content="Update your profile, control your data, and manage privacy settings on Inyeon AI.">
+    <meta property="og:image" content="https://www.inyeonai.com/app-logo.jpg">
+    <meta property="og:url" content="https://www.inyeonai.com/account">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Inyeon">
+    <meta itemprop="name" content="Inyeon"/>
+    <meta itemprop="url" content="https://www.inyeonai.com/account"/>
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Inyeon AI Account Management">
+    <meta name="twitter:description" content="Control your profile, notifications, and data on Inyeon AI.">
+    <meta name="twitter:image" content="https://www.inyeonai.com/app-logo.jpg">
+    <!-- Structured Data -->
+   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Account Management – Inyeon AI",
+  "description": "Update your profile, control your data, and manage privacy settings on Inyeon AI.",
+  "url": "https://www.inyeonai.com/account",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Inyeon AI",
+    "url": "https://www.inyeonai.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Inyeon AI",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.inyeonai.com/app-logo.jpg"
+    }
+  }
+}
+</script>
+    <style>
+        /* Same global styles as support.html (abbreviated) */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary-black: #111111; --secondary-black: #1a1a1a; --light-black: #2a2a2a; --pure-white: #ffffff; --off-white: #f8f8f8; --light-gray: #e0e0e0; --medium-gray: #888888; --dark-gray: #444444; --gradient-start: rgba(255,255,255,0.05); --gradient-end: rgba(255,255,255,0); --accent-color: #7c3aed; --danger-color: #ef4444; --success-color: #10b981; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--primary-black); color: var(--pure-white); line-height: 1.6; overflow-x: hidden; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { padding: 20px 0; border-bottom: 1px solid var(--dark-gray); position: sticky; top: 0; background-color: var(--primary-black); z-index: 1000; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo-container { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-image { width: 40px; height: 40px; background: linear-gradient(135deg, var(--accent-color), #a855f7); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--pure-white); font-size: 20px; font-weight: 700; }
+        .logo-text { font-size: 24px; font-weight: 700; color: var(--pure-white); letter-spacing: -0.5px; }
+        .logo-text span { font-weight: 300; color: var(--accent-color); }
+        .nav-menu { display: flex; align-items: center; gap: 30px; }
+        .nav-link { color: var(--medium-gray); text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
+        .nav-link:hover { color: var(--pure-white); }
+        .download-btn-header { background: var(--accent-color); color: var(--pure-white); padding: 12px 28px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: none; cursor: pointer; }
+        .download-btn-header:hover { background: #6d28d9; transform: translateY(-2px); }
+        .mobile-menu-btn { display: none; background: none; border: none; color: var(--pure-white); font-size: 1.5rem; cursor: pointer; }
+        footer { padding: 60px 0 40px; border-top: 1px solid var(--dark-gray); margin-top: 60px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-col h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; color: var(--pure-white); }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: var(--medium-gray); text-decoration: none; transition: color 0.3s ease; }
+        .footer-links a:hover { color: var(--pure-white); }
+        .copyright { text-align: center; color: var(--medium-gray); padding-top: 30px; border-top: 1px solid var(--dark-gray); }
+        .platform-badge { display: inline-flex; align-items: center; gap: 10px; background: var(--light-black); padding: 12px 24px; border-radius: 50px; font-weight: 600; border: 1px solid var(--dark-gray); }
+        .policy-container { max-width: 900px; margin: 0 auto; padding: 80px 20px 120px; }
+        .policy-header { margin-bottom: 50px; padding-bottom: 30px; border-bottom: 1px solid var(--dark-gray); }
+        .policy-title { font-size: 2.5rem; font-weight: 700; margin-bottom: 10px; letter-spacing: -0.5px; }
+        .policy-updated { color: var(--medium-gray); }
+        .policy-section { margin-bottom: 50px; padding: 30px; background: var(--secondary-black); border-radius: 12px; border: 1px solid var(--dark-gray); }
+        .policy-subtitle { font-size: 1.5rem; font-weight: 600; margin-bottom: 20px; display: flex; gap: 10px; }
+        .policy-subtitle i { color: var(--accent-color); }
+        .policy-text { color: var(--medium-gray); margin-bottom: 20px; font-size: 1.05rem; }
+        .policy-list { list-style: none; padding: 0; margin: 14px 0; display: flex; flex-direction: column; gap: 10px; }
+        .policy-list li { padding-left: 20px; position: relative; color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.6; }
+        .policy-list li::before { content: "—"; position: absolute; left: 0; color: rgba(255,255,255,0.3); }
+        .back-btn { display: inline-flex; align-items: center; gap: 8px; color: var(--medium-gray); text-decoration: none; font-weight: 500; margin-bottom: 30px; transition: color 0.3s ease; padding: 10px 20px; border-radius: 8px; background: var(--secondary-black); border: 1px solid var(--dark-gray); }
+        .back-btn:hover { color: var(--pure-white); border-color: var(--medium-gray); }
+        @media (max-width: 768px) { .mobile-menu-btn { display: block; } .nav-menu { display: none; position: absolute; top: 80px; left: 0; right: 0; background: var(--secondary-black); padding: 20px; flex-direction: column; gap: 20px; border-bottom: 1px solid var(--dark-gray); z-index: 100; } .nav-menu.active { display: flex; } .policy-section { padding: 20px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo-container"><img src="app-logo.jpg" alt="Inyeon AI Logo" class="logo-image"><div class="logo-text">Inyeon<span>AI</span></div></a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+                <div class="nav-menu" id="navMenu">
+                    <a href="index.html" class="nav-link">Home</a><a href="index.html#how-it-works" class="nav-link">How It Works</a><a href="support.html" class="nav-link">Support</a><a href="privacy.html" class="nav-link">Privacy</a><a href="terms.html" class="nav-link">Terms</a><a href="#" class="download-btn-header" id="downloadBtnHeader"><i class="fab fa-android"></i> Download App</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="policy-container">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        <div class="policy-header">
+            <h1 class="policy-title">Account Management</h1>
+            <p class="policy-updated">Last Updated: April 7, 2026</p>
+            <p class="policy-text" style="margin-top:12px;">Inyeon AI is built around one principle — you are in control. Your account, your data, your decisions. Here is everything you need to know about managing your presence on Inyeon AI.</p>
+        </div>
+        <div class="policy-section"><h2 class="policy-subtitle"><i class="fas fa-user-cog"></i> 1. Managing Your Account</h2><p class="policy-text">You have full control over your account and personal data at all times. Every setting, every preference, every piece of information you shared — you can update or remove it whenever you choose, directly from within the app. No need to contact support for routine changes.</p></div>
+        <div class="policy-section"><h2 class="policy-subtitle"><i class="fas fa-edit"></i> 2. Update Your Profile & Preferences</h2><p class="policy-text">You can update any of the following at any time from the app settings:</p><ul class="policy-list"><li>Your name, age, and bio</li><li>Profile photos and display picture</li><li>Dating preferences and relationship intent</li><li>Personality test results — retake any assessment whenever you feel you have grown</li><li>Privacy settings including incognito mode, read receipts, and typing indicators</li><li>Notification preferences</li><li>Google Drive backup settings for your encrypted chat history</li></ul></div>
+        <div class="policy-section"><h2 class="policy-subtitle"><i class="fas fa-shield-alt"></i> 3. Your Data — Stored on Your Device</h2><p class="policy-text">Unlike most apps, Inyeon AI stores your chat messages locally on your device, fully encrypted. We do not hold copies of your conversations on our servers. You own them completely. You can back up your chats securely to Google Drive at any time and restore them on a new device. Your backup is encrypted with your credentials — only you can access it.</p></div>
+        <div class="policy-section"><h2 class="policy-subtitle"><i class="fas fa-comment-slash"></i> 4. Message Control</h2><p class="policy-text">Inyeon AI gives you full control over every conversation you have:</p><ul class="policy-list"><li><strong>Delete for Everyone:</strong> Remove any message from both sides of a conversation instantly — a feature no other dating app currently offers</li><li><strong>Edit Messages:</strong> Correct or update any message you have already sent at any time</li><li><strong>Clear Chat:</strong> Clear an entire conversation locally from your device at any time</li></ul></div>
+        <div class="policy-section"><h2 class="policy-subtitle"><i class="fas fa-trash-alt"></i> 5. Delete Your Account</h2><p class="policy-text">You may permanently delete your account at any time. No waiting period, no retention tactics, no dark patterns. Here is how:</p><ul class="policy-list"><li>Open the Inyeon AI app</li><li>Go to <strong>Settings</strong></li><li>Select <strong>Account</strong></li><li>Tap <strong>Delete Account</strong></li><li>Confirm your choice</li></ul><p class="policy-text" style="margin-top:14px;">Once your account is deleted:</p><ul class="policy-list"><li>Your profile, photos, bio, and personal information are permanently removed</li><li>All your matches and conversations are deleted</li><li>Your personality test results and AI preference data are erased</li><li>You will no longer appear in anyone's matches or search results</li><li>Some anonymised data may be retained for up to 30 days for legal or security reasons before being fully purged</li></ul><p class="policy-text" style="margin-top:14px;">Account deletion is permanent and cannot be undone. If you think you may return, consider deactivating your profile instead — this hides you from the app without deleting your data.</p></div>
+        <div class="policy-section"><h2 class="policy-subtitle"><i class="fas fa-moon"></i> 6. Deactivate Instead of Delete</h2><p class="policy-text">If you need a break from Inyeon AI but are not ready to leave permanently, you can deactivate your account. While deactivated your profile is hidden from all users, you will not appear in any matches, and no one can contact you. Your data is preserved. You can reactivate at any time simply by logging back in.</p></div>
+        <div class="policy-section"><h2 class="policy-subtitle"><i class="fas fa-envelope"></i> 7. Need Help?</h2><p class="policy-text">If you experience any issues managing or deleting your account, our support team is here to help. We respond within 48 hours.</p><p class="policy-text" style="margin-top:10px;"><strong>Email:</strong> <a href="mailto:support@inyeonai.com" style="color:inherit;text-decoration:underline;">support@inyeonai.com</a></p></div>
+        <div class="policy-section"><a href="open-source.html" style="text-decoration:none; color:inherit; display:block;"><h2 class="policy-subtitle"><i class="fas fa-code-branch"></i> 8. Open Source Attributions</h2><p class="policy-text">Inyeon AI is built on the shoulders of the open source community. We are grateful for the libraries and tools that make this app possible. View our full list of open source libraries and data attributions used in the Android build.</p><p class="policy-text" style="margin-top:10px; opacity:0.5; font-size:0.85rem;">Tap to view full attributions <i class="fas fa-arrow-right" style="margin-left:6px;"></i></p></a></div>
+    </div>
+
+    <footer>
+        <div class="container"><div class="footer-grid"><div class="footer-col"><h3>Inyeon AI</h3><p style="color: var(--medium-gray); margin-bottom:15px;">Meaningful connections through mood, intent, and destiny.</p><div class="platform-badge"><i class="fab fa-android"></i> Android App</div></div><div class="footer-col"><h3>Explore</h3><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="index.html#how-it-works">How It Works</a></li><li><a href="support.html">Support</a></li></ul></div><div class="footer-col"><h3>Legal</h3><ul class="footer-links"><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms & Conditions</a></li><li><a href="account-management.html">Account Management</a></li></ul></div><div class="footer-col"><h3>Contact</h3><ul class="footer-links"><li><a href="support.html">Contact Support</a></li><li><a href="mailto:support@inyeonai.com">Email Us</a></li><li><a href="faq.html">FAQ</a></li></ul></div></div><div class="copyright">&copy; 2026 Inyeon AI. All rights reserved.</div></div>
+    </footer>
+
+    <script>
+        (function() {
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const navMenu = document.getElementById('navMenu');
+            if (mobileBtn) {
+                mobileBtn.addEventListener('click', function(e) { e.stopPropagation(); navMenu.classList.toggle('active'); });
+                document.addEventListener('click', function(event) { if (!event.target.closest('.nav-menu') && !event.target.closest('.mobile-menu-btn')) navMenu.classList.remove('active'); });
+            }
+            window.downloadApp = function() { window.open('https://play.google.com/store/apps/details?id=com.sandhyanand.flirtyfy', '_blank'); navMenu.classList.remove('active'); };
+            document.getElementById('downloadBtnHeader').addEventListener('click', (e) => { e.preventDefault(); downloadApp(); });
+        })();
+    </script>
+</body>
+</html>
