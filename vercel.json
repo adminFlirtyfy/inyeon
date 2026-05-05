@@ -45,14 +45,13 @@
     { "src": "/faq.html", "dest": "/faq", "status": 301 },
 
     { "src": "/link", "dest": "/link.html" },
-     { "src": "/account-management", "dest": "/account-management.html" },
-    { "src": "/account-management.html", "dest": "/account-management", "status": 301 },
+    
+     { "src": "/account", "dest": "/account.html" },
+    { "src": "/account.html", "dest": "/account", "status": 301 },
 
-    { "src": "/accountmanagement", "dest": "/account-management", "status": 301 },
-    { "src": "/account", "dest": "/account-management", "status": 301 },
-
-    { "src": "/open-source", "dest": "/open-source.html" },
-    { "src": "/open-source.html", "dest": "/open-source", "status": 301 },
+    { "src": "/opensource", "dest": "/opensource.html" },
+    { "src": "/opensource.html", "dest": "/opensource", "status": 301 },
+    
     { "src": "/sitemap.xml", "dest": "/public/sitemap.xml" },
     { "src": "/robots.txt", "dest": "/public/robots.txt" },
     { "src": "/llms.txt", "dest": "/public/llms.txt" },
