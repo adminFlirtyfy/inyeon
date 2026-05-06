@@ -49,6 +49,8 @@
      { "src": "/account", "dest": "/account.html" },
     { "src": "/account.html", "dest": "/account", "status": 301 },
 
+    { "src": "/account/opensource", "dest": "/opensource.html" },
+    { "src": "/opensource.html", "dest": "/account/opensource", "status": 301 },
     { "src": "/opensource", "dest": "/opensource.html" },
     { "src": "/opensource.html", "dest": "/opensource", "status": 301 },
     
