@@ -28,8 +28,8 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 </url>
 
 <url>
-<loc>https://www.inyeonai.com/account-management</loc>
-<lastmod>2026-05-04T00:00:00+00:00</lastmod>
+<loc>https://www.inyeonai.com/account</loc>
+<lastmod>2026-05-05T00:00:00+00:00</lastmod>
 <priority>0.80</priority>
 </url>
 
@@ -40,8 +40,8 @@ http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 </url>
 
 <url>
-<loc>https://www.inyeonai.com/open-source</loc>
-<lastmod>2026-05-04T00:00:00+00:00</lastmod>
+<loc>https://www.inyeonai.com/opensource</loc>
+<lastmod>2026-05-05T00:00:00+00:00</lastmod>
 <priority>0.64</priority>
 </url>
 
