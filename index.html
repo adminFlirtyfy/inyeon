@@ -52,29 +52,47 @@
 
 <!-- ===================== -->
 <!-- STRUCTURED DATA (SEO) -->
-<!-- ===================== -->
 
 <!-- Organization (VERY IMPORTANT for brand name) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Inyeon",
+  "@id": "https://www.inyeonai.com/#organization",
+  "name": "Inyeon AI",
   "url": "https://www.inyeonai.com",
   "logo": "https://www.inyeonai.com/app-logo.jpg",
+  "termsOfService": "https://www.inyeonai.com/terms",
+  "privacyPolicy": "https://www.inyeonai.com/privacy",
   "sameAs": [
-    "https://play.google.com/store/apps/details?id=com.sandhyanand.flirtyfy"
-  ]
+    "https://play.google.com/store/apps/details?id=com.sandhyanand.flirtyfy",
+    "https://linkedin.com/company/inyeonai",
+    "https://www.facebook.com/inyeonai",
+    "https://x.com/inyeonai",
+    "https://www.instagram.com/inyeonai",
+    "https://www.threads.net/@inyeonai",
+    "https://www.youtube.com/@Inyeonai"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "support@inyeonai.com",
+    "url": "https://www.inyeonai.com/support",
+    "availableLanguage": "English"
+  }
 }
 </script>
 
 <!-- Website -->
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Inyeon",
-  "url": "https://www.inyeonai.com"
+  "@id": "https://www.inyeonai.com/#website",
+  "name": "Inyeon AI",
+  "url": "https://www.inyeonai.com",
+  "publisher": { "@id": "https://www.inyeonai.com/#organization" }
 }
 </script>
 
