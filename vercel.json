@@ -65,6 +65,9 @@
     { "src": "/lvu83gh7rekn4rmbjrgcyboagigrzx.html", "dest": "/public/lvu83gh7rekn4rmbjrgcyboagigrzx.html" },
     { "src": "/app-logo.jpg", "dest": "/public/app-logo.jpg" },
     { "src": "/favicon.ico", "dest": "/public/favicon.ico" },
+    { "src": "/favicon-16x16.png", "dest": "/public/favicon-16x16.png" },
+    { "src": "/favicon-32x32.png", "dest": "/public/favicon-32x32.png" },
+    { "src": "/favicon-48x48.png", "dest": "/public/favicon-48x48.png" },
     { "src": "/googleaed1d32c1fbbd602.html", "dest": "/public/googleaed1d32c1fbbd602.html" }
   ]
 }
