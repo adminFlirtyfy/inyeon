@@ -57,7 +57,7 @@
     { "src": "/robots.txt", "dest": "/public/robots.txt" },
     { "src": "/llms.txt", "dest": "/public/llms.txt" },
     { "src": "/llms-full.txt", "dest": "/public/llms-full.txt" },
-    { "src": "/og-image.jpg", "dest": "/public/og-image.jpg" },
+    { "src": "/og-image.jpg", "dest": "/public/app-logo.jpg" },
     
     { "src": "/gma8rxvz51ag299tyz3a81gdutcs6jxj.txt", "dest": "/public/gma8rxvz51ag299tyz3a81gdutcs6jxj.txt" },
     { "src": "/6d64bcd03ff94a4094bd6f380ad76700.txt", "dest": "/public/6d64bcd03ff94a4094bd6f380ad76700.txt" },
