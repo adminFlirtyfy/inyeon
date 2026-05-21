@@ -66,65 +66,67 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://www.inyeonai.com/#organization",
-  "name": "Inyeon AI",
-  "url": "https://www.inyeonai.com",
-  "logo": "https://www.inyeonai.com/app-logo.jpg",
-  "sameAs": [
-    "https://play.google.com/store/apps/details?id=com.sandhyanand.flirtyfy",
-    "https://linkedin.com/company/inyeonai",
-    "https://www.facebook.com/inyeonai",
-    "https://x.com/inyeonai",
-    "https://www.instagram.com/inyeonai",
-    "https://www.threads.net/@inyeonai",
-    "https://www.youtube.com/@Inyeonai"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "customer support",
-    "email": "support@inyeonai.com",
-    "url": "https://www.inyeonai.com/support",
-    "availableLanguage": "English"
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.inyeonai.com/#organization",
+      "name": "Inyeon AI",
+      "url": "https://www.inyeonai.com",
+      "logo": "https://www.inyeonai.com/app-logo.jpg",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.sandhyanand.flirtyfy",
+        "https://linkedin.com/company/inyeonai",
+        "https://www.facebook.com/inyeonai",
+        "https://x.com/inyeonai",
+        "https://www.instagram.com/inyeonai",
+        "https://www.threads.net/@inyeonai",
+        "https://www.youtube.com/@Inyeonai"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "support@inyeonai.com",
+        "url": "https://www.inyeonai.com/support",
+        "availableLanguage": "English"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.inyeonai.com/#website",
+      "name": "Inyeon AI",
+      "url": "https://www.inyeonai.com",
+      "publisher": { "@id": "https://www.inyeonai.com/#organization" },
+      "mainEntity": { "@id": "https://inyeonai.com" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://inyeonai.com",
+      "url": "https://www.inyeonai.com",      
+      "name": "Inyeon AI - Intent-Driven Privacy-First Dating App",
+      "isPartOf": { "@id": "https://www.inyeonai.com/#website" },
+      "about": { "@id": "https://inyeonai.com" },
+      "relatedLink": "https://www.inyeonai.com/faq"
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://inyeonai.com",
+      "name": "Inyeon AI",
+      "applicationCategory": "LifestyleApplication",
+      "applicationSubCategory": "Dating, Matchmaking, Social Networking",
+      "operatingSystem": "Android",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.sandhyanand.flirtyfy",
+      "url": "https://www.inyeonai.com",
+      "publisher": { "@id": "https://www.inyeonai.com/#organization" },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+  ]
 }
 </script>
 
-<!-- Website -->
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://www.inyeonai.com/#website",
-  "name": "Inyeon AI",
-  "url": "https://www.inyeonai.com",
-  "publisher": { "@id": "https://www.inyeonai.com/#organization" },
-  "mainEntity": { "@id": "https://www.inyeonai.com" }
-}
-</script>
-
-<!-- Web App (helps Google understand product) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MobileApplication",
-  "@id": "https://inyeonai.com",
-  "name": "Inyeon AI",
-  "applicationCategory": "DatingApplication",
-  "operatingSystem": "Android",
-  "downloadUrl": "https://play.google.com/store/apps/details?id=com.sandhyanand.flirtyfy",
-  "url": "https://www.inyeonai.com",
-  "publisher": {
-    "@id": "https://www.inyeonai.com/#organization"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "INR"
-  }
-}
-</script>
 
 <style>
     /* === GLOBAL STYLES === */
