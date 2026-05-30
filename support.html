@@ -307,7 +307,7 @@
                         category: document.getElementById('category').value,   // ← add this line
                         problem: document.getElementById('problem').value
                     };
-                    const scriptURL = 'https://script.google.com/macros/s/AKfycbzYJcZNAhBuCLszC88N86EfTGcIFvl2ZNQcJou_TV81_lCUQuSWFkH-W1VYmJ2JMr9r/exec';
+                    const scriptURL = 'https://script.google.com/macros/s/AKfycbxoaF7hY_42HZpWwtUG0Aco4lUeD1iykl0uk5PF8Gab0dKJvmPhdlQXZ4EtZS92SDVM/exec';
                     fetch(scriptURL, { method: 'POST', mode: 'no-cors', body: JSON.stringify(data), headers: { 'Content-Type': 'application/json' } })
                         .then(() => { success.style.display = 'block'; form.reset(); setTimeout(() => { success.style.display = 'none'; }, 5000); })
                         .catch(() => { error.style.display = 'block'; setTimeout(() => { error.style.display = 'none'; }, 5000); })
