@@ -306,7 +306,7 @@
                         email: document.getElementById('email').value,
                         problem: document.getElementById('problem').value
                     };
-                    const scriptURL = 'https://script.google.com/macros/s/AKfycbzYJcZNAhBuCLszC88N86EfTGcIFvl2ZNQcJou_TV81_lCUQuSWFkH-W1VYmJ2JMr9r/exec';
+                    const scriptURL = 'https://script.google.com/macros/s/AKfycbxbnWgBQkGauc3pE1STbjMW5N0TUs0euXaWyEVEnytmI2gtxVKaD1uuEbqkvKPrDDPT/exec';
                     fetch(scriptURL, { method: 'POST', mode: 'no-cors', body: JSON.stringify(data), headers: { 'Content-Type': 'application/json' } })
                         .then(() => { success.style.display = 'block'; form.reset(); setTimeout(() => { success.style.display = 'none'; }, 5000); })
                         .catch(() => { error.style.display = 'block'; setTimeout(() => { error.style.display = 'none'; }, 5000); })
