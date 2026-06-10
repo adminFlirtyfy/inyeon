@@ -133,7 +133,7 @@
     }
     .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
     
-    /* Header & navigation (unchanged but mobile optimised) */
+    /* Header & navigation */
     header { padding: 20px 0; border-bottom: 1px solid var(--dark-gray); position: sticky; top: 0; background-color: var(--primary-black); z-index: 1000; }
     .header-content { display: flex; justify-content: space-between; align-items: center; }
     .logo-container { display: flex; align-items: center; gap: 12px; text-decoration: none; }
@@ -181,16 +181,16 @@
     .section-title { font-size: 2.6rem; font-weight: 700; text-align: center; margin-bottom: 16px; letter-spacing: -0.3px; }
     .section-subtitle { text-align: center; opacity: 0.6; font-size: 1rem; margin-top: -8px; margin-bottom: 48px; letter-spacing: 0.02em; }
     
-    /* ========== FEATURE GRID: FORCED 3 COLUMNS ON ALL SCREENS ========== */
+    /* ========== FEATURE GRID: FORCED 3 COLUMNS ON ALL DEVICES (web + mobile) ========== */
     .features-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 32px;
     }
-    /* Responsive fine-tuning: on extremely narrow devices, maintain 3 columns but reduce padding/font */
-    @media (max-width: 740px) {
+    /* Even on narrow screens: maintain 3 columns, only spacing/padding adjusts */
+    @media (max-width: 780px) {
         .features-grid {
-            gap: 18px;
+            gap: 20px;
         }
         .feature-card {
             padding: 28px 16px;
@@ -211,6 +211,10 @@
         }
         .feature-icon {
             font-size: 2rem;
+            margin-bottom: 16px;
+        }
+        .feature-title {
+            font-size: 1rem;
         }
     }
     .feature-card {
@@ -229,7 +233,7 @@
     .feature-title { font-size: 1.4rem; font-weight: 600; margin-bottom: 14px; }
     .feature-description { color: var(--medium-gray); line-height: 1.5; }
     
-    /* ========== HOW IT WORKS: ALWAYS HORIZONTAL 4 COLUMNS (NO STACKING) ========== */
+    /* ========== HOW IT WORKS: HORIZONTAL 4 STEPS ON EVERY DEVICE (no wrap) ========== */
     .steps-wrapper {
         width: 100%;
         overflow-x: auto;
@@ -273,7 +277,7 @@
     .step-title { font-size: 1.3rem; font-weight: 600; margin-bottom: 12px; }
     .step-description { color: var(--medium-gray); font-size: 0.9rem; line-height: 1.5; }
     
-    /* Responsive: on smaller screens, allow steps to shrink but remain horizontal */
+    /* Responsive: shrink step width but keep all 4 in one row */
     @media (max-width: 900px) {
         .steps { gap: 20px; }
         .step { min-width: 160px; }
@@ -322,7 +326,7 @@
     .carousel-nav.prev { left: -12px; }
     .carousel-nav.next { right: -12px; }
     
-    /* Global responsive adjustments */
+    /* Global responsive adjustments: keep 3 columns & horizontal steps intact */
     @media (max-width: 768px) {
         .container { padding: 0 20px; }
         .brand-heading { font-size: 2.6rem; }
@@ -342,11 +346,13 @@
         .carousel-nav { width: 32px; height: 32px; font-size: 1.4rem; }
         .carousel-nav.prev { left: -8px; }
         .carousel-nav.next { right: -8px; }
+        /* Keep 3 columns, just shrink font/padding, no column reduction */
+        .features-grid { gap: 16px; }
+        .feature-card { padding: 24px 12px; }
+        .feature-icon { font-size: 2.2rem; margin-bottom: 18px; }
     }
     @media (max-width: 480px) {
-        .feature-card { padding: 20px 12px; }
-        .feature-title { font-size: 1rem; }
-        .feature-icon { font-size: 2rem; margin-bottom: 14px; }
+        .feature-title { font-size: 0.95rem; }
         .step { min-width: 140px; }
         .step-number { width: 56px; height: 56px; font-size: 1.3rem; margin-bottom: 14px; }
         .step-title { font-size: 0.9rem; }
@@ -399,7 +405,7 @@
         </div>
     </section>
 
-    <!-- Why Inyeon AI: 3 columns on ALL devices (3x2 grid) -->
+    <!-- Why Inyeon AI: strictly 3 columns across all devices (web + mobile) -->
     <section class="section">
         <div class="container">
             <h2 class="section-title">Why Inyeon AI</h2>
@@ -415,7 +421,7 @@
         </div>
     </section>
 
-    <!-- How It Works: Horizontal 4 steps on web AND mobile (no column wrap) -->
+    <!-- How It Works: always 4 horizontal steps (web & mobile) -->
     <section class="section" id="how-it-works">
         <div class="container">
             <h2 class="section-title">How It Works</h2>
@@ -441,7 +447,7 @@
         </div>
     </section>
 
-    <!-- FAQ section (kept) -->
+    <!-- FAQ section (unchanged) -->
     <section class="section">
         <div class="container">
             <div class="home-faq">
