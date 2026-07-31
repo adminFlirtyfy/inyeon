@@ -91,4 +91,4 @@ export const faqs = [
   },
 ];
 
-export const DOWNLOAD_URL = "https://www.inyeonai.com/#";
+export const DOWNLOAD_URL = "https://play.google.com/store/apps/details?id=com.sandhyanand.flirtyfy";
