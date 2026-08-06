@@ -1,17 +1,15 @@
 {
+  "version": 2,
+
   "redirects": [
     {
       "source": "/(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "inyeonai.com"
-        }
-      ],
+      "has": [{ "type": "host", "value": "inyeonai.com" }],
       "destination": "https://www.inyeonai.com/$1",
       "permanent": true
     }
   ],
+
   "headers": [
     {
       "source": "/(.*)",
@@ -27,5 +25,33 @@
         }
       ]
     }
+  ],
+
+  "trailingSlash": false,
+
+  "routes": [
+    { "src": "/index\\.html$", "dest": "/", "status": 301 },
+    { "src": "/features\\.html$", "dest": "/features", "status": 301 },
+    { "src": "/how-it-works\\.html$", "dest": "/how-it-works", "status": 301 },
+    { "src": "/community\\.html$", "dest": "/community", "status": 301 },
+    { "src": "/faq\\.html$", "dest": "/faq", "status": 301 },
+    { "src": "/support\\.html$", "dest": "/support", "status": 301 },
+    { "src": "/account\\.html$", "dest": "/account", "status": 301 },
+    { "src": "/privacy\\.html$", "dest": "/privacy", "status": 301 },
+    { "src": "/terms\\.html$", "dest": "/terms", "status": 301 },
+
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/features", "dest": "/features.html" },
+    { "src": "/how-it-works", "dest": "/how-it-works.html" },
+    { "src": "/community", "dest": "/community.html" },
+    { "src": "/faq", "dest": "/faq.html" },
+    { "src": "/support", "dest": "/support.html" },
+    { "src": "/account", "dest": "/account.html" },
+    { "src": "/privacy", "dest": "/privacy.html" },
+    { "src": "/terms", "dest": "/terms.html" },
+
+    { "handle": "filesystem" },
+
+    { "src": "/(.*)", "dest": "/404.html", "status": 404 }
   ]
 }
