@@ -26,8 +26,28 @@
     }
   ],
   "builds": [
-    { "src": "*.html", "use": "@vercel/static" },
-    { "src": "public/**/*", "use": "@vercel/static" }
+    "builds": [
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "css/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "js/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "assets/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "public/**/*",
+      "use": "@vercel/static"
+    }
+  
   ],
   "routes": [
     { "src": "/", "dest": "/index.html" },
@@ -63,9 +83,7 @@
     { "src": "/opensource", "dest": "/opensource.html" },
     { "src": "/opensource.html", "dest": "/opensource", "status": 301 },
     
-    { "src": "css/**", "use": "@vercel/static" },
-    { "src": "js/**", "use": "@vercel/static" },
-    { "src": "assets/**", "use": "@vercel/static" },
+   
     
     { "src": "/sitemap.xml", "dest": "/public/sitemap.xml" },
     { "src": "/robots.txt", "dest": "/public/robots.txt" },
