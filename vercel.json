@@ -70,6 +70,9 @@
     { "src": "/community", "dest": "/community.html" },
     { "src": "/community.html", "dest": "/community", "status": 301 },
     
+    { "src": "/delete", "dest": "/delete.html" },
+    { "src": "/delete.html", "dest": "/delete", "status": 301 },
+    
     { "src": "/how-it-works", "dest": "/how-it-works.html" },
     { "src": "/how-it-works.html", "dest": "/how-it-works", "status": 301 },
 
