@@ -897,3 +897,115 @@ a.card:hover .thread-rule {
 /* ---- Utility spacing --------------------------------------------------------------- */
 .mt-lg { margin-top: 3.5rem; }
 .text-center { text-align: center; }
+
+/* ==========================================================================
+   FEATURED ON — badge carousel
+   ========================================================================== */
+.carousel-wrapper {
+  position: relative;
+  margin-top: 3.5rem;
+}
+
+.badge-carousel {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x proximity;
+  padding: 0.5rem 2.5rem;
+  scrollbar-width: none;
+}
+
+.badge-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.badge-item {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  opacity: 0.75;
+  filter: grayscale(0.3);
+  transition: opacity 0.2s ease, filter 0.2s ease;
+}
+
+.badge-item:hover {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+.badge-item img {
+  height: 2.5rem;
+  width: auto;
+  display: block;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  color: var(--foreground);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  z-index: 2;
+}
+
+.carousel-nav:hover {
+  background-color: var(--thread);
+  border-color: var(--thread);
+  color: var(--primary-foreground);
+}
+
+.carousel-nav.prev { left: -0.5rem; }
+.carousel-nav.next { right: -0.5rem; }
+
+@media (min-width: 768px) {
+  .carousel-nav.prev { left: -1.25rem; }
+  .carousel-nav.next { right: -1.25rem; }
+}
+
+/* ==========================================================================
+   FOOTER — social icons
+   ========================================================================== */
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--muted-foreground);
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.footer-social a:hover {
+  color: var(--thread);
+  border-color: color-mix(in oklab, var(--thread) 50%, transparent);
+  background-color: color-mix(in oklab, var(--thread) 10%, transparent);
+}
+
+.footer-social svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
