@@ -101,7 +101,7 @@
     { "src": "/blog", "dest": "/blog/index.html" },
     { "src": "/blog/index.html", "dest": "/blog", "status": 301 },
     
-   {
+    {
       "src": "/blog/india/maharashtra/pune/best-dating-app-pune-2026",
       "dest": "/blog/india/maharashtra/pune/best-dating-app-pune-2026.html"
     },
