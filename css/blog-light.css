@@ -1,0 +1,126 @@
+/* ============================================================
+   Blog light theme — warm, premium, editorial.
+   Link this file on any blog page and add class="light-post" to <body>.
+   Overrides are scoped to body.light-post so the site's default
+   dark theme (used on the marketing pages) is untouched.
+   ============================================================ */
+
+body.light-post {
+  background: #f4e9d8;        /* warm parchment, not stark white */
+  color: #2b211c;              /* deep warm charcoal, not pure black */
+}
+
+/* Header */
+body.light-post .site-header {
+  background: #f9f2e6;
+  border-bottom: 1px solid #e3d5bf;
+}
+body.light-post .main-nav a,
+body.light-post .logo-title {
+  color: #2b211c;
+}
+body.light-post .logo-korean { color: #7b1e3a; }
+body.light-post .btn-outline {
+  color: #2b211c;
+  border-color: #c9b799;
+  background: transparent;
+}
+body.light-post .btn-primary {
+  background: #7b1e3a;
+  color: #f9f2e6;
+  border: none;
+}
+body.light-post .btn-primary:hover { background: #611730; }
+
+/* Type & accents */
+body.light-post .eyebrow {
+  color: #7b1e3a;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+body.light-post h1, body.light-post h2, body.light-post h3 { color: #201812; }
+body.light-post .text-thread,
+body.light-post .glow-text { color: #7b1e3a; text-shadow: none; font-style: italic; }
+body.light-post .text-muted { color: #6b5d52; }
+body.light-post .text-link { color: #7b1e3a; font-weight: 500; }
+body.light-post .text-link:hover { color: #611730; }
+
+/* Sections */
+body.light-post .section-bordered {
+  border-top: 1px solid #e3d5bf;
+  border-bottom: 1px solid #e3d5bf;
+  background: #f9f2e6;
+}
+body.light-post .section { background: #f4e9d8; }
+
+/* Cards */
+body.light-post .card {
+  background: #fbf6ec;
+  border: 1px solid #e6d9c2;
+  box-shadow: 0 2px 8px rgba(90, 55, 30, 0.06);
+}
+body.light-post .thread-rule { background: #7b1e3a; }
+
+/* FAQ */
+body.light-post .faq-item { border-bottom: 1px solid #e3d5bf; }
+body.light-post .faq-item summary { color: #201812; font-weight: 500; }
+body.light-post .answer { color: #4d443c; }
+body.light-post .plus { color: #7b1e3a; }
+
+/* Final CTA — kept dark for contrast, like a closing statement */
+body.light-post .final-cta { background: #241016; color: #f9f2e6; }
+body.light-post .final-cta .veil { display: none; }
+body.light-post .final-cta-mark { color: #d99cae; }
+body.light-post .final-cta .btn-primary { background: #d99cae; color: #241016; }
+body.light-post .final-cta-note { color: #c3a6ad; }
+
+/* Footer */
+body.light-post .site-footer { background: #efe1c9; border-top: 1px solid #e3d5bf; }
+body.light-post .footer-tagline,
+body.light-post .footer-nav a { color: #6b5d52; }
+body.light-post .footer-nav a:hover { color: #7b1e3a; }
+body.light-post .footer-brand-name { color: #201812; }
+
+/* ---- Blog index post list ---- */
+body.light-post .post-list { display: flex; flex-direction: column; }
+body.light-post .post-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 1.5rem 0;
+  border-top: 1px solid #e3d5bf;
+}
+body.light-post .post-row:first-child { border-top: none; }
+body.light-post .post-row h3 { margin: 0 0 0.35rem; }
+body.light-post .post-row p { margin: 0; }
+body.light-post .post-date { white-space: nowrap; color: #8a7c6d; font-size: 0.85rem; }
+
+/* ---- Long-form article body ---- */
+body.light-post .blog-body { max-width: 760px; margin: 0 auto; line-height: 1.75; }
+body.light-post .blog-body p { margin: 0 0 1.25rem; }
+body.light-post .blog-body h2 { margin: 2.75rem 0 1rem; font-size: 1.5rem; }
+body.light-post .blog-body h3 { margin: 1.75rem 0 0.6rem; font-size: 1.15rem; }
+body.light-post .blog-body ul,
+body.light-post .blog-body ol { margin: 0 0 1.25rem 1.25rem; }
+body.light-post .blog-body li { margin-bottom: 0.4rem; }
+body.light-post .blog-body em.chat-line {
+  display: block; font-style: italic; margin: 0.3rem 0 0.3rem 1rem; color: #6b5d52;
+}
+body.light-post .blog-meta { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
+body.light-post .blog-tag { font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: #8a7c6d; }
+body.light-post .back-link { display: inline-block; margin-bottom: 1.5rem; }
+
+body.light-post .spotlight,
+body.light-post .compare-table-wrap {
+  background: #fbf6ec;
+  border: 1px solid #e6d9c2;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2.5rem 0;
+}
+body.light-post .compare-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; font-size: 0.95rem; }
+body.light-post .compare-table th,
+body.light-post .compare-table td { text-align: left; padding: 0.75rem 1rem; border: 1px solid #e3d5bf; vertical-align: top; }
+body.light-post .compare-table th { background: #efe1c9; }
