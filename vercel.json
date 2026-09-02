@@ -119,6 +119,15 @@
       "dest": "/blog/india/rajasthan/jaipur/best-dating-app-jaipur-2026",
       "status": 301
     },
+     {
+      "src": "/blog/dating/what-community-based-dating-app",
+      "dest": "/blog/dating/what-community-based-dating-app.html"
+    },
+    {
+      "src": "/blog/dating/what-community-based-dating-app.html",
+      "dest": "/blog/dating/what-community-based-dating-app",
+      "status": 301
+    },
 
     
    
