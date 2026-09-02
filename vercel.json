@@ -88,7 +88,7 @@
     { "src": "/blog/index.html", "dest": "/blog", "status": 301 },
 
     { "src": "/blog/best-ai-dating-apps-2026", "dest": "/blog/best-ai-dating-apps-2026.html" },
-    { "src": "/blog/best-ai-dating-apps-2026.html", "dest": "/blog/best-ai-dating-apps-2026", "status": 301 }
+    { "src": "/blog/best-ai-dating-apps-2026.html", "dest": "/blog/best-ai-dating-apps-2026", "status": 301 },
 
     
    
