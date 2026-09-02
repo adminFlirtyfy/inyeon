@@ -6,7 +6,7 @@
       "has": [
         {
           "type": "host",
-          "value": "inyeonai.com"
+          "value": "inyeonai.com" 
         }
       ],
       "destination": "https://www.inyeonai.com/$1",
