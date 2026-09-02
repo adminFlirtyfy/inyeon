@@ -78,7 +78,9 @@ body.light-post .final-cta-note { color: #c3a6ad; }
 /* Footer */
 body.light-post .site-footer { background: #efe1c9; border-top: 1px solid #e3d5bf; }
 body.light-post .footer-tagline,
-body.light-post .footer-nav a { color: #6b5d52; }
+body.light-post .footer-nav a {
+  color: #453a33;
+}
 body.light-post .footer-nav a:hover { color: #7b1e3a; }
 body.light-post .footer-brand-name { color: #201812; }
 
