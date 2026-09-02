@@ -84,6 +84,8 @@
 
     { "src": "/opensource", "dest": "/opensource.html" },
     { "src": "/opensource.html", "dest": "/opensource", "status": 301 },
+    { "src": "/blog", "dest": "/blog/blog.html" },
+    { "src": "/blog/blog.html", "dest": "/blog", "status": 301 },
     
    
     
