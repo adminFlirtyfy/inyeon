@@ -100,8 +100,12 @@
 
     { "src": "/blog", "dest": "/blog/index.html" },
     { "src": "/blog/index.html", "dest": "/blog", "status": 301 },
+    
     { "src": "/blog/india/([^/]+)/([^/]+)/([^.]+)", "dest": "/blog/india/$1/$2/$3.html" },
+    { "src": "/blog/india/$1/$2/$3.html", "dest": "/blog/india/([^/]+)/([^/]+)/([^.]+)", "status": 301 },
+    
     { "src": "/blog/([^.]+)", "dest": "/blog/$1.html" },
+    { "src": "/blog/$1.html", "dest": "/blog/([^.]+)", "status": 301 },
 
     
    
