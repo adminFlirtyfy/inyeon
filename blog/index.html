@@ -18,7 +18,7 @@
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/app-logo.jpg">
-  <meta name="theme-color" content="#15141a">
+  <meta name="theme-color" content="#faf8f5">
   <link rel="stylesheet" href="../css/styles.css">
 
   <!-- Structured Data (Blog) -->
@@ -33,6 +33,12 @@
       "blogPost": [
         {
           "@type": "BlogPosting",
+          "headline": "Community-Based Dating Apps: Pros, Cons, and the Future of Meaningful Connections",
+          "url": "https://www.inyeonai.com/blog/dating/what-community-based-dating-app.html",
+          "datePublished": "2026-09-03"
+        },
+        {
+          "@type": "BlogPosting",
           "headline": "Best AI Dating Apps in 2026: What Actually Works",
           "url": "https://www.inyeonai.com/blog/best-ai-dating-apps-2026.html",
           "datePublished": "2026-09-02"
@@ -41,18 +47,56 @@
     }
   </script>
 
+  <!--
+    Light theme override, matching the article pages. Scoped to body.light-post
+    so the rest of the site's dark theme is untouched.
+  -->
   <style>
-    /* Scoped to the blog index only; main stylesheet is untouched */
+    body.light-post {
+      background: #faf8f5;
+      color: #262220;
+    }
+    body.light-post .site-header {
+      background: #ffffff;
+      border-bottom: 1px solid #ece7e0;
+    }
+    body.light-post .main-nav a,
+    body.light-post .logo-title,
+    body.light-post .btn-outline {
+      color: #262220;
+      border-color: #d8d2c8;
+    }
+    body.light-post .logo-korean { color: #a13d4c; }
+    body.light-post .btn-primary {
+      background: #a13d4c;
+      color: #ffffff;
+      border: none;
+    }
+    body.light-post .btn-outline { background: transparent; }
+    body.light-post .eyebrow { color: #a13d4c; }
+    body.light-post h1, body.light-post h2, body.light-post h3 { color: #201c1a; }
+    body.light-post .text-thread, body.light-post .glow-text { color: #a13d4c; text-shadow:none; }
+    body.light-post .text-muted { color: #6f675f; }
+    body.light-post .text-link { color: #a13d4c; }
+    body.light-post .section-bordered { border-top: 1px solid #ece7e0; border-bottom: 1px solid #ece7e0; }
+    body.light-post .final-cta { background: #201c1a; color: #ffffff; }
+    body.light-post .final-cta .veil { display:none; }
+    body.light-post .final-cta-mark { color: #d98a94; }
+    body.light-post .site-footer { background: #f2ede6; border-top: 1px solid #ece7e0; }
+    body.light-post .footer-tagline, body.light-post .footer-nav a { color: #6f675f; }
+    body.light-post .footer-brand-name { color: #201c1a; }
+
+    /* Scoped to the blog index only */
     .post-list { display:flex; flex-direction:column; }
     .post-row { display:grid; grid-template-columns: 1fr auto; gap:1rem; align-items:baseline;
-                padding:1.5rem 0; border-top:1px solid rgba(255,255,255,0.08); }
+                padding:1.5rem 0; border-top:1px solid #ece7e0; }
     .post-row:first-child { border-top:none; }
     .post-row h3 { margin:0 0 0.35rem; }
     .post-row p { margin:0; }
-    .post-date { white-space:nowrap; opacity:0.6; font-size:0.85rem; }
+    .post-date { white-space:nowrap; opacity:0.65; font-size:0.85rem; }
   </style>
 </head>
-<body>
+<body class="light-post">
   <header class="site-header">
     <div class="header-inner">
       <a href="../index.html" class="logo">
@@ -155,7 +199,7 @@
       <nav class="footer-nav">
         <p class="eyebrow" style="margin-bottom:0.25rem;">Legal &amp; help</p>
         <a href="../privacy.html">Privacy Policy</a>
-        <a href="../terms.html">Terms & Conditions</a>
+        <a href="../terms.html">Terms &amp; Conditions</a>
         <a href="../support.html">Support</a>
         <a href="mailto:support@inyeonai.com">support@inyeonai.com</a>
       </nav>
