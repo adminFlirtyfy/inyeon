@@ -84,8 +84,12 @@
 
     { "src": "/opensource", "dest": "/opensource.html" },
     { "src": "/opensource.html", "dest": "/opensource", "status": 301 },
-    { "src": "/blog", "dest": "/blog/blog.html" },
-    { "src": "/blog/blog.html", "dest": "/blog", "status": 301 },
+    { "src": "/blog", "dest": "/blog/index.html" },
+    { "src": "/blog/index.html", "dest": "/blog", "status": 301 },
+
+    { "src": "/blog/best-ai-dating-apps-2026", "dest": "/blog/best-ai-dating-apps-2026.html" },
+    { "src": "/blog/best-ai-dating-apps-2026.html", "dest": "/blog/best-ai-dating-apps-2026", "status": 301 }
+
     
    
     
