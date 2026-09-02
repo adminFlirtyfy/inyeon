@@ -93,14 +93,14 @@
     { "src": "/opensource", "dest": "/opensource.html" },
     { "src": "/opensource.html", "dest": "/opensource", "status": 301 },
     
-    { "src": "/blog", "dest": "/blog/index.html" },
-    { "src": "/blog/index.html", "dest": "/blog", "status": 301 },
+   
 
     { "src": "/blog/best-ai-dating-apps-2026", "dest": "/blog/best-ai-dating-apps-2026.html" },
     { "src": "/blog/best-ai-dating-apps-2026.html", "dest": "/blog/best-ai-dating-apps-2026", "status": 301 },
 
-    
-    { "src": "/blog/city/([^.]+)", "dest": "/blog/city/$1.html" },
+    { "src": "/blog", "dest": "/blog/index.html" },
+    { "src": "/blog/index.html", "dest": "/blog", "status": 301 },
+    { "src": "/blog/india/([^/]+)/([^/]+)/([^.]+)", "dest": "/blog/india/$1/$2/$3.html" },
     { "src": "/blog/([^.]+)", "dest": "/blog/$1.html" },
 
     
