@@ -18,8 +18,9 @@
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/app-logo.jpg">
-  <meta name="theme-color" content="#faf8f5">
+  <meta name="theme-color" content="#7B1E3A">
   <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/blog-light.css">
 
   <!-- Structured Data (Blog) -->
   <script type="application/ld+json">
@@ -46,55 +47,6 @@
       ]
     }
   </script>
-
-  <!--
-    Light theme override, matching the article pages. Scoped to body.light-post
-    so the rest of the site's dark theme is untouched.
-  -->
-  <style>
-    body.light-post {
-      background: #faf8f5;
-      color: #262220;
-    }
-    body.light-post .site-header {
-      background: #ffffff;
-      border-bottom: 1px solid #ece7e0;
-    }
-    body.light-post .main-nav a,
-    body.light-post .logo-title,
-    body.light-post .btn-outline {
-      color: #262220;
-      border-color: #d8d2c8;
-    }
-    body.light-post .logo-korean { color: #a13d4c; }
-    body.light-post .btn-primary {
-      background: #a13d4c;
-      color: #ffffff;
-      border: none;
-    }
-    body.light-post .btn-outline { background: transparent; }
-    body.light-post .eyebrow { color: #a13d4c; }
-    body.light-post h1, body.light-post h2, body.light-post h3 { color: #201c1a; }
-    body.light-post .text-thread, body.light-post .glow-text { color: #a13d4c; text-shadow:none; }
-    body.light-post .text-muted { color: #6f675f; }
-    body.light-post .text-link { color: #a13d4c; }
-    body.light-post .section-bordered { border-top: 1px solid #ece7e0; border-bottom: 1px solid #ece7e0; }
-    body.light-post .final-cta { background: #201c1a; color: #ffffff; }
-    body.light-post .final-cta .veil { display:none; }
-    body.light-post .final-cta-mark { color: #d98a94; }
-    body.light-post .site-footer { background: #f2ede6; border-top: 1px solid #ece7e0; }
-    body.light-post .footer-tagline, body.light-post .footer-nav a { color: #6f675f; }
-    body.light-post .footer-brand-name { color: #201c1a; }
-
-    /* Scoped to the blog index only */
-    .post-list { display:flex; flex-direction:column; }
-    .post-row { display:grid; grid-template-columns: 1fr auto; gap:1rem; align-items:baseline;
-                padding:1.5rem 0; border-top:1px solid #ece7e0; }
-    .post-row:first-child { border-top:none; }
-    .post-row h3 { margin:0 0 0.35rem; }
-    .post-row p { margin:0; }
-    .post-date { white-space:nowrap; opacity:0.65; font-size:0.85rem; }
-  </style>
 </head>
 <body class="light-post">
   <header class="site-header">
