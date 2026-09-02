@@ -101,11 +101,24 @@
     { "src": "/blog", "dest": "/blog/index.html" },
     { "src": "/blog/index.html", "dest": "/blog", "status": 301 },
     
-    { "src": "/blog/india/([^/]+)/([^/]+)/([^.]+)", "dest": "/blog/india/$1/$2/$3.html" },
-    { "src": "/blog/india/$1/$2/$3.html", "dest": "/blog/india/([^/]+)/([^/]+)/([^.]+)", "status": 301 },
-    
-    { "src": "/blog/([^.]+)", "dest": "/blog/$1.html" },
-    { "src": "/blog/$1.html", "dest": "/blog/([^.]+)", "status": 301 },
+   {
+      "src": "/blog/india/maharashtra/pune/best-dating-app-pune-2026",
+      "dest": "/blog/india/maharashtra/pune/best-dating-app-pune-2026.html"
+    },
+    {
+      "src": "/blog/india/maharashtra/pune/best-dating-app-pune-2026.html",
+      "dest": "/blog/india/maharashtra/pune/best-dating-app-pune-2026",
+      "status": 301
+    },
+    {
+      "src": "/blog/india/rajasthan/jaipur/best-dating-app-jaipur-2026",
+      "dest": "/blog/india/rajasthan/jaipur/best-dating-app-jaipur-2026.html"
+    },
+    {
+      "src": "/blog/india/rajasthan/jaipur/best-dating-app-jaipur-2026.html",
+      "dest": "/blog/india/rajasthan/jaipur/best-dating-app-jaipur-2026",
+      "status": 301
+    },
 
     
    
