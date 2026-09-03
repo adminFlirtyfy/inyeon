@@ -1,156 +1,134 @@
-/* ============================================================
-   Blog light theme — warm, premium, editorial.
-   Link this file on any blog page and add class="light-post" to <body>.
-   Overrides are scoped to body.light-post so the site's default
-   dark theme (used on the marketing pages) is untouched.
-   ============================================================ */
+/* ==========================================================================
+   BLOG LIGHT THEME
+   The main stylesheet (styles.css) drives almost everything off CSS custom
+   properties: --background, --foreground, --card, --muted-foreground,
+   --thread, --border, etc. Nearly every rule (headings, card text, FAQ
+   answers, buttons, borders) reads from these variables rather than
+   hardcoding colors.
+
+   So instead of overriding dozens of individual selectors, we just redefine
+   the tokens inside body.light-post — the rest of styles.css recomputes
+   automatically, correctly, everywhere (including places like .final-cta,
+   which has no background of its own and simply inherits body's).
+
+   Usage: link this AFTER styles.css, and add class="light-post" to <body>.
+   ========================================================================== */
 
 body.light-post {
-  background: #f4e9d8;        /* warm parchment, not stark white */
-  color: #2b211c;              /* deep warm charcoal, not pure black */
+  /* Warm parchment page, deep warm ink text — inverted from the dark theme */
+  --background: #f4ead9;
+  --foreground: #201811;
+
+  --card: #fbf3e6;
+  --card-foreground: #201811;
+
+  /* Wine/burgundy accent, replacing the dark theme's vermillion */
+  --thread: #7b1e3a;
+  --thread-glow: #9c3655;
+  --gold: #a97a34;
+
+  --primary: var(--thread);
+  --primary-foreground: #fbf3e6;
+
+  /* Needs to be noticeably darker than the dark-theme value (which was a
+     pale gray meant for a dark background) to stay readable here */
+  --muted-foreground: #5c4f43;
+
+  /* Subtle dark hairline instead of a subtle light one */
+  --border: oklch(0.25 0.02 60 / 14%);
+
+  --gradient-veil: radial-gradient(
+    120% 80% at 50% 0%,
+    color-mix(in oklab, var(--thread) 14%, transparent),
+    transparent 70%
+  );
+  --shadow-thread: 0 24px 70px -30px color-mix(in oklab, var(--thread) 35%, transparent);
+
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
-/* Header */
-body.light-post .site-header {
-  background: #f9f2e6;
-  border-bottom: 1px solid #e3d5bf;
-}
-body.light-post .main-nav a,
-body.light-post .logo-title {
-  color: #2b211c;
-}
-body.light-post .logo-korean { color: #7b1e3a; }
-body.light-post .btn-outline {
-  color: #2b211c;
-  border-color: #c9b799;
-  background: transparent;
-}
-body.light-post .btn-primary {
-  background: #7b1e3a;
-  color: #f9f2e6;
-  border: none;
-}
-body.light-post .btn-primary:hover { background: #611730; }
+/* site-header uses color-mix(in oklab, var(--background) 80%, transparent)
+   for its frosted-glass effect — recomputes to a light blur automatically,
+   no override needed. Same for hero-gradient, card-grid hairlines,
+   carousel-nav, footer-social, etc. */
 
-/* Type & accents */
-body.light-post .eyebrow {
-  color: #7b1e3a;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-body.light-post h1, body.light-post h2, body.light-post h3 {
-  color: #170f0a !important;
-  font-weight: 700;
-  background: none !important;
-  background-image: none !important;
-  -webkit-background-clip: initial !important;
-  background-clip: initial !important;
-  -webkit-text-fill-color: initial !important;
-  text-shadow: none !important;
-}
-/* .final-cta keeps its dark background even in the light theme,
-   so its heading needs to stay light — override the override above. */
-body.light-post .final-cta h1,
-body.light-post .final-cta h2,
-body.light-post .final-cta h3 {
-  color: #f9f2e6 !important;
-}
-body.light-post .text-thread,
-body.light-post .glow-text { color: #7b1e3a; text-shadow: none; font-style: italic; }
-body.light-post .text-muted { color: #6b5d52; }
-body.light-post .text-link { color: #7b1e3a; font-weight: 500; }
-body.light-post .text-link:hover { color: #611730; }
+/* ---- Small legibility tweaks specific to light mode --------------------- */
 
-/* Sections */
-body.light-post .section-bordered {
-  border-top: 1px solid #e3d5bf;
-  border-bottom: 1px solid #e3d5bf;
-  background: #f9f2e6;
-}
-body.light-post .section { background: #f4e9d8; }
+/* Badge/partner logos were tuned (grayscale + opacity) for a dark card
+   background; on light parchment they read a little washed out, so ease off. */
+body.light-post .badge-item { opacity: 0.85; }
 
-/* Cards */
-body.light-post .card {
-  background: #fbf6ec;
-  border: 1px solid #e6d9c2;
-  box-shadow: 0 2px 8px rgba(90, 55, 30, 0.06);
-}
-body.light-post .thread-rule { background: #7b1e3a; }
+/* ==========================================================================
+   BLOG-SPECIFIC LAYOUT
+   These classes don't exist in the main stylesheet — they're only used on
+   blog pages — so they're defined here directly. All colors reference the
+   tokens above so they automatically stay correct if the palette changes.
+   ========================================================================== */
 
-/* FAQ */
-body.light-post .faq-item { border-bottom: 1px solid #e3d5bf; }
-body.light-post .faq-item summary {
-  color: #170f0a !important;
-  font-weight: 600;
-  background: none !important;
-  -webkit-text-fill-color: initial !important;
-}
-body.light-post .answer { color: #4d443c; }
-body.light-post .plus { color: #7b1e3a; }
-
-/* Final CTA — kept dark for contrast, like a closing statement */
-body.light-post .final-cta { background: #241016; color: #f9f2e6; }
-body.light-post .final-cta .veil { display: none; }
-body.light-post .final-cta-mark { color: #d99cae; }
-body.light-post .final-cta .btn-primary { background: #d99cae; color: #241016; }
-body.light-post .final-cta-note { color: #c3a6ad; }
-
-/* Footer */
-body.light-post .site-footer { background: #efe1c9; border-top: 1px solid #e3d5bf; }
-body.light-post .footer-tagline,
-body.light-post .footer-nav a { color: #6b5d52; }
-body.light-post .footer-nav a:hover { color: #7b1e3a; }
-body.light-post .footer-brand-name {
-  color: #170f0a !important;
-  -webkit-text-fill-color: initial !important;
-  background: none !important;
-}
-
-/* ---- Blog index post list ---- */
-body.light-post .post-list { display: flex; flex-direction: column; }
-body.light-post .post-row {
+.post-list { display: flex; flex-direction: column; }
+.post-row {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 1rem;
   align-items: baseline;
   padding: 1.5rem 0;
-  border-top: 1px solid #e3d5bf;
+  border-top: 1px solid var(--border);
 }
-body.light-post .post-row:first-child { border-top: none; }
-body.light-post .post-row h3 { margin: 0 0 0.35rem; }
-body.light-post .post-row h3 a {
-  color: #170f0a !important;
-  -webkit-text-fill-color: initial !important;
-  background: none !important;
-}
-body.light-post .post-row p { margin: 0; }
-body.light-post .post-date { white-space: nowrap; color: #8a7c6d; font-size: 0.85rem; }
+.post-row:first-child { border-top: none; }
+.post-row h3 { margin: 0 0 0.35rem; }
+.post-row h3 a { color: var(--foreground); }
+.post-row h3 a:hover { color: var(--thread); }
+.post-row p { margin: 0; color: var(--muted-foreground); }
+.post-date { white-space: nowrap; color: var(--muted-foreground); font-size: 0.85rem; }
 
-/* ---- Long-form article body ---- */
-body.light-post .blog-body { max-width: 760px; margin: 0 auto; line-height: 1.75; }
-body.light-post .blog-body p { margin: 0 0 1.25rem; }
-body.light-post .blog-body h2 { margin: 2.75rem 0 1rem; font-size: 1.5rem; }
-body.light-post .blog-body h3 { margin: 1.75rem 0 0.6rem; font-size: 1.15rem; }
-body.light-post .blog-body ul,
-body.light-post .blog-body ol { margin: 0 0 1.25rem 1.25rem; }
-body.light-post .blog-body li { margin-bottom: 0.4rem; }
-body.light-post .blog-body em.chat-line {
-  display: block; font-style: italic; margin: 0.3rem 0 0.3rem 1rem; color: #6b5d52;
+.blog-body { max-width: 760px; margin: 0 auto; line-height: 1.75; color: var(--foreground); }
+.blog-body p { margin: 0 0 1.25rem; }
+.blog-body h2 { margin: 2.75rem 0 1rem; font-size: 1.5rem; }
+.blog-body h3 { margin: 1.75rem 0 0.6rem; font-size: 1.15rem; }
+.blog-body ul,
+.blog-body ol { margin: 0 0 1.25rem 1.25rem; }
+.blog-body li { margin-bottom: 0.4rem; }
+.blog-body em.chat-line {
+  display: block;
+  font-style: italic;
+  margin: 0.3rem 0 0.3rem 1rem;
+  color: var(--muted-foreground);
 }
-body.light-post .blog-meta { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
-body.light-post .blog-tag { font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: #8a7c6d; }
-body.light-post .back-link { display: inline-block; margin-bottom: 1.5rem; }
 
-body.light-post .spotlight,
-body.light-post .compare-table-wrap {
-  background: #fbf6ec;
-  border: 1px solid #e6d9c2;
+.blog-meta { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
+.blog-tag {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+/* .text-link in styles.css adds margin-top: 2rem, meant for links at the
+   end of a homepage section — reset that here since this link sits at the
+   very top of the page. */
+.back-link { display: inline-block; margin-top: 0 !important; margin-bottom: 1.5rem; }
+
+.spotlight {
+  background: var(--card);
+  border: 1px solid var(--border);
   border-radius: 12px;
   padding: 2rem;
   margin: 2.5rem 0;
 }
-body.light-post .compare-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; font-size: 0.95rem; }
-body.light-post .compare-table th,
-body.light-post .compare-table td { text-align: left; padding: 0.75rem 1rem; border: 1px solid #e3d5bf; vertical-align: top; }
-body.light-post .compare-table th { background: #efe1c9; }
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0 2rem;
+  font-size: 0.95rem;
+}
+.compare-table th,
+.compare-table td {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  vertical-align: top;
+  color: var(--foreground);
+}
+.compare-table th { background: var(--card); font-weight: 600; }
