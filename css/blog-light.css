@@ -1,71 +1,449 @@
 /* ==========================================================================
-   BLOG LIGHT THEME
-   The main stylesheet (styles.css) drives almost everything off CSS custom
-   properties: --background, --foreground, --card, --muted-foreground,
-   --thread, --border, etc. Nearly every rule (headings, card text, FAQ
-   answers, buttons, borders) reads from these variables rather than
-   hardcoding colors.
+   INYEON AI — BLOG STYLESHEET (standalone)
+   This file is fully self-contained: it does NOT depend on styles.css.
+   Blog pages should link ONLY this file — no styles.css, no body class
+   needed. That means the blog never breaks from changes to the main
+   site's theme, and every color/spacing rule for the blog lives in one
+   place.
 
-   So instead of overriding dozens of individual selectors, we just redefine
-   the tokens inside body.light-post — the rest of styles.css recomputes
-   automatically, correctly, everywhere (including places like .final-cta,
-   which has no background of its own and simply inherits body's).
-
-   Usage: link this AFTER styles.css, and add class="light-post" to <body>.
+   Same visual language as the main site (same fonts, same "thread" accent
+   idea) but tuned as a warm light theme instead of the main site's dark
+   theme, and only including the components blog pages actually use.
    ========================================================================== */
 
-body.light-post {
-  /* Warm parchment page, deep warm ink text — inverted from the dark theme */
+/* ---- Fonts (Google Fonts) ------------------------------------------------ */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Karla:wght@300;400;500;600&family=Noto+Serif+KR:wght@300;500&display=swap");
+
+/* ---- Design tokens --------------------------------------------------------
+   All blog styling reads from these. Change a value here and it updates
+   everywhere in the blog.
+---------------------------------------------------------------------------- */
+:root {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Karla", ui-sans-serif, system-ui, sans-serif;
+  --font-korean: "Noto Serif KR", serif;
+
+  --radius: 0.25rem;
+
+  /* warm parchment page, deep warm ink text, wine/burgundy accent */
   --background: #f4ead9;
   --foreground: #201811;
-
   --card: #fbf3e6;
   --card-foreground: #201811;
 
-  /* Wine/burgundy accent, replacing the dark theme's vermillion */
   --thread: #7b1e3a;
   --thread-glow: #9c3655;
   --gold: #a97a34;
 
   --primary: var(--thread);
   --primary-foreground: #fbf3e6;
-
-  /* Needs to be noticeably darker than the dark-theme value (which was a
-     pale gray meant for a dark background) to stay readable here */
   --muted-foreground: #5c4f43;
 
-  /* Subtle dark hairline instead of a subtle light one */
-  --border: oklch(0.25 0.02 60 / 14%);
+  --border: rgba(32, 24, 17, 0.14);
 
   --gradient-veil: radial-gradient(
     120% 80% at 50% 0%,
-    color-mix(in oklab, var(--thread) 14%, transparent),
+    rgba(123, 30, 58, 0.14),
     transparent 70%
   );
-  --shadow-thread: 0 24px 70px -30px color-mix(in oklab, var(--thread) 35%, transparent);
+  --shadow-thread: 0 24px 70px -30px rgba(123, 30, 58, 0.35);
+}
 
+/* ---- Reset / base --------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
   background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin: 0;
   color: var(--foreground);
 }
 
-/* site-header uses color-mix(in oklab, var(--background) 80%, transparent)
-   for its frosted-glass effect — recomputes to a light blur automatically,
-   no override needed. Same for hero-gradient, card-grid hairlines,
-   carousel-nav, footer-social, etc. */
+p { margin: 0; }
+ul, ol { margin: 0; padding: 0; }
 
-/* ---- Small legibility tweaks specific to light mode --------------------- */
+.wrap {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+.wrap-narrow {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+.wrap-mid {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
 
-/* Badge/partner logos were tuned (grayscale + opacity) for a dark card
-   background; on light parchment they read a little washed out, so ease off. */
-body.light-post .badge-item { opacity: 0.85; }
+/* ---- Reusable text styles -------------------------------------------------- */
+.eyebrow {
+  font-size: 0.6875rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--thread);
+  font-weight: 600;
+  margin: 0;
+}
+
+.font-korean { font-family: var(--font-korean); }
+.text-thread { color: var(--thread); }
+.text-muted { color: var(--muted-foreground); }
+.italic { font-style: italic; }
+
+.glow-text {
+  color: var(--thread);
+  text-shadow: none;
+}
+
+.thread-rule {
+  height: 1px;
+  width: 2.5rem;
+  background: linear-gradient(to right, transparent, var(--thread), transparent);
+  opacity: 0.7;
+}
+.thread-rule.wide {
+  width: 6rem;
+  margin: 2rem auto 0;
+}
+
+.veil { background-image: var(--gradient-veil); }
+
+.text-link {
+  margin-top: 2rem;
+  display: inline-block;
+  font-size: 0.875rem;
+  color: var(--thread);
+  font-weight: 500;
+  text-underline-offset: 4px;
+}
+.text-link:hover { text-decoration: underline; }
+
+/* ---- Buttons --------------------------------------------------------------- */
+.btn-primary {
+  display: inline-block;
+  border-radius: 999px;
+  background-color: var(--thread);
+  color: var(--primary-foreground);
+  padding: 0.9rem 1.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  box-shadow: var(--shadow-thread);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background-color: #611730;
+}
+
+.btn-outline {
+  display: inline-block;
+  border-radius: 999px;
+  border: 1px solid rgba(123, 30, 58, 0.4);
+  color: var(--foreground);
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  background: transparent;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+.btn-outline:hover {
+  background-color: var(--thread);
+  color: var(--primary-foreground);
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--border);
+  background-color: rgba(244, 234, 217, 0.85);
+  backdrop-filter: blur(20px);
+}
+
+.header-inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo { display: flex; align-items: center; gap: 0.625rem; }
+.logo-mark { height: 1.75rem; width: 1.75rem; }
+.logo-text { display: flex; align-items: baseline; gap: 0.5rem; }
+.logo-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  color: var(--foreground);
+}
+.logo-korean {
+  font-family: var(--font-korean);
+  font-size: 0.75rem;
+  color: var(--thread);
+}
+
+.main-nav {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+.main-nav a { transition: color 0.2s ease; }
+.main-nav a:hover,
+.main-nav a.active { color: var(--thread); }
+
+@media (min-width: 768px) {
+  .main-nav { display: flex; }
+}
+
+/* leave room for the fixed header */
+main { padding-top: 4.5rem; }
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.site-footer {
+  border-top: 1px solid var(--border);
+  background-color: var(--card);
+}
+
+.footer-inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 3rem 1.25rem;
+  display: grid;
+  gap: 2rem;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+@media (min-width: 768px) {
+  .footer-inner { grid-template-columns: repeat(3, 1fr); }
+}
+
+.footer-brand { display: flex; align-items: center; gap: 0.5rem; }
+.footer-brand-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--foreground);
+}
+.footer-tagline { margin-top: 0.75rem; max-width: 20rem; line-height: 1.6; }
+.footer-nav { display: flex; flex-direction: column; gap: 0.5rem; }
+.footer-nav a:hover { color: var(--thread); }
+
+.footer-social { display: flex; align-items: center; gap: 0.75rem; margin-top: 1.25rem; }
+.footer-social a {
+  display: flex; align-items: center; justify-content: center;
+  width: 2rem; height: 2rem; border-radius: 999px;
+  border: 1px solid var(--border); color: var(--muted-foreground);
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+.footer-social a:hover {
+  color: var(--thread);
+  border-color: rgba(123, 30, 58, 0.5);
+  background-color: rgba(123, 30, 58, 0.1);
+}
+.footer-social svg { width: 1rem; height: 1rem; fill: currentColor; }
+
+/* ==========================================================================
+   SECTIONS
+   ========================================================================== */
+.section { padding: 6rem 0; }
+@media (min-width: 768px) { .section { padding: 7rem 0; } }
+
+.section-bordered {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background-color: var(--card);
+}
+
+.section-tight { padding: 5rem 0; }
+@media (min-width: 768px) { .section-tight { padding: 6rem 0; } }
+
+.section h2 { margin-top: 1rem; font-size: 2.25rem; }
+@media (min-width: 768px) { .section h2 { font-size: 3rem; } }
+
+.text-center { text-align: center; }
+.mt-lg { margin-top: 3.5rem; }
+
+/* ---- Meaning / quote-style block (available if a post wants it) --------- */
+.meaning-grid {
+  display: grid;
+  gap: 2.5rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 5rem 1.25rem;
+}
+@media (min-width: 768px) {
+  .meaning-grid { grid-template-columns: auto 1fr; align-items: center; gap: 5rem; padding: 7rem 1.25rem; }
+}
+.meaning-mark { font-family: var(--font-korean); font-size: 4.5rem; line-height: 1; color: var(--thread); }
+@media (min-width: 768px) { .meaning-mark { font-size: 6rem; } }
+.meaning-text { font-family: var(--font-display); font-size: 1.5rem; line-height: 1.6; color: var(--foreground); }
+@media (min-width: 768px) { .meaning-text { font-size: 1.875rem; } }
+
+/* ==========================================================================
+   CARD GRID (feature cards used in posts and city guides)
+   ========================================================================== */
+.card-grid {
+  margin-top: 3.5rem;
+  display: grid;
+  gap: 1px;
+  overflow: hidden;
+  border-radius: 2px;
+  border: 1px solid var(--border);
+  background-color: var(--border);
+}
+@media (min-width: 768px) {
+  .card-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .card-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1024px) {
+  .card-grid.cols-3-lg { grid-template-columns: repeat(3, 1fr); }
+}
+
+.card {
+  background-color: var(--background);
+  padding: 2rem;
+  transition: background-color 0.2s ease;
+}
+.card:hover, a.card:hover { background-color: var(--card); }
+.card:hover .thread-rule, a.card:hover .thread-rule { width: 5rem; }
+.card h3 { margin-top: 1.5rem; font-size: 1.5rem; line-height: 1.3; }
+.card p { margin-top: 1rem; font-size: 0.875rem; line-height: 1.7; color: var(--muted-foreground); }
+
+/* ==========================================================================
+   NUMBERED STEPS (available if a post wants a step-by-step layout)
+   ========================================================================== */
+.steps { margin-top: 3.5rem; }
+.step {
+  display: grid; gap: 1rem;
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+}
+@media (min-width: 768px) {
+  .step { grid-template-columns: 4rem 1fr 1.4fr; align-items: baseline; gap: 2.5rem; }
+}
+.step-number { font-family: var(--font-display); font-size: 1.875rem; color: var(--thread); }
+.step h3 { font-size: 1.5rem; }
+.step p { font-size: 0.875rem; line-height: 1.7; color: var(--muted-foreground); }
+
+/* ==========================================================================
+   FAQ ACCORDION
+   ========================================================================== */
+.faq-list {
+  margin-top: 3rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.faq-item { border-bottom: 1px solid var(--border); padding: 1.5rem 0; }
+.faq-item:last-child { border-bottom: none; }
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--foreground);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary .plus {
+  flex-shrink: 0;
+  color: var(--thread);
+  margin-top: 0.25rem;
+  transition: transform 0.2s ease;
+}
+.faq-item[open] summary .plus { transform: rotate(45deg); }
+.faq-item .answer {
+  margin-top: 1rem;
+  max-width: 48rem;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--muted-foreground);
+}
+
+/* ==========================================================================
+   FINAL CTA
+   ========================================================================== */
+.final-cta {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+}
+.final-cta-inner {
+  position: relative;
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 6rem 1.25rem;
+  text-align: center;
+}
+@media (min-width: 768px) { .final-cta-inner { padding: 8rem 1.25rem; } }
+
+.final-cta-mark {
+  font-family: var(--font-korean);
+  font-size: 0.875rem;
+  letter-spacing: 0.4em;
+  color: var(--thread);
+}
+.final-cta h2 { margin-top: 1.5rem; font-style: italic; font-size: 2.25rem; }
+@media (min-width: 768px) { .final-cta h2 { font-size: 3.75rem; } }
+.final-cta p { margin-top: 1.5rem; color: var(--muted-foreground); }
+.final-cta .btn-primary { margin-top: 2.5rem; }
+.final-cta-note {
+  margin-top: 1.25rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--muted-foreground);
+}
 
 /* ==========================================================================
    BLOG-SPECIFIC LAYOUT
-   These classes don't exist in the main stylesheet — they're only used on
-   blog pages — so they're defined here directly. All colors reference the
-   tokens above so they automatically stay correct if the palette changes.
    ========================================================================== */
 
+/* ---- Blog index post list ---- */
 .post-list { display: flex; flex-direction: column; }
 .post-row {
   display: grid;
@@ -82,6 +460,7 @@ body.light-post .badge-item { opacity: 0.85; }
 .post-row p { margin: 0; color: var(--muted-foreground); }
 .post-date { white-space: nowrap; color: var(--muted-foreground); font-size: 0.85rem; }
 
+/* ---- Long-form article body ---- */
 .blog-body { max-width: 760px; margin: 0 auto; line-height: 1.75; color: var(--foreground); }
 .blog-body p { margin: 0 0 1.25rem; }
 .blog-body h2 { margin: 2.75rem 0 1rem; font-size: 1.5rem; }
@@ -104,10 +483,7 @@ body.light-post .badge-item { opacity: 0.85; }
   color: var(--muted-foreground);
 }
 
-/* .text-link in styles.css adds margin-top: 2rem, meant for links at the
-   end of a homepage section — reset that here since this link sits at the
-   very top of the page. */
-.back-link { display: inline-block; margin-top: 0 !important; margin-bottom: 1.5rem; }
+.back-link { display: inline-block; margin-top: 0; margin-bottom: 1.5rem; }
 
 .spotlight {
   background: var(--card);
@@ -116,6 +492,19 @@ body.light-post .badge-item { opacity: 0.85; }
   padding: 2rem;
   margin: 2.5rem 0;
 }
+
+.app-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--border);
+}
+.app-card:first-of-type { border-top: none; }
+.app-rank { font-size: 1.5rem; font-weight: 600; color: var(--muted-foreground); min-width: 2.5rem; }
+.app-card h3 { margin: 0 0 0.35rem; }
+.app-card p { margin: 0; color: var(--muted-foreground); }
 
 .compare-table {
   width: 100%;
