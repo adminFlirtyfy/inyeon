@@ -39,10 +39,19 @@ body.light-post .eyebrow {
   text-transform: uppercase;
   font-weight: 600;
 }
-body.light-post h1, body.light-post h2, body.light-post h3 { color: #201812; }
+body.light-post h1, body.light-post h2, body.light-post h3 {
+  color: #170f0a !important;
+  font-weight: 700;
+  background: none !important;
+  background-image: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  text-shadow: none !important;
+}
 body.light-post .text-thread,
 body.light-post .glow-text { color: #7b1e3a; text-shadow: none; font-style: italic; }
-body.light-post .text-muted { color: #2f2723; }
+body.light-post .text-muted { color: #6b5d52; }
 body.light-post .text-link { color: #7b1e3a; font-weight: 500; }
 body.light-post .text-link:hover { color: #611730; }
 
@@ -78,9 +87,7 @@ body.light-post .final-cta-note { color: #c3a6ad; }
 /* Footer */
 body.light-post .site-footer { background: #efe1c9; border-top: 1px solid #e3d5bf; }
 body.light-post .footer-tagline,
-body.light-post .footer-nav a {
-  color: #453a33;
-}
+body.light-post .footer-nav a { color: #6b5d52; }
 body.light-post .footer-nav a:hover { color: #7b1e3a; }
 body.light-post .footer-brand-name { color: #201812; }
 
