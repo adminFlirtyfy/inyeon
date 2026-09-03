@@ -51,9 +51,18 @@ body.light-post h1, body.light-post h2, body.light-post h3 {
 }
 body.light-post .text-thread,
 body.light-post .glow-text { color: #7b1e3a; text-shadow: none; font-style: italic; }
-body.light-post .text-muted { color: #6b5d52; }
-body.light-post .text-link { color: #7b1e3a; font-weight: 500; }
-body.light-post .text-link:hover { color: #611730; }
+body.light-post .text-muted {
+  color: #3f362f;
+  font-size: 1.1em;
+}
+body.light-post .text-link {
+  color: #4a0f22;
+  font-weight: 500;
+  font-size: 1.15em;
+}
+body.light-post .text-link:hover {
+  color: #300a15;
+}
 
 /* Sections */
 body.light-post .section-bordered {
