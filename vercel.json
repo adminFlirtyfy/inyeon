@@ -1,152 +1,50 @@
 {
   "version": 2,
+  "cleanUrls": true,
+
   "redirects": [
     {
       "source": "/(.*)",
       "has": [
         {
           "type": "host",
-          "value": "inyeonai.com" 
+          "value": "inyeonai.com"
         }
       ],
       "destination": "https://www.inyeonai.com/$1",
       "permanent": true
     }
   ],
+
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()" },
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://launchigniter.com https://www.shipit.buzz https://www.bing.com https://*.bing.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://www.bing.com https://*.bing.com https://*.clarity.ms; frame-src 'self' https://www.bing.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" } ]
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://launchigniter.com https://www.shipit.buzz https://www.bing.com https://*.bing.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://www.bing.com https://*.bing.com https://*.clarity.ms; frame-src 'self' https://www.bing.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+        }
+      ]
     }
-  ],
-  "builds": [
-    {
-      "src": "*.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "css/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "js/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "assets/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "public/**/*",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "scripts/**/*",
-      "use": "@vercel/static"
-    },
-     {
-      "src": "blog/**/*",
-      "use": "@vercel/static"
-    }
-  
-  ],
-  "routes": [
-    { "src": "/", "dest": "/index.html" },
-    { "src": "/index.html", "dest": "/", "status": 301 },
-    
-    { "src": "/privacy", "dest": "/privacy.html" },
-    { "src": "/privacy.html", "dest": "/privacy", "status": 301 },
-
-    { "src": "/terms", "dest": "/terms.html" },
-    { "src": "/terms.html", "dest": "/terms", "status": 301 },
-
-    { "src": "/support", "dest": "/support.html" },
-    { "src": "/support.html", "dest": "/support", "status": 301 },
-
-    { "src": "/faq", "dest": "/faq.html" },
-    { "src": "/faq.html", "dest": "/faq", "status": 301 },
-    
-    { "src": "/features", "dest": "/features.html" },
-    { "src": "/features.html", "dest": "/features", "status": 301 },
-    
-    { "src": "/community", "dest": "/community.html" },
-    { "src": "/community.html", "dest": "/community", "status": 301 },
-    
-    { "src": "/delete", "dest": "/delete.html" },
-    { "src": "/delete.html", "dest": "/delete", "status": 301 },
-    
-    { "src": "/how-it-works", "dest": "/how-it-works.html" },
-    { "src": "/how-it-works.html", "dest": "/how-it-works", "status": 301 },
-
-    
-    
-     { "src": "/account", "dest": "/account.html" },
-    { "src": "/account.html", "dest": "/account", "status": 301 },
-
-
-    { "src": "/opensource", "dest": "/opensource.html" },
-    { "src": "/opensource.html", "dest": "/opensource", "status": 301 },
-    
-   
-
-    { "src": "/blog/best-ai-dating-apps-2026", "dest": "/blog/best-ai-dating-apps-2026.html" },
-    { "src": "/blog/best-ai-dating-apps-2026.html", "dest": "/blog/best-ai-dating-apps-2026", "status": 301 },
-
-    { "src": "/blog", "dest": "/blog/index.html" },
-    { "src": "/blog/index.html", "dest": "/blog", "status": 301 },
-    
-    {
-      "src": "/blog/india/maharashtra/pune/best-dating-app-pune-2026",
-      "dest": "/blog/india/maharashtra/pune/best-dating-app-pune-2026.html"
-    },
-    {
-      "src": "/blog/india/maharashtra/pune/best-dating-app-pune-2026.html",
-      "dest": "/blog/india/maharashtra/pune/best-dating-app-pune-2026",
-      "status": 301
-    },
-    {
-      "src": "/blog/india/rajasthan/jaipur/best-dating-app-jaipur-2026",
-      "dest": "/blog/india/rajasthan/jaipur/best-dating-app-jaipur-2026.html"
-    },
-    {
-      "src": "/blog/india/rajasthan/jaipur/best-dating-app-jaipur-2026.html",
-      "dest": "/blog/india/rajasthan/jaipur/best-dating-app-jaipur-2026",
-      "status": 301
-    },
-     {
-      "src": "/blog/dating/what-community-based-dating-app",
-      "dest": "/blog/dating/what-community-based-dating-app.html"
-    },
-    {
-      "src": "/blog/dating/what-community-based-dating-app.html",
-      "dest": "/blog/dating/what-community-based-dating-app",
-      "status": 301
-    },
-
-    
-   
-    
-    { "src": "/sitemap.xml", "dest": "/public/sitemap.xml" },
-    { "src": "/robots.txt", "dest": "/public/robots.txt" },
-    { "src": "/llms.txt", "dest": "/public/llms.txt" },
-    { "src": "/llms-full.txt", "dest": "/public/llms-full.txt" },
-    { "src": "/og-image.jpg", "dest": "/public/app-logo.jpg" },
-    
-    { "src": "/gma8rxvz51ag299tyz3a81gdutcs6jxj.txt", "dest": "/public/gma8rxvz51ag299tyz3a81gdutcs6jxj.txt" },
-    { "src": "/6d64bcd03ff94a4094bd6f380ad76700.txt", "dest": "/public/6d64bcd03ff94a4094bd6f380ad76700.txt" },
-    { "src": "/yandex_e06a10bdb506dce7.html", "dest": "/public/yandex_e06a10bdb506dce7.html" },
-    { "src": "/lvu83gh7rekn4rmbjrgcyboagigrzx.html", "dest": "/public/lvu83gh7rekn4rmbjrgcyboagigrzx.html" },
-    { "src": "/app-logo.jpg", "dest": "/public/app-logo.jpg" },
-    { "src": "/favicon.ico", "dest": "/public/favicon.ico" },
-    { "src": "/favicon-16x16.png", "dest": "/public/favicon-16x16.png" },
-    { "src": "/favicon-32x32.png", "dest": "/public/favicon-32x32.png" },
-    { "src": "/favicon-48x48.png", "dest": "/public/favicon-48x48.png" },
-    { "src": "/googleaed1d32c1fbbd602.html", "dest": "/public/googleaed1d32c1fbbd602.html" }
   ]
 }
